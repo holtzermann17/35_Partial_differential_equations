@@ -1,0 +1,396 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LaplaceEquationInCylindricalCoordinates}
+\pmcreated{2013-03-22 16:24:24}
+\pmmodified{2013-03-22 16:24:24}
+\pmowner{bloftin}{6104}
+\pmmodifier{bloftin}{6104}
+\pmtitle{Laplace equation in cylindrical coordinates}
+\pmrecord{13}{38555}
+\pmprivacy{1}
+\pmauthor{bloftin}{6104}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{35J05}
+\pmrelated{BesselFunction}
+\pmrelated{BesselsEquation}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+\section{Laplace Equation in Cylindrical Coordinates}
+
+Solutions to the Laplace equation in cylindrical coordinates have wide applicability from fluid mechanics to electrostatics.
+Applying the method of separation of variables to Laplace's partial differential equation and then enumerating the various forms
+of solutions will lay down a foundation for solving problems in this coordinate system.  Finally, the use of Bessel functions
+in the solution reminds us why they are synonymous with the cylindrical domain.
+
+\subsection{Separation of Variables}
+Beginning with the Laplacian in cylindrical coordinates, apply the operator to a potential function and set it equal to zero to get the Laplace equation
+
+\begin{equation}
+\nabla^{2} \Phi = \frac{1}{r} \frac{\partial}{\partial r}\left(r \frac{\partial\Phi}{\partial r}\right) + \frac{1}{r^2} \frac{\partial^2\Phi}{\partial \theta^2} + \frac{\partial^2 \Phi}{\partial z^2} = 0.
+\end{equation}
+
+First expand out the terms
+
+\begin{equation}
+\nabla^{2} \Phi = \frac{1}{r} \frac{\partial \Phi}{\partial r} + \frac{\partial^2\Phi}{\partial r^2} + \frac{1}{r^2} \frac{\partial^2\Phi}{\partial \theta^2} + \frac{\partial^2 \Phi}{\partial z^2} = 0.
+\end{equation}
+
+Then apply the method of separation of variables by assuming the solution is in the form
+
+$$ \Phi \left ( r,\theta,z \right) = R(r)P(\theta)Z(z).$$
+
+Plug this into (2) and note how we can bring out the functions that are not affected by the derivatives
+
+$$ \frac{P Z}{r} \frac{d R}{d r} + P Z \frac{d^2 R}{d r^2} + \frac{R Z}{r^2} \frac{d^2 P}{d \theta^2}  + R P \frac{d^2 Z}{d z^2} = 0.$$
+
+Divide by $R(r) P(\theta) Z(z)$ and use short hand notation to get
+
+$$\frac{1}{Rr} \frac{d R}{d r} + \frac{1}{R} \frac{d^2R}{d r^2} + \frac{1}{Pr^2} \frac{d^2P}{d \theta^2} + \frac{1}{Z} \frac{d^2 Z}{dz^2} = 0.$$
+
+``Separating'' the z term to the other side gives
+
+$$\frac{1}{Rr} \frac{d R}{d r} + \frac{1}{R} \frac{d^2R}{d r^2} + \frac{1}{Pr^2} \frac{d^2P}{d \theta^2} = - \frac{1}{Z} \frac{d^2 Z}{dz^2}.$$
+
+This equation can only be satisfied for all values if both sides are equal to a constant, $\lambda$, such that
+
+\begin{equation}
+-\frac{1}{Z} \frac{d^2 Z}{dz^2} = \lambda
+\end{equation}
+
+\begin{equation}
+\frac{1}{Rr} \frac{d R}{d r} + \frac{1}{R} \frac{d^2R}{d r^2} + \frac{1}{Pr^2} \frac{d^2P}{d\theta^2} = \lambda.
+\end{equation}
+
+Before we can focus on solutions, we need to further separate (4), so multiply (4) by $r^2$
+
+$$\frac{r}{R} \frac{d R}{d r} + \frac{r^2}{R} \frac{d^2R}{d r^2} + \frac{1}{P} \frac{d^2P}{d\theta^2} = \lambda r^2.$$
+
+Separate the terms
+
+$$\frac{r}{R} \frac{d R}{d r} + \frac{r^2}{R} \frac{d^2R}{d r^2} - \lambda r^2 = - \frac{1}{P} \frac{d^2P}{d \theta^2}.$$
+
+As before, set both sides to a constant, $\kappa$
+
+\begin{equation}
+- \frac{1}{P} \frac{d^2P}{d \theta^2}= \kappa
+\end{equation}
+
+\begin{equation}
+\frac{r}{R} \frac{dR}{d r} + \frac{r^2}{R} \frac{d^2R}{d r^2} - \lambda r^2  = \kappa.
+\end{equation}
+
+Now there are three differential equations and we know the form of these solutions.  The differential equations of
+(3) and (5) are ordinary differential equations, while (6) is a little more complicated and we must turn to Bessel functions.
+
+\subsection{Axial Solutions ($z$)}
+
+Following the guidelines setup in [Etgen] for linear homogeneous differential equations, the first step in solving
+
+$$\frac{d^2 Z}{dz^2} + Z \lambda = 0$$
+
+is to find the roots of the characteristic polynomial
+
+$$C(r) = r^2 + \lambda = 0$$
+
+$$r =  \pm \sqrt{ -\lambda}.$$
+
+Although, one can go forward using the square root, here we will introduce another constant, $\gamma$ to imply
+the following cases.  So if we want real roots, then we want to ensure a negative constant
+
+$$ \lambda = -\gamma^2 $$
+
+and if we want complex roots, then we want to ensure a positive constant
+
+$$ \lambda = \gamma^2 ,$$
+
+{\bf Case 1}: $\lambda \le 0$ and real roots $(\lambda = -\gamma^2)$.
+
+For every real root, there will be an exponential in the general solution.  The real roots are
+
+$$ r_1 = \gamma $$
+$$ r_2 = -\gamma $$
+$$ r_3 = 0 .$$
+
+Therefore, the solutions for these roots are
+
+$$ h_1(z) = C_1e^{\gamma z} $$
+$$ h_2(z) = C_2e^{-\gamma z} $$
+$$ h_3(z) = C_3z e^0  = C_3z.$$
+
+Combining these using the principle of superposition, gives the general solution,
+
+\begin{equation}
+Z_{\gamma}(z) =  C_1e^{\gamma z} + C_2e^{-\gamma z} + C_3z + C_4.
+\end{equation}
+
+{\bf Case 2}: $\lambda > 0$ and complex roots $(\lambda = \gamma^2)$.
+
+The roots are
+$$ r_4 = i \gamma $$
+$$ r_5 = -i \gamma $$
+
+and the corresponding solutions
+
+$$ h_4(z) = C_5e^0 \cos (\gamma z) =  C_5\cos (\gamma z) $$
+$$ h_5(z) = C_6e^0 \sin (\gamma z)=  C_6\sin (\gamma z) .$$
+
+Combining these into a general solution yields
+
+$$Z_{\gamma}(z) =  C_5\cos (\gamma z) + C_6\sin (\gamma z) + C_7.$$
+
+\subsection{Azimuthal Solutions ($\theta$)}
+
+Azimuthal solutions for
+
+$$ \frac{d^2P}{d \theta^2} + \kappa P  = 0$$
+
+are in the most general sense obtained similarly  to the axial solutions with the characteristic polynomial
+
+$$C(r) = r^2 + \kappa = 0$$
+
+$$r = \pm \sqrt{- \kappa}.$$
+
+Using another constant, $\nu$ to ensure positive or negative constants, we get two cases.
+
+{\bf Case 1}: $\kappa \le 0$ and real roots $(\kappa = -\nu^2)$.
+
+The solutions for these roots are then
+
+$$ h_1(z) = C_1e^{\nu \theta} $$
+$$ h_2(z) = C_2e^{-\nu \theta} $$
+$$ h_3(z) = C_3\theta e^0  = C_3\theta.$$
+
+Combining these for the general solution,
+
+\begin{equation}
+P_{\nu}(\theta) =  C_1e^{\nu \theta} + C_2e^{-\nu \theta} + C_3\theta + C_4.
+\end{equation}
+
+{\bf Case 2}: $\kappa > 0$ and complex roots $(\kappa = \nu^2)$.
+
+The roots are
+
+$$ r_4 = i \nu $$
+$$ r_5 = -i \nu $$
+
+and the corresponding solutions
+
+$$ h_4(\theta) = C_5e^0 \cos (\nu \theta) =  C_5\cos (\nu \theta) $$
+$$ h_5(\theta) = C_6e^0 \sin (\nu \theta)=  C_6\sin (\nu \theta) .$$
+
+Combining these into a general solution
+
+$$P_{\nu}(\theta) =  C_5\cos (\nu \theta) + C_6\sin (\nu \theta) + C_7.$$
+
+For the first glimpse at simplification, we will note a restriction on $\kappa$
+that is used when it is required that the solution be periodic to ensure $P$ is single valued
+
+$$P(\theta) = P(\theta + 2 n \pi).$$
+
+Then we are left with either the periodic solutions that occur with complex roots or the zero case.  So not only
+
+$$(\kappa = \nu^2)$$
+
+but also $\nu$ must be an integer, i.e.
+
+\begin{equation}
+P_{\nu}(\theta) =  C_5 \cos (\nu \theta) + C_6 \sin (\nu \theta) + C_7 \,\,\,\,\,\,\,\,\,\,\, \nu = 0, 1, 2, ...
+\end{equation}
+
+Note, that $\nu = 0$, is still a solution, but to be periodic we can only have a constant
+
+$$P(\theta) = C_4.$$
+
+\subsection{Radial Solutions ($r$)}
+
+The radial solutions are the more difficult ones to understand for this problem and are solved using a power series.
+The two types of solutions generated based on the choices of constants from the $\theta$ and $z$ solutions (excluding non-periodic solutions for $P$)
+leads to the Bessel functions and the modified Bessel functions.  The first step for both these cases is to transform (6)
+into the Bessel differential equation.
+
+{\bf Case 1}: $\lambda < 0$ $(\lambda = -\gamma^2)$, $\kappa > 0$ $(\kappa = \nu^2)$.
+
+Substitute $\gamma$ and $\nu$ into the radial equation (6) to get
+
+\begin{equation}
+\frac{r}{R} \frac{dR}{d r} + \frac{r^2}{R} \frac{d^2R}{d r^2} + \gamma^2 r^2  - \nu^2 = 0.
+\end{equation}
+
+Next, use the substitution
+
+$$x = \gamma r$$
+$$r = \frac{x}{\gamma}.$$
+
+Therefore, the derivatives are
+
+$$dx = \gamma dr$$
+$$dr = \frac{dx}{\gamma}$$
+
+and make a special note that
+
+$$\frac{d^2}{dx^2} = \frac{d}{dx} \frac{d}{dx}$$
+
+so
+
+$$dx^2 = dx*dx = \gamma^2 dr^2$$
+$$dr^2 = \frac{dx^2}{\gamma^2}.$$
+
+Substituting these relationships into (10) gives us
+
+$$\frac{x \gamma}{\gamma R} \frac{dR}{dx} + \frac{x^2 \gamma^2}{\gamma^2 R} \frac{d^2R}{dx^2} + x^2  - \nu^2 = 0.$$
+
+Finally, multiply by $R/x^2$ to get the \emph{Bessel differential equation}
+
+\begin{equation}
+\frac{d^2R}{dx^2} + \frac{1}{x} \frac{dR}{dx} +  \left(1  - \frac{\nu^2}{x^2} \right )R = 0.
+\end{equation}
+
+Delving into all the nuances of solving Bessel's differential equation is beyond the scope of this article, however, the curious
+are directed to Watson's in depth treatise [Watson].  Here, we will just present the results as we did for the previous
+differential equations.  The general solution is a linear combination of the Bessel function of the first kind $J_{\nu}(r)$
+and the Bessel function of the second kind $Y_{\nu}(r)$.  Remebering  that $\nu$ is a positive integer or zero.
+
+\begin{equation}
+R_{\nu}(r) = C_1 J_{\nu}(\gamma  r) + C_2 Y_{\nu}(\gamma  r) + C_3
+\end{equation}
+
+Bessel function of the first kind:
+
+$$J_{\nu}(x) = \sum_{m=0}^{\infty} \frac{ (-1)^m ( \frac{-1}{2}x)^{\nu + 2m} }{ m! (m + \nu)! }.$$
+
+Bessel function of the second kind (using Hankel's formula):
+
+$$Y_{\nu}(x) = 2J_{\nu}(x) \left (\eta + ln \left( \frac{x}{2}\right ) \right ) - \left( \frac{x}{2} \right)^{-\nu} \sum_{m=0}^{\nu-1} \frac{(\nu - m - 1)!}{m!} \left ( \frac{x}{2} \right)^{2m}$$
+$$ \,\,\,\,\, -\sum_{m=0}^{\infty} \frac{ (-1)^m (\frac{x}{2})^{\nu + 2m} }{m! (\nu + m)!} \left \{ \frac{1}{1} + \frac{1}{2} + ... + \frac{1}{m}+ \frac{1}{1} + \frac{1}{2} + ...  + \frac{1}{\nu + m} \right \}.$$
+
+For the unfortunate person who has to evaluate this function, note that when $m = 0$, the singularity is taken care of by replacing the series in brackets by
+
+$$ \left \{ \frac{1}{1} + \frac{1}{2} + ... + \frac{1}{\nu} \right \}.$$
+
+Some solace can be found since most physical problems need to be analytic at $x = 0$ and therefore $Y_{\nu}(x)$ breaks down at $ln(0)$.
+This leads to the choice of constant $C_2$ to be zero.
+
+
+{\bf Case 2}: $\lambda > 0$ $(\lambda = \gamma^2)$, $\kappa > 0$ $(\kappa = \nu^2)$.
+
+Using the previous method of substitution, we just get the change of sign
+
+\begin{equation}
+\frac{d^2R}{dx^2} + \frac{1}{x} \frac{dR}{dx} -  \left(1 + \frac{\nu^2}{x^2} \right)R = 0.
+\end{equation}
+
+This leads to the modified Bessel functions as a solution, which are also known as the pure imaginary Bessel functions.  The
+general solution is denoted
+
+\begin{equation}
+R_{\nu}(r) = C_1 I_{\nu}(\gamma  r) + C_2 K_{\nu}(\gamma  r) + C_3
+\end{equation}
+
+where $I_{\nu}$ is the modified Bessel function of the first kind and $K_{\nu}$ is the modified Bessel function of the
+second kind
+
+$$I_{\nu}(\gamma r) = i^{-\nu} J_{\nu}(i \gamma r)$$
+$$K_{\nu}(\gamma r) = \frac{\pi}{2} i^{\nu+1} \left ( J_{\nu}(i \gamma r) + iY_{\nu}(i \gamma r) \right ) .$$
+
+\subsection{Combined Solution}
+
+Keeping track of all the different cases and choosing the right terms for boundary conditions is a daunting task when one attempts
+to solve Laplace's equation.  The short hand notation used in [Kusse] and [Arfken] will be presented here
+to help organize the choices as a reference.  It is important to remember that these solutions are only for
+the single valued azimuth cases $(\kappa = \nu^2)$.
+
+Once the separate solutions are obtained, the rest is simple since our solution is separable
+
+$$ \Phi \left ( r,\theta,z \right) = R(r)P(\theta)Z(z).$$
+
+So we just combine the individual solutions to get the general solutions to the Laplace equation in cylindrical coordinates.
+
+{\bf Case 1}: $\lambda < 0$ $(\lambda = -\gamma^2)$, $\kappa > 0$ $(\kappa = \nu^2)$.
+
+\begin{equation}
+\Phi \left ( r,\theta,z \right) =  \sum_{\nu} \sum_{\gamma} \left \{ \begin{array}{c}
+        e^{\gamma z} \\
+        e^{-\gamma z}
+           \end{array} \right .
+     \left \{ \begin{array}{c}
+        \cos (\nu \theta) \\
+        \sin (\nu \theta)
+           \end{array} \right .
+        \left \{ \begin{array}{c}
+        J_{\nu}(\gamma  r) \\
+        Y_{\nu}(\gamma  r)
+           \end{array} \right .
+\end{equation}
+
+{\bf Case 2}: $\lambda > 0$ $(\lambda = \gamma^2)$, $\kappa > 0$ $(\kappa = \nu^2)$.
+
+\begin{equation}
+\Phi \left ( r,\theta,z \right) =  \sum_{\nu} \sum_{\gamma} \left \{ \begin{array}{c}
+        \cos (\gamma z) \\
+        \sin (\gamma z)
+           \end{array} \right .
+     \left \{ \begin{array}{c}
+        \cos (\nu \theta) \\
+        \sin (\nu \theta)
+           \end{array} \right .
+        \left \{ \begin{array}{c}
+        I_{\nu}(\gamma  r) \\
+        K_{\nu}(\gamma  r)
+           \end{array} \right .
+\end{equation}
+
+Interpreting the short hand notation is as simple as expanding terms and not forgetting the linear solutions, i.e. $(\gamma = 0)$ .
+As an example, case 1, expanded out while ignoring the linear terms would give
+
+\begin{equation}
+\Phi \left ( r,\theta,z \right) =  \sum_{\nu} \sum_{\gamma}  \left \{ \begin{array}{c}
+   \,  A_{\nu \gamma} e^{\gamma z} \cos (\nu \theta) J_{\nu}(\gamma  r) \\
+   + B_{\nu \gamma} e^{\gamma z} \cos (\nu \theta) Y_{\nu}(\gamma  r) \\
+   + C_{\nu \gamma} e^{\gamma z} \sin (\nu \theta) J_{\nu}(\gamma  r) \\
+   + D_{\nu \gamma} e^{\gamma z} \sin (\nu \theta) Y_{\nu}(\gamma  r) \\
+   + E_{\nu \gamma} e^{-\gamma z} \cos (\nu \theta) J_{\nu}(\gamma  r) \\
+   + F_{\nu \gamma} e^{-\gamma z} \cos (\nu \theta) Y_{\nu}(\gamma  r) \\
+   + G_{\nu \gamma} e^{-\gamma z} \sin (\nu \theta) J_{\nu}(\gamma  r) \\
+   + H_{\nu \gamma} e^{-\gamma z} \sin (\nu \theta) Y_{\nu}(\gamma  r) \\
+
+     \end{array} \right \} .
+\end{equation}
+
+
+
+\begin{thebibliography}{9}
+\bibitem{Arfken} Arfken, George, Weber, Hans, {\em Mathematical Physics}. Academic Press, San Diego, 2001.
+\bibitem{Etgen} Etgen, G., {\em Calculus}. John Wiley \& Sons, New York, 1999.
+\bibitem{Guterman} Guterman, M., Nitecki, Z., {\em Differential Equations, 3rd Edition}. Saunders College Publishing, Fort Worth, 1992.
+\bibitem{Jackson} Jackson, J.D., {\em Classical Electrodynamics, 2nd Edition}. John Wiley \& Sons, New York, 1975.
+\bibitem{Kusse} Kusse, Bruce, Westwig, Erik, {\em Mathematical Physics}. John Wiley \& Sons, New York, 1998.
+\bibitem{Lebedev} Lebedev, N., {\em Special Functions \& Their Applications}. Dover Publications, New York, 1995.
+\bibitem{Watson} Watson, G.N., {\em A Treatise on the Theory of Bessel Functions}. Cambridge University Press, New York, 1995.
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

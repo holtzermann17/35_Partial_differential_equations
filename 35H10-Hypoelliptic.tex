@@ -1,0 +1,86 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Hypoelliptic}
+\pmcreated{2013-03-22 16:01:13}
+\pmmodified{2013-03-22 16:01:13}
+\pmowner{jirka}{4157}
+\pmmodifier{jirka}{4157}
+\pmtitle{hypoelliptic}
+\pmrecord{7}{38059}
+\pmprivacy{1}
+\pmauthor{jirka}{4157}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{35H10}
+\pmdefines{analytically hypoelliptic}
+\pmdefines{analytic hypoelliptic}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{theorem}
+\newtheorem*{thm}{Theorem}
+\newtheorem*{lemma}{Lemma}
+\newtheorem*{conj}{Conjecture}
+\newtheorem*{cor}{Corollary}
+\newtheorem*{example}{Example}
+\newtheorem*{prop}{Proposition}
+\theoremstyle{definition}
+\newtheorem*{defn}{Definition}
+\theoremstyle{remark}
+\newtheorem*{rmk}{Remark}
+
+\begin{document}
+\begin{defn}
+Let $P$ be a partial differential operator defined in an open subset $U \subset{\mathbb{R}}^n$.
+If
+for every \PMlinkname{distribution}{Distribution4} $u$ defined in an open subset $V \subset U$ such that
+$Pu$ is $C^\infty$ (smooth), $u$ must also be $C^\infty$, then $P$ is
+called {\em hypoelliptic}.
+\end{defn}
+
+Similarly, if the same assertion holds with $C^\infty$ replaced by
+real analytic,
+then $P$ is said to be {\em analytically hypoelliptic}.
+
+Note that some authors use ``hypoelliptic'' to mean ``analytically hypoelliptic.''  Hence, if it is not clear from context, it is best to specify the regularity when using the term.  For example, $C^\infty$-hypoelliptic instead of just hypoelliptic.
+
+
+\begin{thebibliography}{9}
+\bibitem{netoartino}
+J.\@ Barros-Neto, Ralph A.\@ Artino.
+{\em \PMlinkescapetext{Hypoelliptic boundary value problems}},
+Lecture Notes in Pure and Applied Mathematics, 53. Marcel Dekker, Inc., New York, 1980.
+\PMlinkexternal{MR 81k:35031}{http://www.ams.org/mathscinet-getitem?mr=81k:35031}
+\bibitem{heffernier}
+Bernard Helffer, Francis Nier.
+{\em \PMlinkescapetext{Hypoelliptic estimates and spectral theory for Fokker-Planck operators and Witten Laplacians}},
+Lecture Notes in Mathematics, 1862. Springer-Verlag, Berlin, 2005.
+\PMlinkexternal{MR 2006a:58039}{http://www.ams.org/mathscinet-getitem?mr=2006a:58039}
+\bibitem{Shimakura:EPDE}
+Norio Shimakura.
+{\em \PMlinkescapetext{Elliptic Partial Differential Operators}},
+Kinokuniya Company Ltd., Tokyo, Japan, 1978.
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

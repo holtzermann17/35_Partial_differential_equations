@@ -1,0 +1,63 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExistenceAndUniquenessOfSolutionOfOrdinaryDifferentialEquations}
+\pmcreated{2013-03-22 13:36:50}
+\pmmodified{2013-03-22 13:36:50}
+\pmowner{Daume}{40}
+\pmmodifier{Daume}{40}
+\pmtitle{existence and uniqueness of solution of ordinary differential equations}
+\pmrecord{13}{34246}
+\pmprivacy{1}
+\pmauthor{Daume}{40}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{35-00}
+\pmclassification{msc}{34-00}
+\pmclassification{msc}{34A12}
+\pmrelated{PicardsTheorem2}
+\pmrelated{CauchyKowalewskiTheorem}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic} 
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+% The below lines should work as the command
+% \renewcommand{\bibname}{References}
+% without creating havoc when rendering an entry in
+% the page-image mode.
+\makeatletter
+\@ifundefined{bibname}{}{\renewcommand{\bibname}{References}}
+\makeatother
+\begin{document}
+Let $E\subset W$ where $E$ is an open subset of $W$ which is a normed vector space, and let $f$ be a continuous differentiable map
+$$f: E \to W.$$  Then the ordinary differential equation defined as 
+$$\dot{x} = f(x)$$
+with the initial condition
+$$x(0) = x_0$$
+where $x_0 \in E$ has a unique solution on some interval containing zero.  More specifically there exists $\alpha>0$ such that the following is a unique function 
+$$x:(-\alpha,\alpha) \to E$$
+such that $\dot{x}=f\circ x$ and $x(0)=x_0$.\cite{HS}
+\begin{thebibliography}{1}
+\bibitem[HS]{HS} Hirsch, W. Morris, Smale, Stephen.:  Differential Equations, Dynamical Systems, And Linear Algebra. Academic Press, Inc. New York, 1974. 
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

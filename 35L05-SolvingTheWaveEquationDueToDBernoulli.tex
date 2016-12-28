@@ -1,0 +1,109 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SolvingTheWaveEquationDueToDBernoulli}
+\pmcreated{2013-03-22 16:31:41}
+\pmmodified{2013-03-22 16:31:41}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{solving the wave equation due to D. Bernoulli}
+\pmrecord{12}{38708}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{35L05}
+\pmsynonym{vibrating string}{SolvingTheWaveEquationDueToDBernoulli}
+\pmrelated{ExampleOfSolvingTheHeatEquation}
+\pmrelated{EigenvalueProblem}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{string}
+
+A string has been strained between the points\, $(0,\,0)$\, and\, $(p,\,0)$\, of the $x$-axis.\, The \PMlinkescapetext{transversal} vibration of the string in the $xy$-plane is determined by the one-dimensional wave equation
+\begin{align} 
+\frac{\partial^2u}{\partial t^2} = c^2\cdot\frac{\partial^2u}{\partial x^2}
+\end{align}
+satisfied by the ordinates\, $u(x,\,t)$\, of the points of the string with the  abscissa $x$ on the time \PMlinkescapetext{moment}\, $t\,(\geqq 0)$.
+The boundary conditions are thus 
+               $$u(0,\,t) = u(p,\,t) = 0.$$
+We suppose also the initial conditions
+   $$u(x,\,0) = f(x),\quad u_t'(x,\,0) = g(x)$$
+which give the initial position of the string and the initial velocity of the points of the string.
+
+For trying to separate the variables, set
+                        $$u(x,\,t) := X(x)T(t).$$
+The boundary conditions are then\, $X(0) = X(p) = 0$,\, and the partial differential equation (1) may be written
+\begin{align}
+c^2\cdot\frac{X''}{X} = \frac{T''}{T}.
+\end{align}
+This is not possible unless both sides are equal to a same constant $-k^2$ where $k$ is positive; we soon justify why the constant must be negative.\, Thus (2) splits into two ordinary linear differential equations of second order:
+\begin{align}
+X'' = -\left(\frac{k}{c}\right)^2 X,\quad T'' = -k^2T
+\end{align}
+The solutions of these are, as is well known,
+\begin{align}
+\begin{cases}
+        X = C_1\cos\frac{kx}{c}+C_2\sin\frac{kx}{c}\\
+        T = D_1\cos{kt}+D_2\sin{kt}\\
+\end{cases}
+\end{align}
+with integration constants $C_i$ and $D_i$.
+
+But if we had set both sides of (2) equal to\, $+k^2$, we had got the solution\, $T = D_1e^{kt}+D_2e^{-kt}$\, which can not present a vibration.\, Equally impossible would be that\, $k = 0$.
+
+Now the boundary condition for $X(0)$ shows in (4) that\, $C_1 = 0$,\, and the one for $X(p)$ that 
+              $$C_2\sin\frac{kp}{c} = 0.$$
+If one had\, $C_2 = 0$,\, then $X(x)$ were identically 0 which is naturally impossible.\, So we must have
+               $$\sin\frac{kp}{c} = 0,$$
+which implies
+$$\frac{kp}{c} = n\pi \quad (n \in \mathbb{Z}_+).$$
+This means that the only suitable values of $k$ satisfying the equations (3), the so-called eigenvalues, are
+$$k = \frac{n\pi c}{p} \quad (n = 1,\,2,\,3,\,\ldots).$$
+So we have infinitely many solutions of (1), the eigenfunctions
+$$u = XT = C_2\sin\frac{n\pi}{p}x
+\left[D_1\cos\frac{n\pi c}{p}t+D_2\sin\frac{n\pi c}{p}t\right]$$
+or
+$$u = \left[A_n\cos\frac{n\pi c}{p}t+B_n\sin\frac{n\pi c}{p}t\right]
+\sin\frac{n\pi}{p}x$$
+$(n = 1,\,2,\,3,\,\ldots)$ where $A_n$'s and $B_n$'s are for the time being arbitrary constants.\, Each of these functions satisfy the boundary conditions.\, Because of the linearity of (1), also their sum series 
+\begin{align}
+u(x,\,t) := \sum_{n=1}^\infty\left(A_n\cos\frac{n\pi c}{p}t+B_n\sin\frac{n\pi c}{p}t\right)\sin\frac{n\pi}{p}x
+\end{align}
+is a solution of (1), provided it converges.\, It fulfils the boundary conditions, too.\, In order to also the initial conditions would be fulfilled, one must have
+$$\sum_{n=1}^\infty A_n\sin\frac{n\pi}{p}x = f(x),$$
+$$\sum_{n=1}^\infty B_n\frac{n\pi c}{p}\sin\frac{n\pi}{p}x = g(x)$$
+on the interval\, $[0,\,p]$.\, But the left sides of these equations are the Fourier sine series of the functions $f$ and $g$, and therefore we obtain the expressions for the coefficients:
+$$A_n = \frac{2}{p}\int_{0}^p\!f(x)\sin\frac{n\pi x}{p}\,dx,$$
+$$B_n = \frac{2}{n\pi c}\int_{0}^p\!g(x)\sin\frac{n\pi x}{p}\,dx.$$
+
+\begin{thebibliography}{9}
+\bibitem{K.V.}{\sc K. V\"ais\"al\"a:} {\em Matematiikka IV}.\, Hand-out Nr. 141.\quad Teknillisen korkeakoulun ylioppilaskunta, Otaniemi, Finland (1967).
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

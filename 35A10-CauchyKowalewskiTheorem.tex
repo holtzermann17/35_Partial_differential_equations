@@ -1,0 +1,64 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CauchyKowalewskiTheorem}
+\pmcreated{2013-03-22 14:37:04}
+\pmmodified{2013-03-22 14:37:04}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{Cauchy-Kowalewski theorem}
+\pmrecord{16}{36196}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{35A10}
+\pmsynonym{Cauchy-Kovalevskaya theorem}{CauchyKowalewskiTheorem}
+\pmrelated{Analytic}
+\pmrelated{CauchyInitialValueProblem}
+\pmrelated{ExistenceAndUniquenessOfSolutionOfOrdinaryDifferentialEquations}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Consider a system of partial differential equations involving $m$ dependent variables $u_1, \ldots, u_m$ and $n+1$ independent variables $t, x_1, \ldots, x_n$:
+ $${\partial u_i \over \partial t} = F_i \left( u_1, \ldots, u_m; t, x_1, \ldots, x_n; {\partial u_1 \over \partial x_1}, \ldots, {\partial u_m \over \partial x_n} \right)$$
+in which $F_1 ,\ldots, F_m$ are analytic functions in a neighborhood of a point $(u_1^0, \ldots, u_m^0; t^0, x_1^0, \ldots, x_n^0)$ subject to the boundary
+conditions
+ $$u_i = f_i (x_1, \ldots, x_n)$$
+when $t = t^0$ for given functions $f_i$ which are analytic in a neighborhood of $x_1^0, \ldots, x_n^0$ such that $u_i^0 = f_i (x^0_1, \ldots, x^0_n)$.
+
+The Cauchy-Kowalewski theorem asserts that this boundary value problem has a unique analytic solution $u_i = f_i (t,x_1, \ldots, x_n)$ in a neighborhood of $(u_1^0, \ldots, u_m^0; 0, x_1^0, \ldots, x_n^0)$.
+
+The Cauchy-Kowalewski theorem is a local existence theorem --- it only asserts that a solution exists in a neighborhood of the point, not in all space.  A peculiar feature of this theorem is that the type of the differential equation (whether it is elliptic, parabolic, or hyperbolic) is irrelevant.  As soon as one either considers global solutions or relaxes the assumption of analyticity, this is no longer the case --- the existence and uniqueness of solutions to a differential equation (or system of differential equations) will depend upon the type of the equation.
+
+By simple transformations, one can generalize this theorem.
+
+By making a change of variable $t' = t - \phi (x_1, \ldots, x_m)$, with $\phi$ analytic, one can generalize the theorem to the case where the boundary values are specified on a surface given by the equation $t = \phi (x_1, \ldots, x_m)$ rather than on the plane $t = t^0$.
+
+One can allow higher order derivatives by the device of introducing new variables.  For instance, to allow third order time derivatives of $u_1$, one could introduce new variables $u_{1t}$ and $u_{1tt}$ and augment the system of equations by adding
+ $${\partial u_1 \over \partial t} = u_{1t}$$
+and
+ $${\partial u_{1t} \over \partial t} = u_{1tt}$$
+Likewise, one can eliminate spatial derivatives.  The manner in which one introduces new equations for these new variables is somewhat clumsy to describe in general, and it is best to explain it by example, as is done in a \PMlinkid{supplement}{6198} to this entry.
+%%%%%
+%%%%%
+\end{document}

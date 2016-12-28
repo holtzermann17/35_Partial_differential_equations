@@ -1,0 +1,67 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ConnectionBetweenRiccatiEquationAndAiryFunctions}
+\pmcreated{2013-03-22 18:09:07}
+\pmmodified{2013-03-22 18:09:07}
+\pmowner{perucho}{2192}
+\pmmodifier{perucho}{2192}
+\pmtitle{connection between Riccati equation and Airy functions}
+\pmrecord{5}{40708}
+\pmprivacy{1}
+\pmauthor{perucho}{2192}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{35-00}
+\pmclassification{msc}{34-00}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem{theorem}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+
+\begin{document}
+We report an interesting connection relating Riccati equation with Airy functions. Let us consider the nonlinear complex operator $\mathfrak{L}:z\in\mathbb{C}\mapsto\zeta$ with kernel given by
+\begin{equation}
+\frac{d\zeta}{dz}+\zeta^2+a(z)\zeta+b(z)=0,
+\end{equation}
+a nonlinear ODE of the first order so-called Riccati equation. In order to accomplish our purpose we particularize (1) by setting $a(z)\equiv 0$ and $b(z)=-z$. Thus (1) becomes
+\begin{equation}
+\frac{d\zeta}{dz}+\zeta^2=z.
+\end{equation}
+(2) can be reduced to a linear equation of the second order by the suitable change: $\zeta=w'(z)/w(z)$, whence
+\begin{equation*} 
+\zeta'=\frac{w''}{w}-\frac{w'^2}{w^2}, \qquad \zeta^2=\left(\frac{w'}{w}\right)^2,
+\end{equation*}
+which leads (2) to
+\begin{equation}
+w''-zw=0.
+\end{equation}
+Pairs of linearly independent solutions of (3) are the Airy functions.
+  
+
+%%%%%
+%%%%%
+\end{document}

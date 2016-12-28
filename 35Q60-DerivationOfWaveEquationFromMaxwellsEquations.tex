@@ -1,0 +1,82 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DerivationOfWaveEquationFromMaxwellsEquations}
+\pmcreated{2013-03-22 17:52:09}
+\pmmodified{2013-03-22 17:52:09}
+\pmowner{invisiblerhino}{19637}
+\pmmodifier{invisiblerhino}{19637}
+\pmtitle{derivation of wave equation from Maxwell's equations}
+\pmrecord{10}{40348}
+\pmprivacy{1}
+\pmauthor{invisiblerhino}{19637}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{35Q60}
+\pmclassification{msc}{78A25}
+%\pmkeywords{wave equation}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Maxwell was the first to note that Amp\`ere's Law does not satisfy conservation of charge (his corrected form is given in Maxwell's equation). This can be shown using the equation of conservation of electric charge:
+\[
+\nabla \cdot \mathbf{J} + \frac{\partial \rho}{\partial t} = 0
+\]
+
+Now consider Faraday's Law in differential form:
+\[
+\nabla \times \mathbf{E} = -\frac{ \partial \mathbf{B}}{\partial t}
+\]
+Taking the curl of both sides:
+\[
+\nabla \times (\nabla \times \mathbf{E}) =  \nabla \times (- \frac{ \partial \mathbf{B}}{\partial t})
+\]
+
+The right-hand side may be simplified by noting that
+\[
+\nabla \times (\frac{ \partial \mathbf{B}}{\partial t}) = - \frac{ \partial}{\partial t} (\nabla \times \mathbf{B})
+\]
+Recalling Amp\`ere's Law,
+\[
+- \frac{ \partial}{\partial t} (\nabla \times \mathbf{B}) = -\mu_0 \epsilon_0 \frac{ \partial^2 \mathbf{E}}{\partial t^2} 
+\]
+Therefore
+\[
+\nabla \times (\nabla \times \mathbf{E}) = -\mu_0 \epsilon_0 \frac{ \partial^2 \mathbf{E}}{\partial t^2} 
+\]
+The left hand side may be simplified by the following vector identity:
+\[
+\nabla \times (\nabla \times \mathbf{E}) = -\nabla^2 \mathbf{E}
+\]
+Hence
+\[
+\nabla^2 \mathbf{E} = \mu_0 \epsilon_0 \frac{ \partial^2 \mathbf{E}}{\partial t^2} 
+\]
+Applying the same analysis to Amp\'ere's Law then substituting in Faraday's Law leads to the result 
+\[
+\nabla^2 \mathbf{B} = \mu_0 \epsilon_0 \frac{ \partial^2 \mathbf{E}}{\partial t^2} 
+\]
+Making the substitution $\mu_0 \epsilon_0 = 1/c^2$ we note that these equations take the form of a transverse wave travelling at constant speed $c$. Maxwell evaluated the constants $\mu_0$ and $\epsilon_0$ according to their known values at the time and concluded that $c$ was approximately equal to 310,740,000 $\mbox{ms}^{-1}$, a value within ~3\% of today's results!
+%%%%%
+%%%%%
+\end{document}

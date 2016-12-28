@@ -1,0 +1,76 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{WaveEquation}
+\pmcreated{2013-03-22 13:10:12}
+\pmmodified{2013-03-22 13:10:12}
+\pmowner{Mathprof}{13753}
+\pmmodifier{Mathprof}{13753}
+\pmtitle{wave equation}
+\pmrecord{10}{33614}
+\pmprivacy{1}
+\pmauthor{Mathprof}{13753}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{35L05}
+%\pmkeywords{partial differential equation}
+\pmrelated{HelmholtzDifferentialEquation}
+\pmrelated{SphericalMean}
+\pmdefines{d'Alembert's solution to the wave equation}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+The \emph{wave equation} is a partial differential equation which
+describes certain kinds of waves.  It arises in various physical
+situations, such as vibrating \PMlinkescapetext{strings}, \PMlinkescapetext{sound} waves, and
+electromagnetic waves.
+
+The wave equation in one \PMlinkescapetext{dimension} is
+$$
+\frac{\partial^2 u}{\partial t^2}=c^2\frac{\partial^2 u}{\partial
+  x^2}.
+$$
+The general solution of the one-dimensional wave equation can be
+obtained by a change of coordinates: $(x,t)\longrightarrow(\xi,\eta)$,
+where $\xi=x-ct$ and $\eta=x+ct$.  This gives $\frac{\partial^2 u}{\partial\xi\partial\eta}=0$, which we can integrate to get \emph{d'Alembert's solution}:
+$$
+u(x,t)=F(x-ct)+G(x+ct)
+$$
+where $F$ and $G$ are twice differentiable functions.  $F$ and $G$
+represent waves traveling in the positive and negative $x$
+directions, respectively, with velocity $c$.  These functions can be
+obtained if appropriate initial conditions and boundary conditions are given.  For example, if $u(x,0)=f(x)$ and $\frac{\partial u}{\partial t}(x,0)=g(x)$ are given, the solution is
+$$
+u(x,t)=\frac{1}{2}[f(x-ct)+f(x+ct)]+\frac{1}{2c}\int_{x-ct}^{x+ct}g(s)\mathrm d s.
+$$
+
+In general, the wave equation in $n$ \PMlinkescapetext{dimensions} is
+$$
+\frac{\partial^2 u}{\partial t^2}=c^2\nabla^2 u.
+$$
+where $u$ is a function of the location variables
+$x_1,x_2,\ldots,x_n$, and time $t$.  Here, $\nabla^2$ is the Laplacian
+with respect to the location variables, which in Cartesian coordinates is given by $
+\nabla^2=\frac{\partial^2}{\partial x_1^2}+\frac{\partial^2}{\partial x_2^2}+\cdots+\frac{\partial^2}{\partial x_n^2}$.
+%%%%%
+%%%%%
+\end{document}

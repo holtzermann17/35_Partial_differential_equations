@@ -1,0 +1,142 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExampleOfSolvingTheHeatEquation}
+\pmcreated{2014-09-28 17:02:21}
+\pmmodified{2014-09-28 17:02:21}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{example of solving the heat equation}
+\pmrecord{25}{37647}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{35Q99}
+\pmsynonym{stationary example of heat equation}{ExampleOfSolvingTheHeatEquation}
+%\pmkeywords{time-independent}
+\pmrelated{LaplacesEquation}
+\pmrelated{BlackScholesPDE}
+\pmrelated{AnalyticSolutionOfBlackScholesPDE}
+\pmrelated{SolvingTheWaveEquationByDBernoulli}
+\pmrelated{TimeDependentExampleOfHeatEquation}
+\pmrelated{ExampleOfSummationByParts}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+\begin{document}
+Let a \PMlinkescapetext{thin square-formed plate of heat conducting homogeneous material be in the $xy$-plane with sides on the $x$-axis (isolated), on the line\, $y = \pi$ (held at the constant temperature\, $u = C$), and on the vertical lines\, $x = 0$\, and\, $x = \pi$ (both held at the constant temperature\, $u = 0$)}.\, Determine the temperature function\, $(x,\,y)\mapsto u(x,\,y)$\, on the plate, when the faces of the plate are \PMlinkescapetext{isolated}.\\
+
+The \PMlinkname{equation of the heat flow}{HeatEquation} in this \PMlinkescapetext{stationary} case is
+\begin{align}
+\nabla^2 u \;\equiv\; u''_{xx}+u''_{yy} \;=\; 0
+\end{align}
+under the boundary conditions
+$$u(0,\,y) = 0, \qquad u(\pi,\,y) = 0, \qquad u(x,\,\pi) = C, 
+\qquad u'_y(x,\,0) = 0.$$
+We first try to separate the variables, i.e. seek the solution of (1) of the form
+$$u(x,\,y) \;:=\; X(x)\,Y(y).$$
+Then we get
+$$u'_x = X'Y, \qquad u''_{xx} = X''Y, \qquad u'_y = XY', 
+\qquad u''_{yy} = XY'',$$
+and thus (1) gets the form
+\begin{align}
+X''Y+XY'' \;=\; 0
+\end{align}
+and the boundary conditions
+$$X(0) \;=\; X(\pi) \;=\; 0, \quad X(x) \;=\; \frac{C}{Y(\pi)}, \quad Y'(0) \;=\; 0.$$
+We separate the variables in (2):
+$$\frac{X''}{X} \;=\; -\frac{Y''}{Y}$$
+This equation is not possible unless both sides are equal to a same negative \PMlinkescapetext{constant} $-k^2$, which implies for\, $X'' = -k^2X$\, the solution
+$$X \;:=\; C_1\cos{kx}+C_2\sin{kx}$$
+and for\, $Y'' \;=\; k^2Y$\, the solution
+$$Y \;:=\; D_1\cosh{ky}+D_2\sinh{ky}.$$
+The two first boundary conditions give\, $0 = X(0) = C_1$,\, $0 = X(\pi) = 0+C_2\sin{k\pi}$,\, and since\, $C_2 \ne 0$,\, we must have\, $\sin{k\pi} = 0$,\, i.e.
+$$0 \;<\; k \;:=\; n \;=\; 1,\,2,\,3,\,\ldots$$
+Therefore 
+$$X(x) \;:=\; C_2\sin{nx}, \quad Y'(y) \;\equiv\; nD_1\sinh{ny}+nD_2\cosh{ny}.$$
+The fourth boundary condition now yields that\, $0 = Y'(0) = nD_2$;\,
+thus\, $D_2 = 0$\, and\, $Y(y) := D_1\cosh{ny}.$\, So (1) has infinitely many solutions
+\begin{align}
+u_n \;:=\; C_2D_1\sin{nx}\cosh{ny} \;=\; A_n\sin{nx}\cosh{ny}
+\end{align}
+with\, $n\in\mathbb{Z}_+$\, and they all satisfy the boundary conditions except the third.\, Because of the linearity of (1), also the sum 
+$$u \;:=\; \sum_{n=1}^\infty A_n\sin{nx}\cosh{ny}$$
+of the functions (3) satisfy (1) and those boundary conditions, provided that this series converges.\, The third boundary condition requires that
+$$C \;=\; u(x,\,\pi) \;=\; \sum_{n=1}^\infty A_n\sin{nx}\cosh{n\pi} \;=\;
+    \sum_{n=1}^\infty(A_n\cosh{n\pi})\sinh{nx}$$
+on the interval\, $0 \leqq x \leqq \pi$.\, But this is the Fourier sine series of the constant function\, $x \mapsto C$\, on the half-interval\, $[0,\,\pi]$,\, whence 
+$$A_n\cosh{n\pi} \;=\; \frac{2}{\pi}\int_0^\pi C\sin{nx}\,dx \;=\; 
+  \frac{2C}{n\pi}(1\!-\!(-1)^n) \quad \forall n\in\mathbb{Z}_+.$$
+The \PMlinkname{even}{EvenNumber} $n$'s here give 0 and the \PMlinkname{odd}{EvenNumber} give
+$$A_{2m+1} \;:=\; \frac{4C}{(2m\!+\!1)\pi\cosh(2m\!+\!1)\pi}
+\quad (m = 0,\,1,\,2,\,\ldots)$$
+
+Thus we obtain the solution
+$$u(x,\,y) \;:=\; 
+\frac{4C}{\pi}\sum_{m=0}^\infty\frac{\sin(2m\!+\!1)x\cosh(2m\!+\!1)y}
+                                    {(2m\!+\!1)\cosh(2m\!+\!1)\pi}.$$
+It can be shown that this series converges in the whole \PMlinkescapetext{square} of the plate.
+
+\subsection*{Visualization of the solution}
+
+\begin{figure}[!htb]
+\begin{center}
+\includegraphics{heat-surface.eps}
+\caption{Surface plot of the solution $u(x,\,y)$, for $C = 1$} 
+\end{center}
+\end{figure}
+
+\begin{figure}[!htb]
+\begin{center}
+\includegraphics{heat-color.eps}
+\caption{Color-coded plot of the temperature $u(x,\,y)$}
+\end{center}
+\end{figure}
+
+\textbf{Remark.}\, The function $u$ has been approximated in the plot by computing a partial sum of the true infinite-series solution.\, However,
+there is substantial numerical error in the approximate solution near\, 
+$y = \pi$,\, evident in the small oscillations observed in the surface plot, that should not be there in \PMlinkescapetext{theory}.\, This phenomenon is actually inevitable given that the boundary conditions are actually discontinuous at the corners\, $(0,\,\pi)$\, and\, $(\pi,\,\pi)$.
+
+More precisely, observe that when\, $y = \pi$,\, the \PMlinkescapetext{formula} for\, $u(x,\,y)$\, reduces to the Fourier series
+\[
+\frac{4C}{\pi} \left( \sin{x}+\frac{\sin{3x}}{3}+\frac{\sin{5x}}{5}+\dotsb \right)
+\]
+for the discontinuous function on\, $[-\pi,\,\pi]$:
+\[
+x \mapsto \begin{cases}
+ C\,, & 0 < x < \pi \\
+ -C\,, & -\pi < x < 0
+\end{cases}\,
+\]
+That means the Fourier \PMlinkescapetext{expansion} will necessarily be subject to the {\em Gibbs phenomenon}.\, Of course, the series also cannot converge absolutely; in other \PMlinkescapetext{words, the terms} of the series decay too slowly in magnitude, adversely affecting the numerical solution.
+
+\begin{itemize}
+\item
+\PMlinkexternal{Python program to compute\, $u(x,\,y)$\, and produce the two figures}{http://gold-saucer.afraid.org/math/planetmath/ExampleOfSolvingTheHeatEquation/heat.py}
+\end{itemize}
+
+%%%%%
+%%%%%
+\end{document}

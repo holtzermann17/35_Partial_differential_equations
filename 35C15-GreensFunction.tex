@@ -1,0 +1,92 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GreensFunction}
+\pmcreated{2013-03-22 14:43:36}
+\pmmodified{2013-03-22 14:43:36}
+\pmowner{PrimeFan}{13766}
+\pmmodifier{PrimeFan}{13766}
+\pmtitle{Green's function}
+\pmrecord{7}{36355}
+\pmprivacy{1}
+\pmauthor{PrimeFan}{13766}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{35C15}
+\pmrelated{PoissonsEquation}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts,euscript}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+%%%%% My special things
+\newcommand{\DSp}{(\EuScript{F}(\Omega))^*}
+\newcommand{\FOx}{\EuScript{F}(\Omega_x)}
+\newcommand{\GOy}{\EuScript{G}(\Omega_y)}
+%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\section*{Some general preliminary considerations}
+Let $(\Omega,\mu)$ be a bounded measure space and $\EuScript{F}(\Omega)$ be a linear function
+space of bounded functions defined on $\Omega$, i.e. $\EuScript{F}(\Omega)\subset\EuScript{L}^\infty(\Omega)$.
+We would like to note two types of functionals from the dual space $\DSp$, which
+will be used here:
+\begin{enumerate}
+\item Each function $g(x)\in\EuScript{L}^1(\Omega)$ defines a functional $\varphi\in\DSp$ in the
+    following way:
+    $$
+        \varphi(f)=\int\limits_{\Omega} g(x)\,f(x)\,d\mu.
+    $$
+    Such functional we will call \textit{regular} functional and function $g$ --- its \textit{generator}.
+
+\item For each $x\in\Omega$, we will consider a functional $\delta_x\in\DSp$ defined as follows:
+    \begin{equation}\label{dFn}
+        \delta_x(f)=f(x).
+    \end{equation}
+    Since generally, we can not speak about values at the point for functions from $\EuScript(L)^\infty$,
+    in the following, we assume some regularity for functions from considered spaces, so that
+    (\ref{dFn}) is correctly defined.
+
+\end{enumerate}
+
+
+\section*{Necessary notations and motivation}
+Let $(\Omega_x,\mu_x),\,(\Omega_y,\mu_y)$ be some bounded measure spaces; $\FOx,\GOy$ be some
+linear function spaces. Let $A:\FOx\rightarrow\GOy$ be a linear operator which has a well-defined
+inverse $A^{-1}:\GOy\rightarrow\FOx$.
+
+Consider an operator equation:
+\begin{equation}\label{OpEq}
+    Af=g
+\end{equation}
+where $f\in\FOx$ is unknown and $g\in\GOy$ is given. We are interested to have an integral representation
+for solution of (\ref{OpEq}). For this purpose we write:
+$$
+    f(x)=\delta_x(f)=\delta_x(A^{-1}(g))=[\, (A^{-1})^*\delta_x \,](g).
+$$
+
+\section*{Definition of Green's function}
+If $\forall x\in\Omega_x$ the functional $(A^{-1})^*\delta_x$ is regular with generator
+$G(\cdot,y)\in\EuScript{L}^1(\Omega_y)$, then $G$ is called \textbf{Green's function of
+operator $A$} and solution of (\ref{OpEq}) admits the following integral representation:
+$$
+    f(x)=\int\limits_{\Omega_y}G(x,y)\,g(y)\,d\mu_y
+$$
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,94 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{MaxwellsEquations}
+\pmcreated{2013-03-22 17:51:34}
+\pmmodified{2013-03-22 17:51:34}
+\pmowner{invisiblerhino}{19637}
+\pmmodifier{invisiblerhino}{19637}
+\pmtitle{Maxwell's equations}
+\pmrecord{28}{40336}
+\pmprivacy{1}
+\pmauthor{invisiblerhino}{19637}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{35Q60}
+\pmclassification{msc}{78A25}
+\pmrelated{PartialDifferentialEquation}
+\pmdefines{Faraday's Law}
+\pmdefines{Ampere's Law}
+\pmdefines{Gauss' Law of Electrostatics}
+\pmdefines{Gauss' Law of Magnetostatics}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Maxwell's equations are a set of four partial differential equations first combined by James Clerk Maxwell. They may also be written as integral equations. Two other important equations, the electromagnetic wave equation and the equation of conservation of charge, may be derived from them.
+\subsection{Notation}
+As this article considers merely the mathematical aspects of the equations, natural units have been used throughout. For their use in physics see any classical electromagnetism textbook.
+\[
+\mathbf{E} = \mbox{Electric field strength}
+\]
+\[
+\mathbf{B} = \mbox{Magnetic flux density}
+\]
+\subsection{Gauss' Law of Electrostatics}
+\[
+\nabla \cdot \mathbf{E} = 0
+\]
+\[
+\oint_S  \mathbf{E} \cdot \mathrm{d}\mathbf{S} = 0
+\]
+\subsection{Gauss' Law of Magnetostatics}
+\[
+\nabla \cdot \mathbf{B} = 0
+\]
+\[
+\oint_S \mathbf{B} \cdot \mathrm{d}\mathbf{S} = 0
+\]
+\subsection{Faraday's Law}
+Differential form
+\[
+\nabla \times \mathbf{E} = -\frac{ \partial \mathbf{B}}{\partial t}
+\]
+Integral form
+\[
+\oint_{C} \mathbf{E} \cdot \mathrm{d}\mathbf{l} = -  \frac{\mathrm{d}}{\mathrm{d} t} \left( \int_{S} \mathbf{B} \cdot \mathrm{d}\mathbf{S} \right)
+\]
+\subsection{Amp\`ere's Law}
+Differential form
+\[
+\nabla \times \mathbf{B} = \frac{ \partial \mathbf{E}}{\partial t}
+\]
+Integral form
+\[
+\oint_C \mathbf{B} \cdot \mathrm{d}\mathbf{l} = \int_S \frac{\partial \mathbf{E}}{\partial t} \cdot \mathrm{d} \mathbf{S}
+\]
+\subsection{Properties of Maxwell's Equations}
+These four equations together have several interesting properties:
+\begin{itemize}
+\item Lorentz invariance
+\item The fields $\mathbf{E}$ and $\mathbf{B}$ may be Helmholtz decomposed into irrotational and solenoidal potentials. A gauge transformation in these variables does not affect the values of the fields.
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

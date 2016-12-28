@@ -1,0 +1,65 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExampleOfEliminatingHigherorderDerivatives}
+\pmcreated{2013-03-22 14:37:10}
+\pmmodified{2013-03-22 14:37:10}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{example of eliminating higher-order derivatives}
+\pmrecord{11}{36198}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{35A10}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+To show how a partial differential equation involving partial derivatives of order higher than the first can be re-expressed as a system involving only first derivatives to which the simple form of the Cauchy-Kowalewski theorem can be applied, consider the following example:
+ $${\partial^2 u \over \partial t^2} = f \left( {\partial^2 u \over \partial x^2}, 
+{\partial^2 u \over \partial t \partial x} \right)$$
+
+First, the second derivative with respect to $t$ can be eliminated by introducing a new variable $u_t$ and a adding a differential equation which sets $u_t$ equal to the derivative of $u$.
+ $${\partial u_t \over \partial t} = f \left( {\partial^2 u \over \partial x^2}, {\partial u_t \over \partial x} \right)$$
+ $${\partial u \over \partial t} = u_t$$
+
+To eliminate the second derivatives involving $x$, we first introduce variables $u_{xx}$, $u_{tx}$ and $u_{tt}$.  To obtain an equation with $\partial u_{tt} / \partial t$ on the left-hand side, differentiate the original equation with respect to $t$
+ $${\partial^3 u \over \partial t^3} = {f'}_1 \left( {\partial^2 u \over \partial x^2}, {\partial^2 u \over \partial t \partial x} \right) {\partial^3 u \over \partial t \partial x^2} + {f'}_2 \left( {\partial^2 u \over \partial x^2}, {\partial^2 u \over \partial t \partial x} \right) {\partial^3 u \over \partial t^2 \partial x}$$
+The notation ${f'}_1$ and ${f'}_2$ denotes the partial derivatives of the function $f$ with respect to its first and second arguments.  Consider the following system of equations:
+ $${\partial u \over \partial t} = u_t$$
+ $${\partial u_t \over \partial t} = f (u_{tx}, u_{xx})$$
+ $${\partial u_x \over \partial t} = {\partial u_t \over \partial x}$$
+ $${\partial u_{tt} \over \partial t} = {f'}_1 (u_{tx}, u_{xx}) {\partial u_{tx} \over \partial x} + {f'}_2 (u_{tx}, u_{xx}) {\partial u_{t} \over \partial x}$$
+ $${\partial u_{tx} \over \partial t} = {\partial u_{tt} \over \partial x}$$
+ $${\partial u_{xx} \over \partial t} = {\partial u_{tx} \over \partial x}$$
+These equations will be satisfied if $u$ satisfies the orignal equation and the new variables are set equal to appropriate partial derivatives of $u$.  Conversely, by eliminating variables, one can show that, for any solution of the above system of equations which satisfies the boundary conditions
+ $$u_x = {\partial u \over \partial x}$$
+ $$u_{xx} = {\partial^2 u \over \partial x^2}$$
+ $$u_{tx} = {\partial u_t \over \partial x}$$
+ $$u_{tt} = f(u_{xt},u_{xx})$$
+on the surface $t = 0$, the variable $u$ will satisfy the original equation.
+
+The same approach can be used to rewrite systems of any number of equations in any number of variables involving derivatives of arbitrary order as a system involving only first derivatives such that the left hand side is the time derivative of a variable and the right hand side only involves spatial derivatives.  However, trying to write out the solution in general can lead to awkward and complicated notation.  There is no particularly good reason to do so because, upon seeing the example presented here, it becomes obvious that it is possible.
+%%%%%
+%%%%%
+\end{document}

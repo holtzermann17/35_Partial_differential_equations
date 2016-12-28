@@ -1,0 +1,110 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{UsingLaplaceTransformToSolveHeatEquation}
+\pmcreated{2015-05-30 6:55:05}
+\pmmodified{2015-05-30 6:55:05}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{using Laplace transform to solve heat equation}
+\pmrecord{11}{41836}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{35K20}
+\pmclassification{msc}{35Q99}
+\pmclassification{msc}{35K05}
+\pmsynonym{using Laplace transform to solve partial differential equation}{UsingLaplaceTransformToSolveHeatEquation}
+%\pmkeywords{PDE}
+\pmrelated{LaplaceTransform}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+Along the whole positive $x$-axis, we have an \PMlinkescapetext{ideal} heat-conducting rod, the surface of which is \PMlinkescapetext{isolated}.\, The initial temperature of the rod is 0 \PMlinkescapetext{degrees}.\, Determine the temperature function 
+\,$u(x,\,t)$\, when at the time \,$t = 0$
+ 
+(a) the head \,$x = 0$\, of the rod is set permanently to the constant temperature;
+
+(b) through the head \,$x = 0$\, one directs a constant heat flux.\\
+
+
+The heat equation in one dimension reads
+\begin{align}
+u_{xx}''(x,\,t) \;=\; \frac{1}{c^2}\,u_t'(x,\,t).
+\end{align}
+In this we have
+\begin{align*}
+\mbox{(a) }
+\begin{cases}
+\mbox{boundary conditions}\;\, u(\infty,\,t) = 0, \qquad u(0,\,t) = u_0, \\
+\mbox{initial conditions} \qquad u(x,\,0) = 0, \qquad \underbrace{u_t'(x,\,0) = 0}_{\mbox{for\;} x\,>\,0} 
+\end{cases}
+\end{align*}
+and
+\begin{align*}
+\mbox{(b) }
+\begin{cases}
+\mbox{boundary conditions}\;\, u(\infty,\,t) = 0, \quad u_x'(0,\,t) = -k, \\
+\mbox{initial conditions} \qquad u(x,\,0) = 0, \quad \underbrace{u_t'(x,\,0) = 0}_{\mbox{for\;} x\,>\,0}. 
+\end{cases}
+\end{align*}
+
+For solving (1), we first form its Laplace transform (see the table of Laplace transforms)
+$$U_{xx}''(x,\,s) \;=\; \frac{1}{c^2}[s\,U(x,\,s)-u(x,\,0)],$$
+which is a \PMlinkescapetext{simple} ordinary linear differential equation
+$$U_{xx}''(x,\,s) \;=\; \left(\frac{\sqrt{s}}{c}\right)^2U(x,\,s)$$
+of \PMlinkname{order}{ODE} two.\, Here, $s$ is only a parametre, and the general solution of the equation is 
+$$U(x,\,s) \;=\; C_1e^{\frac{\sqrt{s}}{c}x}+C_2e^{-\frac{\sqrt{s}}{c}x}$$
+(see \PMlinkname{this entry}{SecondOrderLinearODEWithConstantCoefficients}).\, Since 
+$$U(\infty,\,s) \;=\; \int_0^\infty\!e^{-st}u(\infty,\,t)\,dt \;=\;\int_0^\infty\!0\,dt \;\equiv\; 0,$$
+we must have\, $C_1 = 0$.\, Thus the Laplace transform of the solution of (1) is in both cases (a) and (b)
+\begin{align}
+U(x,\,s) \;=\; C_2e^{-\frac{\sqrt{s}}{c}x}.
+\end{align}
+
+
+For (a), the second boundary condition implies \, $\displaystyle U(0,\,s) = \frac{u_0}{s}$.\, But by (2) we must have\, $U(0,\,s) = C_2\!\cdot\!1$, whence we infer that\, $\displaystyle C_2 = \frac{u_0}{s}$.\, Accordingly, 
+$$U(x,\,s) \;=\; u_0\cdot\frac{1}{s}e^{-\frac{x}{c}\sqrt{s}},$$
+which corresponds to the solution function
+$$u(x,\,t) \;:=\; u_0\mbox{ erfc}\frac{x}{2c\sqrt{t}}$$
+of the heat equation (1).\\
+
+For (b), the second boundary condition says that\, $\displaystyle U_x'(0,\,s) = -\frac{k}{s}$,\, and since (2) implies that\, 
+$U_x'(x,\,s) =-\frac{\sqrt{s}}{c}C_2e^{-\frac{\sqrt{s}}{c}x}$,\, we can infer that now\, 
+$$C_2 \;=\; \frac{ck}{s\sqrt{s}}.$$
+Thus
+$$U(x,\,s) \;=\; \frac{ck}{s\sqrt{s}}e^{-\frac{x}{c}\sqrt{s}},$$
+which corresponds to
+$$u(x,\,t) \;:=\; k\left[2c\sqrt{\frac{t}{\pi}}e^{-\frac{x^2}{4c^2t}}-x\mbox{ erfc}\frac{x}{2c\sqrt{t}}\right]\!.$$\\
+
+
+
+
+
+%%%%%
+%%%%%
+\end{document}

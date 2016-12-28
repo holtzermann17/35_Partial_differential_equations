@@ -1,0 +1,135 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DiracEquation}
+\pmcreated{2013-03-22 17:54:46}
+\pmmodified{2013-03-22 17:54:46}
+\pmowner{Raphanus}{20453}
+\pmmodifier{Raphanus}{20453}
+\pmtitle{Dirac equation}
+\pmrecord{21}{40407}
+\pmprivacy{1}
+\pmauthor{Raphanus}{20453}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{35Q40}
+\pmclassification{msc}{81Q05}
+%\pmkeywords{relativistic}
+%\pmkeywords{D'Alembertian}
+\pmrelated{Spinor}
+\pmrelated{KleinGordonEquation}
+\pmrelated{SchrodingersWaveEquation}
+\pmrelated{PauliMatrices}
+\pmdefines{Feynman slash notation}
+\pmdefines{Dirac matrices}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+\usepackage{cancel}
+% define commands here
+
+\begin{document}
+The Dirac equation is an equation derived by Paul Dirac in 1927 that describes relativistic spin $1/2$ particles (fermions). It is given by:
+\[
+(\gamma^\mu \partial_\mu - im)\psi = 0
+\]
+The Einstein summation convention is used.
+\subsection{Derivation}
+Mathematically, it is interesting as one of the first uses of the spinor calculus in mathematical physics. Dirac began with the relativistic equation of total energy:
+\[
+E = \sqrt{p^2c^2 + m^2c^4}
+\]
+As Schr\"odinger had done before him, Dirac then replaced $p$ with its quantum mechanical operator, $\hat{p} \Rightarrow i\hbar \nabla$. Since he was looking for a Lorentz-invariant equation, he replaced $\nabla$ with the D'Alembertian or wave operator
+\[
+\Box = \nabla^2 - \frac{1}{c^2} \frac{\partial^2}{\partial t^2}
+\]
+Note that some authors use $\Box^2$ for the D'Alembertian. Dirac was now faced with the problem of how to take the square root of an expression containing a differential operator. He proceeded to factorise the d'Alembertian as follows:
+\[
+\nabla^2 - \frac{1}{c^2} \frac{\partial^2}{\partial t^2} = (a^0 \frac{\partial}{\partial x} + a^1 \frac{\partial}{\partial y} + a^2 \frac{\partial}{\partial z} + a^3\frac{i}{c} \frac{\partial}{\partial t})^2
+\]
+Multiplying this out, we find that:
+\[
+(a^0)^2 = (a^1)^2 = (a^2)^2 = (a^3)^2 = 1
+\]
+And
+\[
+a^0a^1 + a^1a^0 = a^0a^2 + a^2a^0 = a^0a^3 + a^3a^0 = a^1a^2 + a^2a^1 = a^1a^3 + a^3a^1 = a^2a^3 + a^3a^2 = 0
+\]
+Clearly these relations cannot be satisfied by scalars, so Dirac sought a set of four matrices which satisfy these relations.  These are now known as the Dirac matrices, and are given as follows:
+\[
+\gamma^0 = -ia^0 = 
+\begin{pmatrix} 
+1 & 0 & 0 & 0 \\
+0 & 1 & 0 & 0 \\ 
+0 & 0 & -1 & 0 \\
+0 & 0 & 0 & -1 \end{pmatrix},
+\gamma^1 = -ia^1 = 
+\begin{pmatrix}
+0 & 0 & 0 & 1 \\
+0 & 0 & 1 & 0 \\
+0 & -1 & 0 & 0 \\
+-1 & 0 & 0 & 0 \end{pmatrix}
+\]
+\[
+\gamma^2 = -ia^2 =
+\begin{pmatrix}
+0 & 0 & 0 & -i \\
+0 & 0 & i & 0 \\
+0 & i & 0 & 0 \\
+-i & 0 & 0 & 0 \end{pmatrix},
+\gamma^3 = a^3 =
+\begin{pmatrix}
+0 & 0 & 1 & 0 \\
+0 & 0 & 0 & -1 \\
+-1 & 0 & 0 & 0 \\
+0 & 1 & 0 & 0 \end{pmatrix}
+\]
+These matrices are also known as the generators of the special unitary group of order 4, i.e. the group of $4 \times 4$ matrices with unit determinant.
+Using these matrices, and switching to natural units ($\hbar = c = 1$) we can now obtain the Dirac equation:
+\[
+(\gamma^\mu \partial_\mu - im)\psi = 0
+\]
+\subsection{Feynman slash notation}
+Richard Feynman developed the following convenient notation for terms involving Dirac matrices:
+\[
+\gamma^\mu q_\mu := \cancel{q}
+\]
+Using this notation, the Dirac equation is simply
+\[
+(\cancel{\partial} - im)\psi = 0
+\]
+\subsection{Relationship with Pauli matrices}
+The Dirac matrices can be written more concisely as matrices of Pauli matrices, as follows:
+\begin{align*}
+\gamma_0 &= \begin{pmatrix} \sigma_0 & 0\\
+                            0 & -\sigma_0
+            \end{pmatrix}\\
+\gamma_1 &= \begin{pmatrix} 0 & \sigma_1\\
+                            -\sigma_1 & 0
+            \end{pmatrix}\\
+\gamma_2 &= \begin{pmatrix} 0 & \sigma_2\\
+                            -\sigma_2 & 0
+            \end{pmatrix}\\
+\gamma_3 &= \begin{pmatrix} 0 & \sigma_3\\
+                            -\sigma_3 & 0
+            \end{pmatrix}
+\end{align*}
+%%%%%
+%%%%%
+\end{document}

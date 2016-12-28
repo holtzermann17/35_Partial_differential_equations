@@ -1,0 +1,59 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PoissonsEquation}
+\pmcreated{2013-03-22 13:38:28}
+\pmmodified{2013-03-22 13:38:28}
+\pmowner{pbruin}{1001}
+\pmmodifier{pbruin}{1001}
+\pmtitle{Poisson's equation}
+\pmrecord{6}{34291}
+\pmprivacy{1}
+\pmauthor{pbruin}{1001}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{35J05}
+%\pmkeywords{partial differential equation}
+\pmrelated{HelmholtzDifferentialEquation}
+\pmrelated{LaplacesEquation}
+\pmrelated{GreensFunction}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\PMlinkescapeword{source}
+\PMlinkescapeword{distribution}
+
+Poisson's equation is a second-order partial differential equation which arises in physical problems such as finding the electric potential of a given charge distribution.  Its general form in $n$ \PMlinkescapetext{dimensions} is
+$$
+\nabla^2\phi(\mathbf r)=\rho(\mathbf r)
+$$
+where $\nabla^2$ is the Laplacian and $\rho:D\to\mathbb{R}$, often called a \emph{source \PMlinkescapetext{function}}, is a given function on some subset $D$ of $\mathbb{R}^n$.  If $\rho$ is identically zero, the Poisson equation reduces to the Laplace equation.
+
+The Poisson equation is linear, and therefore obeys the \emph{superposition principle}: if $\nabla^2\phi_1=\rho_1$ and $\nabla^2\phi_2=\rho_2$, then $\nabla^2(\phi_1+\phi_2)=\rho_1+\rho_2$.  This fact can be used to construct solutions to Poisson's equation from \emph{fundamental solutions}, or \emph{Green's functions}, where the source distribution is a delta function.
+
+A very important case is the one in which $n=3$, $D$ is all of $\mathbb{R}^3$, and $\phi(\mathbf r)\to 0$ as $\vert\mathbf r\vert\to\infty$.  The general solution is then given by
+$$
+\phi(\mathbf r)=-\frac{1}{4\pi}\int_{\mathbb{R}^3}\frac{\rho(\mathbf{r'})}{\vert\mathbf{r}-\mathbf{r'}\vert}\mathrm{d}^3\mathbf{r'}.
+$$
+%%%%%
+%%%%%
+\end{document}

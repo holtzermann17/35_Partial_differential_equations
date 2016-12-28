@@ -1,0 +1,90 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DAlembertAndDBernoulliSolutionsOfWaveEquation}
+\pmcreated{2013-03-22 18:23:15}
+\pmmodified{2013-03-22 18:23:15}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{d'Alembert and D. Bernoulli solutions of wave equation}
+\pmrecord{11}{41031}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{35L15}
+\pmclassification{msc}{35L05}
+\pmrelated{AdditionFormulasForSineAndCosine}
+\pmrelated{SchrodingersWaveEquation}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+Let's consider the \PMlinkname{d'Alembert's solution}{WaveEquation}
+\begin{align}
+u(x,\,t) \,:=\, \frac{1}{2}[f(x\!-\!ct)+f(x\!+\!ct)]+\frac{1}{2c}\int_{x-ct}^{x+ct}g(s)\,ds
+\end{align}
+of the wave equation in one dimension in the special case when the other initial condition is
+\begin{align}
+u'_t(x,\,0) \,:=\, g(x) \,\equiv\, 0.
+\end{align}
+We shall see that the solution is equivalent with the solution of D. Bernoulli.\\ \\
+
+We \PMlinkescapetext{expand} the given function $f$ to the Fourier sine series on the interval \,$[0,\,p]$:
+$$
+f(y) \,=\, \sum_{n=1}^\infty A_n\sin\frac{n\pi y}{p} \quad \mbox{with}\;\; 
+A_n = \frac{2}{p}\int_0^pf(x)\sin\frac{n\pi x}{p}\,dx \quad (n = 1,\,2,\,\ldots)
+$$
+Thus we may write
+\begin{align*}
+\begin{cases}
+   f(x\!-\!ct) = \sum_{n=1}^\infty A_n\sin\!\left(\frac{n\pi x}{p}-\frac{n\pi ct}{p}\right)= 
+\sum_{n=1}^\infty A_n\left(\sin\frac{n\pi x}{p}\cos\frac{n\pi ct}{p}-\cos\frac{n\pi x}{p}\sin\frac{n\pi ct}{p}\right),
+\\ f(x\!+\!ct) = \sum_{n=1}^\infty A_n\sin\!\left(\frac{n\pi x}{p}+\frac{n\pi ct}{p}\right)= 
+\sum_{n=1}^\infty A_n\left(\sin\frac{n\pi x}{p}\cos\frac{n\pi ct}{p}+\cos\frac{n\pi x}{p}\sin\frac{n\pi ct}{p}\right). 
+\end{cases}
+\end{align*}
+Adding these equations and dividing by 2 yield
+\begin{align}
+u(x,\,t) = \frac{1}{2}[f(x\!-\!ct)+f(x\!+\!ct)] 
+= \sum_{n=1}^\infty A_n\cos\frac{n\pi ct}{p}\sin\frac{n\pi x}{p},
+\end{align}
+which indeed is the \PMlinkname{solution of D. Bernoulli}{SolvingTheWaveEquationByDBernoulli} in the case\, $g(x) \equiv 0$.\\
+
+\textbf{Note.}\, The solution (3) of the wave equation is especially \PMlinkescapetext{simple} in the special case where one has besides (2) the sine-formed initial condition
+\begin{align}
+u(x,\,0) \,:=\, f(x) \,\equiv\, \sin\frac{\pi x}{p}.
+\end{align}
+Then \,$A_n = 0$\, for every $n$ except 1, and one obtains
+\begin{align}
+u(x,\,t) \,= \cos\frac{\pi ct}{p}\sin\frac{\pi x}{p}\,.
+\end{align}
+
+\textbf{Remark.}\, 
+In the case of quantum systems one has \PMlinkname{Schr\"odinger's wave equation}{SchrodingersWaveEquation}
+whose solutions are different from the above. 
+%%%%%
+%%%%%
+\end{document}

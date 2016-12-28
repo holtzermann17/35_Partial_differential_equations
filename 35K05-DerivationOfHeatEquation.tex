@@ -1,0 +1,77 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DerivationOfHeatEquation}
+\pmcreated{2013-03-22 18:45:04}
+\pmmodified{2013-03-22 18:45:04}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{derivation of heat equation}
+\pmrecord{9}{41528}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{35K05}
+\pmclassification{msc}{35Q99}
+%\pmkeywords{Gauss theorem}
+%\pmkeywords{Ostrogradsky theorem}
+\pmrelated{DerivationOfWaveEquation}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+Let us consider the heat conduction in a \PMlinkescapetext{homogeneous matter with density} $\varrho$ and specific heat capacity $c$.\, Denote by \,$u(x,\,y,\,z,\,t)$\, the temperature in the point \,$(x,\,y,\,z)$\, at the time $t$.\, Let $a$ be a \PMlinkescapetext{simple} \PMlinkescapetext{closed} surface in the matter and $v$ the spatial region \PMlinkescapetext{restricted} by it.
+
+When the growth of the temperature of a volume element $dv$ in the time $dt$ is $du$, the element releases the amount 
+$$-du\;c\,\varrho\,dv \;=\; -u'_t\,dt\,c\,\varrho\,dv$$
+of heat, which is the heat flux through the surface of $dv$.\, Thus if there are no sources and sinks of heat in $v$, the heat flux through the surface $a$ in $dt$ is
+\begin{align}
+-dt\int_vc\varrho u'_t\,dv.
+\end{align}
+On the other hand, the flux through $da$ in the time $dt$ must be proportional to $a$, to $dt$ and to the derivative of the temperature in the direction of the normal line of the surface element $da$, i.e. the flux is
+$$-k\,\nabla{u}\cdot d\vec{a}\;dt,$$
+where $k$ is a positive \PMlinkescapetext{constant} (because the heat \PMlinkescapetext{flows} always from higher temperature to lower one).\, Consequently, the heat flux through the whole surface $a$ is
+$$-dt\oint_ak\nabla{u}\cdot d\vec{a},$$
+which is, by the Gauss's theorem, same as
+\begin{align}
+-dt\int_vk\,\nabla\cdot\nabla{u}\,dv \;=\; -dt\int_vk\,\nabla^2u\,dv.
+\end{align}
+Equating the expressions (1) and (2) and dividing by $dt$, one obtains
+$$\int_vk\,\nabla^2u\,dv \;=\; \int_vc\,\varrho u'_t\,dv.$$
+Since this equation is valid for any region $v$ in the matter, we infer that 
+$$k\,\nabla^2u \;=\; c\,\varrho u'_t.$$
+Denoting\, $\displaystyle\frac{k}{c\varrho} = \alpha^2$,\, we can write this equation as
+\begin{align}
+\alpha^2\nabla^2u \;=\; \frac{\partial u}{\partial t}.
+\end{align}
+This is the differential equation of heat conduction, first derived by Fourier.
+
+\begin{thebibliography}{9}
+\bibitem{K.V.}{\sc K. V\"ais\"al\"a:} {\em Matematiikka IV}.\, Handout Nr. 141.\quad Teknillisen korkeakoulun ylioppilaskunta, Otaniemi, Finland (1967).
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

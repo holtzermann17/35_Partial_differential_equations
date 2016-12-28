@@ -1,0 +1,170 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{VibratingStringWithVariableDensity}
+\pmcreated{2013-03-22 17:26:42}
+\pmmodified{2013-03-22 17:26:42}
+\pmowner{perucho}{2192}
+\pmmodifier{perucho}{2192}
+\pmtitle{vibrating string with variable density}
+\pmrecord{9}{39826}
+\pmprivacy{1}
+\pmauthor{perucho}{2192}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{35L05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem{theorem}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+
+\begin{document}
+The unidimensional wave's problem may be stated as
+\begin{equation*}
+\frac{\partial^2u}{\partial t^2}-c^2(x)\frac{\partial^2u}{\partial x^2}=f(x,t), \qquad x\in(0,l),\quad t>0,
+\end{equation*}
+with initial conditions
+\begin{equation*}
+\begin{cases}
+\,\, u(x,0)=f(x), \\
+\,\, \frac{\partial u}{\partial t}(x,0)=g(x),
+\end{cases}
+\end{equation*}
+and boundary conditions
+\begin{equation*}
+\begin{cases}
+\,\, u(0,t)=0, \\
+\,\, u(l,t)=0,
+\end{cases}
+\end{equation*}
+which may be specialized to a string's motion if we physically interpret $c^2(x)=T_0/\rho(x)$ as the ratio between the string's initial tension and its linear density. We will discuss the free string's vibrations (i.e. $f(x,t)\equiv 0$) given by the string's problem
+\begin{equation}
+\frac{\partial^2 u}{\partial t^2}-(1+x)^2\frac{\partial^2 u}{\partial x^2}=0, \qquad x\in (0,1), \quad t>0,
+\end{equation}
+initial conditions
+\begin{equation*}
+\begin{cases}
+\,\, u(x,0)=f(x), & \textrm{initial string's form}, \\
+\,\, \frac{\partial u}{\partial t}(x,0)=0, & \textrm{string starts from the rest},
+\end{cases}
+\end{equation*} 
+and boundary conditions
+\begin{equation*}
+\begin{cases}
+\,\, u(0,t)=0, & \textrm{string's left end fixed}, \\
+\,\, u(1,t)=0, & \textrm{string's right end fixed}.
+\end{cases}
+\end{equation*}
+Without loss of generality, we assume unitary the natural undeformed string's length. The solution of this problem approaches to a string's motion whose linear density is proportional to $(1+x)^{-2}$. The \emph{method of separation of variables} (i.e. $u(x,t)=X(x)T(t)$) gives the equations
+\begin{equation}
+X''+\frac{\lambda}{(1+x)^2}X=0,
+\end{equation}
+with boundary conditions $X(0)=X(1)=0$, and
+\begin{equation}
+T''+\lambda T=0,
+\end{equation}
+with initial conditions $T(0)=1$, $T'(0)=0$. In these equations, $\lambda$ is a constant parameter. \\
+In (2), we are dealing with a Sturm-Liouville problem. To find out the eigenvalues, one searches the solution of (2) on the form $X(x)=(1+x)^a$, as we realize that (2) outcomes the associated characteristic equation
+\begin{equation*}
+a(a-1)+\lambda=0. \qquad \textrm{That is}, \qquad a=\frac{1}{2}(1\pm\sqrt{1-4\lambda}).
+\end{equation*}
+In order to satisfying $X(0)=0$, let us choose
+\begin{equation*}
+X(x)=(1+x)^{\frac{1}{2}(1+\sqrt{1-4\lambda})}-(1+x)^{\frac{1}{2}(1-\sqrt{1-4\lambda})}.
+\end{equation*}
+Thus, the boundary condition $X(1)=0$ becomes
+\begin{equation*}
+2^{\frac{1}{2}(1+\sqrt{1-4\lambda})}-2^{\frac{1}{2}(1-\sqrt{1-4\lambda})}=0, 
+\quad \textrm{or}\quad 2^{\sqrt{1-4\lambda}}=1.
+\end{equation*}
+We next study all the possible cases for the eigenvalue $\lambda$ in the last above equation.
+\begin{enumerate}
+\item $\lambda<1/4$. Then $\sqrt{1-4\lambda}$ is real, and the equation does not have solution.
+\item $\lambda=1/4$. Then the pair of solutions, above indicated, will not be independent. Indeed the functions $(1+x)^{1/2}$ and  $(1+x)^{1/2}\log(1+x)$ are linearly independent solutions of (2), in $(0,1)$. Nevertheless, although the last one satisfies the boundary condition at $x=0$, it does not vanish at $x=1$. Hence, $\lambda=1/4$ is not an eigenvalue.
+\item $\lambda>1/4$. Then $\sqrt{1-4\lambda}$ is imaginary. We may even get two solutions by setting ($i=\sqrt{-1}$)
+\begin{equation*}
+Z(x)=X_1(x)+iX_2(x)=(1+x)^{\frac{1}{2}(1+i\sqrt{4\lambda-1})}=
+(1+x)^{\frac{1}{2}}e^{\frac{1}{2}i\sqrt{4\lambda-1}\log(1+x)}
+\end{equation*}
+\begin{equation*}
+=(1+x)^{\frac{1}{2}}\left\{\cos\left(\sqrt{\lambda-\frac{1}{4}}\log(1+x)\right)+
+i\sin\left(\sqrt{\lambda-\frac{1}{4}}\log(1+x)\right)\right\},
+\end{equation*}
+being  the real and imaginary parts of $Z(x)$ two linearly independent solutions. For satisfying $X(0)=0$ one sets
+\begin{equation*}
+X(x)=(1+x)^{\frac{1}{2}}\sin\left(\sqrt{\lambda-\frac{1}{4}}\log(1+x)\right),
+\end{equation*}
+then the boundary condition $X(1)=0$ gives
+\begin{equation*}
+2^{\frac{1}{2}}\sin\left(\sqrt{\lambda-\frac{1}{4}}\log 2\right)=0.
+\end{equation*}
+Therefore, $\sqrt{\lambda-1/4}\log 2$ must be an integral multiple of $\pi$, i.e. $\sqrt{\lambda-1/4}\log 2=n\pi$, or
+\begin{equation*}
+\lambda\,\,\mapsto\,\, \lambda_n=\frac{n^2\pi^2}{\log^2 2}+\frac{1}{4}, \qquad n\in\mathbb{Z}^+.
+\end{equation*} 
+To these eigenvalues correspond the eigenfunctions
+\begin{equation*}
+X_n(x)=(1+x)^{\frac{1}{2}}\sin\left(n\pi\frac{\log(1+x)}{\log 2}\right),
+\end{equation*}
+\end{enumerate}
+and these form a \emph{complete system}, whenever we impose to $f(x)$ certain conditions that we  shall see later. Moreover, $f(x)$ may be expanded in Fourier series
+\begin{equation*}
+f(x)\,\, \sim\,\, \sum_{n=1}^{\infty}c_n X_n(x),
+\end{equation*}
+where
+\begin{equation*}
+c_n=\frac{\int_0^1 f(x)(1+x)^{-\frac{3}{2}}\sin\left(n\pi\frac{\log(1+x)}{\log 2}\right)dx}
+{\int_0^1 (1+x)^{-1}\sin^2\left(n\pi\frac{\log(1+x)}{\log 2}\right)dx}=
+\frac{2}{\log 2}\int_0^1 f(x)(1+x)^{-\frac{3}{2}}\sin\left(n\pi\frac{\log(1+x)}{\log 2}\right)dx. 
+\end{equation*}
+The completeness above mentioned and the Fourier series converges absolutely and uniformly to $f(x)$ in $(0,1)$, only if $f(x)\in\mathcal{PC}^1(0,1)$, $f(0)=f(1)=0$ and $\int_0^1 f'\,^2(x) dx$ is \emph{finite}. {\footnote{A result due to Green-Parseval-Schwarz (GPS) and Bessel's inequality}.} \\
+On the other hand, for satisfying (3) and its initial conditions, we choose the eigenfunction 
+\begin{equation*}
+T(t)\,\, \mapsto \,\, T_n(t)=\cos\sqrt{\lambda_n}\,t.
+\end{equation*}
+Thus, a solution of (1) is given by
+\begin{equation*}
+u_n(x,t)=X_n(x)T_n(t)=
+(1+x)^{\frac{1}{2}}\sin\left(n\pi\frac{\log(1+x)}{\log 2}\right)\cos\sqrt{\lambda_n}\,t,
+\end{equation*}
+and the general solution of (1) may be determined as a linear (infinite) combination of these eigenfunctions, that is
+\begin{equation*}
+u(x,t)\,\, \sim\,\, \sum_{n=1}^{\infty}c_n u_n(x,t)=\sum_{n=1}^{\infty}c_n X_n(x)T_n(t).
+\end{equation*}
+So that, the string's problem (1) has the formal solution
+\begin{equation}
+u(x,t)=\sum_{n=1}^{\infty}c_n (1+x)^{\frac{1}{2}}\sin\left(n\pi\frac{\log(1+x)}{\log 2}\right)
+\cos\left(\sqrt{\frac{n^2\pi^2}{\log^2 2}+\frac{1}{4}}\;t\right).
+\end{equation}
+This series converges uniformly, and hence satisfies the initial and boundary conditions, as the series for $f(x)$ converges uniformly. However, in order to assure continuous derivatives and the partial differential equation (1) to be satisfied, we need suppose that the series for $f''(x)$ converges uniformly, i.e. we must suppose that $f(x)$ to be \emph{regular} {\footnote{i.e. $f(x)\in \mathcal{C}^2(0,1)$.}}, that $f(0)=f(1)=f''(0)=f''(1)=0$, and that $\int_0^1 f'''\,^2(x) dx$ to be finite. {\footnote{By GPS, again}.}
+
+
+
+
+ 
+ 
+%%%%%
+%%%%%
+\end{document}

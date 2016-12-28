@@ -1,0 +1,47 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{HolmgrenUniquenessTheorem}
+\pmcreated{2013-03-22 14:37:24}
+\pmmodified{2013-03-22 14:37:24}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{Holmgren uniqueness theorem}
+\pmrecord{11}{36203}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{35A10}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Given a system of linear partial differential equations with analytic coefficients $a_{j i_1, \ldots ,i_m}$ and $b_i$ 
+ $$\sum_{j, i_1,\ldots ,i_m} a_{j i_1, \ldots ,i_m} (x_1, \ldots, x_m) {\partial^{i_1 + \cdots +i_m} u_j \over \partial x_1^{i_1} \ldots \partial x_m^{i_m}} = b_i (x_1, \ldots, x_m)$$
+and analytic Cauchy data specified along a noncharacteristic analytic surface, there exists a neighborhood of the surface such that every smooth solution of the system defined in that neighborhood is analytic.
+
+This theorem stengthens the Cauchy-Kowalewski theorem.  While the latter theorem asserts that a unique analytic solution exists, it still allows the possibility that there might exist non-analytic solutions.  Holmgren's theorem asserts that this is not the case for linear systems.
+
+It is often possible to determine the neighborhood in which Holmgren's theorem holds explicitly.  For instance, for many hyperbolic equations, one can show that this neighborhood can be taken to be the entire domain of dependence of the surface along which the boundary values were specified.
+%%%%%
+%%%%%
+\end{document}

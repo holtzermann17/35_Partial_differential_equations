@@ -1,0 +1,48 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{QuasiperiodAndHalfQuasiperiodRelationsForJacobivarthetaFunctions}
+\pmcreated{2013-03-22 14:40:27}
+\pmmodified{2013-03-22 14:40:27}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{quasiperiod and half quasiperiod relations for Jacobi $\vartheta$ functions}
+\pmrecord{13}{36276}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{35H30}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\begin{document}
+The theta functions have quasiperiods $\pi$ and $\pi \tau$:
+
+$$\theta_1 (z \mid \tau) = -\theta_1 (z + \pi \mid \tau) = -e^{2 i z + i \pi \tau} \theta_1 (z + \pi \tau \mid \tau)$$
+$$\theta_2 (z \mid \tau) = -\theta_2 (z + \pi \mid \tau) = e^{2 i z + i \pi \tau} \theta_2 (z + \pi \tau \mid \tau)$$
+$$\theta_3 (z \mid \tau) = \theta_3 (z + \pi \mid \tau) = e^{2 i z + i \pi \tau} \theta_3 (z + \pi \tau \mid \tau)$$
+$$\theta_4 (z \mid \tau) = \theta_4 (z + \pi \mid \tau) = -e^{2 i z + i \pi \tau} \theta_4 (z + \pi \tau \mid \tau)$$
+
+By adding half a quasiperiod, one can can convert one theta function into another.
+$$\theta_1 (z \mid \tau) = -\theta_2 (z + \pi / 2 \mid \tau) = -i e^{i z + i \pi \tau / 4} \theta_4 (z + \pi \tau / 2 \mid \tau) = -i e^{i z + i \pi \tau / 4} \theta_3 (z + \pi / 2 + \pi \tau / 2 \mid \tau)$$
+$$\theta_2 (z \mid \tau) = \theta_1 (z + \pi / 2 \mid \tau) = e^{i z + i \pi \tau / 4} \theta_3 (z + \pi \tau / 2 \mid \tau) = e^{i z + i \pi \tau / 4} \theta_4 (z + \pi / 2 + \pi \tau / 2 \mid \tau)$$
+$$\theta_3 (z \mid \tau) = \theta_4 (z + \pi / 2 \mid \tau) = e^{i z + i \pi \tau / 4} \theta_2 (z + \pi \tau / 2 \mid \tau) = e^{i z + i \pi \tau / 4} \theta_1 (z + \pi / 2 + \pi \tau / 2 \mid \tau)$$
+$$\theta_4 (z \mid \tau) = \theta_3 (z + \pi / 2 \mid \tau) = -i e^{i z + i \pi \tau / 4} \theta_1 (z + \pi \tau / 2 \mid \tau) = i e^{i z + i \pi \tau / 4} \theta_2 (z + \pi / 2 + \pi \tau / 2 \mid \tau)$$
+
+The proof of these identities is simply a matter of adding the appropriate quasiperiod to $z$ in the series defining the theta function and using the addition formula for the exponential to simplify the result.  For instance,
+ $$\theta_2 (z + \pi \tau / 2 \mid \tau) = \sum_{n = -\infty}^{+\infty} e^{i \pi \tau (n + 1/2)^2 + (2n+1) i (z + \pi \tau / 2)}$$
+ Multiplying out,
+$$ \pi \tau (n + 1/2)^2 + (2n+1) (z + \pi \tau / 2) = \pi \tau n^2 + 2 n z + 2 \pi \tau n + z + 3 \pi \tau / 4$$
+$$ = \pi \tau (n+1)^2 + 2 (n+1) z - z - \pi \tau / 4$$
+and hence,
+ $$\sum_{n = -\infty}^{+\infty} e^{i \pi \tau (n + 1/2)^2 + (2n+1) i (z + \pi \tau / 2)} = e^{- i z - i \pi \tau / 4} \sum_{n = -\infty}^{+\infty} e^{i \pi \tau (n+1)^2 + 2 i (n+1) z} =$$
+ $$e^{- i z - i \pi \tau / 4} \sum_{n = -\infty}^{+\infty} e^{i \pi \tau n^2 + 2 i n z} = e^{- i z - i \pi \tau / 4} \, \theta_3 (z \mid \tau)$$
+
+Once enough half quasiperiod relations have been verified in this manner, the remaining relations may be deduced from them.  Finally, the quasiperiod relations may be deduced from the half quasiperiod relations.
+
+An important use of these relations is in constructing elliptic functions.  By taking suitable quotients of theta functions with the same quasiperiod, one can arrange for the result to be periodic, not just quasi-periodic.
+%%%%%
+%%%%%
+\end{document}

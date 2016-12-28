@@ -1,0 +1,60 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DerivationOfCoulombsLawFromGaussLaw}
+\pmcreated{2013-03-22 17:53:23}
+\pmmodified{2013-03-22 17:53:23}
+\pmowner{invisiblerhino}{19637}
+\pmmodifier{invisiblerhino}{19637}
+\pmtitle{derivation of Coulomb's Law from Gauss' Law}
+\pmrecord{8}{40375}
+\pmprivacy{1}
+\pmauthor{invisiblerhino}{19637}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{35Q60}
+\pmclassification{msc}{78A25}
+\pmdefines{Coulomb's Law}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+As an example of the statement that Maxwell's equations completely define electromagnetic phenomena, it will be shown that Coulomb's Law may be derived from Gauss' law for electrostatics. Consider a point charge. We can obtain an expression for the electric field surrounding the charge. We surround the charge with a "virtual" sphere of radius $R$, then use Gauss' law in integral form:
+\[
+\oint_S  \mathbf{E} \cdot \mathrm{d}\mathbf{A} = \frac {q}{\epsilon_0}
+\]
+We rewrite this as a volume integral  in spherical polar coordinates over the "virtual" sphere mentioned above, which has the point charge at its centre. Since the electric field is spherically symmetric (by assumption) the electric field is constant over this volume.
+\[
+\oint_S  \mathbf{E} \cdot \mathrm{d}\mathbf{A} = \int^R_0 \int^{2\pi}_0 \int^\pi_0 E r \sin \theta \,dr \,d\theta \,d\phi 
+\]
+Hence
+\[
+4\pi R^2 E = \frac{q}{\epsilon_0}
+\]
+Or
+\[
+E = \frac{q}{4\pi\epsilon_0 R^2}
+\]
+The usual form can then be recovered from the Lorentz force law, $\mathbf{F} = \mathbf{E}q + \mathbf{v} \times \mathbf{B}$ noting the absence of magnetic field.
+%%%%%
+%%%%%
+\end{document}

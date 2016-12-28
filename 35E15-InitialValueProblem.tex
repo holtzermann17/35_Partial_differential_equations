@@ -1,0 +1,54 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{InitialValueProblem}
+\pmcreated{2013-03-22 14:03:17}
+\pmmodified{2013-03-22 14:03:17}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{initial value problem}
+\pmrecord{10}{35410}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{35E15}
+\pmclassification{msc}{34A12}
+\pmrelated{CauchyInitialValueProblem}
+\pmdefines{initial condition}
+\pmdefines{boundary condition}
+
+\usepackage{graphicx}
+%%%\usepackage{xypic} 
+\usepackage{bbm}
+\newcommand{\Z}{\mathbbmss{Z}}
+\newcommand{\C}{\mathbbmss{C}}
+\newcommand{\R}{\mathbbmss{R}}
+\newcommand{\Q}{\mathbbmss{Q}}
+\newcommand{\mathbb}[1]{\mathbbmss{#1}}
+\newcommand{\figura}[1]{\begin{center}\includegraphics{#1}\end{center}}
+\newcommand{\figuraex}[2]{\begin{center}\includegraphics[#2]{#1}\end{center}}
+\begin{document}
+Consider the \PMlinkescapetext{simple} differential equation
+\[\frac{dy}{dx} = x.\]
+
+The solution goes by writing\, $dy = x\,dx$\, and then integrating both sides as $\int dy = \int x\,dx$. The solution becomes\, $y = x^2/2+C$\, where $C$ is any constant. 
+
+Differentiating $x^2/2+5$, $x^2/2+7$ and some other examples shows that all these functions satisfy the condition imposed by the differential equation. So we have an infinite number of solutions.
+
+An initial value problem is then a differential equation (ordinary or partial, or even a system) which, besides of stating the relation among the derivatives,  also, by giving the {\em initial conditions}, specifies the values of the unknowns at some point.\, This makes it possible to get a unique solution from the infinite number of \PMlinkescapetext{potential} ones.\, However, it should be noted that not all possible choices of initial conditions specify a unique solution.  It is also possible that there will be more than one solution satisfying a particular choice of initial conditions, or perhaps no solution.  In fact, one of the main problems in the theory of differential equations is to determine what sort of initial conditions will single out a unique solution of a given differential equation.
+
+In the partial differential equations of physics containing spatial variables ($x$ etc.) and time variable ($t$), often one is seeking a solution within a certain spatial domain.\, The conditions set for the solution of the equation may be called the {\em boundary conditions} when they determine the behavior of the solution function in the boundary (points) of the domain (or in the infinity); the other conditions concerning the solution function in some given moments of time are the proper {\em initial conditions}.
+
+In our example we could add the initial condition\, $y(4) = 3$\, turning it into an initial value problem.\, The general solution\, $y(x) := x^2/2+C$\, is then restricted by 
+\[\frac{4^2}{2}+C = 3\]
+and by solving for $C$ we obtain $C = -5$, and so the unique solution for the system
+\begin{eqnarray*}
+\frac{dy}{dx}&=&x\\
+y(4)&=&3
+\end{eqnarray*}
+is \,$y(x) = x^2/2-5$.
+
+Another way to consider an initial condition is seen in context of the tractrix.\\
+%%%%%
+%%%%%
+\end{document}

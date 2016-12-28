@@ -1,0 +1,83 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TelegraphEquation}
+\pmcreated{2013-03-22 18:03:15}
+\pmmodified{2013-03-22 18:03:15}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{telegraph equation}
+\pmrecord{13}{40580}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{35L15}
+\pmclassification{msc}{35L20}
+\pmsynonym{telegrapher's equation}{TelegraphEquation}
+\pmrelated{HeavisideStepFunction}
+\pmrelated{SecondOrderLinearDifferentialEquation}
+\pmrelated{DelayTheorem}
+\pmrelated{MellinsInverseFormula}
+\pmrelated{TableOfLaplaceTransforms}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+Both the electric voltage and the \PMlinkescapetext{current in a double conductor} satisfy the {\em telegraph equation}
+\begin{align}
+f_{xx}''-af_{tt}''-bf_t'-cf = 0,
+\end{align}
+where $x$ is distance, $t$ is time and\, $a,\,b,\,c$\, are non-negative constants.\, The equation is a generalised form of the wave equation.\\
+
+If the initial conditions are\, $f(x,\,0) = f_t'(x,\,0) = 0$\, and the boundary conditions \,$f(0,\,t) = g(t)$,\, $f(\infty,\,t) = 0$,\, then the Laplace transform of the solution function \,$f(x,\,t)$\, is
+\begin{align}
+F(x,\,s) = G(s)e^{-x\sqrt{as^2+bs+c}}.
+\end{align}
+In the special case\, $b^2-4ac = 0$,\, the solution is
+\begin{align}
+f(x,\,t) = e^{-\frac{bx}{2\sqrt{a}}}g(t-x\sqrt{a})H(t-x\sqrt{a}).
+\end{align}
+
+{\em Justification of} (2).\; Transforming the partial differential equation (1) ($x$ may be regarded as a parametre) gives
+$$F_{xx}''(x,\,s)-a[s^2F(x,\,s)-sf(x,\,0)-f_t'(x,\,0)]-b[sF(x,\,s)-f(x,\,0)]-cF(x,\,s) = 0,$$
+which due to the initial conditions simplifies to
+$$F_{xx}''(x,\,s) = (\underbrace{as^2+bs+c}_{K^2})F(x,\,s).$$
+The solution of this ordinary differential equation is
+$$F(x,\,s) = C_1e^{Kx}+C_2e^{-Kx}.$$
+Using the latter boundary condition, we see that
+$$F(\infty,\,s) = \int_0^\infty e^{-st}f(\infty,\,t)\,dt \equiv 0,$$
+whence\, $C_1 = 0$.\, Thus the former boundary condition implies
+$$C_2 = F(0,\,s) = \mathcal{L}\{g(t)\} = G(s).$$
+So we obtain the equation (2).\\
+
+{\em Justification of} (3).\; When the \PMlinkname{discriminant}{QuadraticFormula} of the quadratic equation \,$as^2\!+\!bs\!+\!c = 0$\, vanishes, the \PMlinkname{roots}{Equation} coincide to\, $s = -\frac{b}{2a}$,\, and\, $as^2\!+\!bs\!+\!c = a(s+\frac{b}{2a})^2$.\, Therefore (2) reads
+$$F(x,\,s) = G(s)a^{-x\sqrt{a}(s+\frac{b}{2a})} = e^{-\frac{bx}{2\sqrt{a}}}e^{-x\sqrt{a}s}G(s).$$
+According to the delay theorem, we have
+$$\mathcal{L}^{-1}\{e^{-ks}G(s)\} = g(t-k)H(t-k).$$
+Thus we obtain for $\mathcal{L}^{-1}\{F(x,\,s)\}$ the expression of (3).
+%%%%%
+%%%%%
+\end{document}

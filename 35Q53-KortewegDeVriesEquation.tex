@@ -1,0 +1,170 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{KortewegDeVriesEquation}
+\pmcreated{2013-03-22 13:43:20}
+\pmmodified{2013-03-22 13:43:20}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{Korteweg - de Vries equation}
+\pmrecord{19}{34406}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{35Q53}
+\pmsynonym{KdV equation}{KortewegDeVriesEquation}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\PMlinkescapeword{model}
+
+The \emph{Korteweg - de Vries equation} is a partial differential
+equation defined as
+\begin{equation}
+u_t + 6u u_x + u_{xxx} = 0
+\end{equation}
+where $u = u(x,t)$ and the subscripts indicate derivatives.  This 
+equation arises in hydrodynamics and was originally proposed to 
+model waves in a canal. In addition to its practical applications, 
+this equation is quite interesting as an object of mathematical 
+study.  It exhibits interesting soliton solutions, has a large
+algebra of conserved quantities, and can be solved using methods 
+of inverse scattering.
+
+\section{Travelling Wave Solution}
+
+It is easy to exhibit a solution which describes a traveling wave.
+To find this solution, one substitutes the ansatz $u(x,t)=f(x-ct)$
+\footnote{The most general form of a solution to the two-dimensional
+wave equation is $u(x,t) = f(x-ct) + f(x+ct)$ which describes waves 
+propagating in both directions with velocity $c$.  Here, we will
+look for a solution which only describes a wave propagatng in one
+direction.} 
+into the equation to obtain the following equation for $f$:
+ \[-cf' + 6f f' + f''' = 0\]
+This equation can be written as 
+ \[(-cf + 3 f^2 + f'')' = 0\]
+and, hence,
+ \[-cf + 3 f^2 + f'' = k\]
+for some constant $k$.  Multiplying by $f'$, we can repeat the same
+trick:
+ \[-cff' + 3 f^2 f' + f'f'' - kf' =
+(-cf^2/2 + f^3 + (f')^2 - kf)' = 0\]
+hence
+\[-cf^2/2 + f^3 + (f')^2 - kf = h\]
+or
+\[f' = \sqrt{ kf + cf^2/2 - f^3}\]
+This can be solved implicitly by an integral:
+\[y = \int^{f(y)} \sqrt{ kf + cf^2/2 - f^3} \,dy + C\]
+Since this is an elliptic integral, the result is an elliptic function.
+
+The solution obtained above is know as a \emph{solitary wave}, or \emph{soliton}.
+This term ``solitary wave'' refers to the fact that this solution describes
+a single wave pulse traveling with velocity $c$.  Note that the amplitude of
+the pulse is determined by its velocity, unlike in the case of linear wave 
+equations where the velocity of propagation does not depend upon the amplitude.
+There are also solutions which describe more than one solitary wave.  In 
+particular, there are solutions in which two of these waves collide and then
+re-emerge from the collision.
+
+\section{Conserved Currents}
+
+It is possible to exhibit integrals whose value is conserved under the
+evolution.  To construct these quantities, we begin with vector fields.
+Suppose that $u$ is a thrice differentiable function of $x$ and $t$ and
+consider the following vector fields:
+\begin{align*}
+ v^{(1)} &= (u, 3 u^2 + u_{xx})  \\
+ v^{(2)} &= (u^2, 4 u^3 - u_x^2 + 2 u u_{xx})
+\end{align*}
+Computing their divergences and rearranging the result,
+\begin{align*}
+ {\partial v^{(1)}_t \over \partial t} +
+ {\partial v^{(1)}_t \over \partial x} &=
+ u_{t} + 6 u u_x + u_{xxx} \\
+ {\partial v^{(2)}_t \over \partial t} +
+ {\partial v^{(2)}_t \over \partial x} &=
+ 2 u (u_t + 6 u u_x + u_{xxx}) .
+\end{align*}
+If $u$ happens to satisfy our differential equation, then the
+divergence of these vector fields will go zero.
+
+To obtain the conserved quantities, we will integrate them over a rectangle in
+the $t,x$ plane with sides parallel to the $x$ and $t$ axes use Green's theorem .
+\begin{align*}
+ \int_{t_1}^{t_2} dt \, \int_{x_1}^{x_2} dx \,
+ &(u_{t}(t,x) + 6 u(t,x) u_x(t,x) + u_{xxx}(t,x)) \\ = 
+ &\int_{x_1}^{x_2} dx \, (3 u^2(x,t_2) + u_{xx}(x,t_2)) +
+ \int_{t_2}^{t_1} dt \, u(t,x_2) + \\
+ &\int_{x_1}^{x_2} dx \, (3 u^2(x,t_1) + u_{xx}(x,t_1)) +
+ \int_{t_1}^{t_2} dt \, u(t,x_1) \\ =
+ &3 \int_{x_1}^{x_2} dx \, u^2(x,t_2) -
+ 3 \int_{x_1}^{x_2} dx \, u^2(x,t_1) \\ +
+ &\int_{t_1}^{t_2} dt \, u(t,x_1) -
+ \int_{t_1}^{t_2} dt \, u(t,x_2) +
+ u_x(x_2,t_2) - u_x(x_1,t_2) - u_x(x_2,t_1) + u_x(x_1,t_1) \\
+ \int_{t_1}^{t_2} dt \, \int_{x_1}^{x_2} dx \,
+ &2 u (u_{t}(t,x) + 6 u(t,x) u_x(t,x) + u_{xxx}(t,x)) \\ = 
+ &\int_{x_1}^{x_2} dx \, (4 u^3(x,t_2) - u_x^2(x,t_2) + 2 u(x,t_2) u_{xx}(x,t_2)) +
+ \int_{t_2}^{t_1} dt \, u^2(t,x_2) + \\
+ &\int_{x_2}^{x_2} dx \, (4 u^3(x,t_1) - u_x^2(x,t_1) + 2 u(x,t_1) u_{xx}(x,t_1)) +
+ \int_{t_1}^{t_2} dt \, u^2(t,x_1) \\ =
+ &\int_{x_1}^{x_2} dx \, (4 u^3(x,t_2) - 3 u_x^2(x,t_2)) -
+ \int_{x_1}^{x_2} dx \, (4 u^3(x,t_1) - 3 u_x^2(x,t_1)) \\ +
+ &\int_{t_1}^{t_2} dt \, u^2(t,x_1) -
+ \int_{t_1}^{t_2} dt \, u^2(t,x_2) \\ +
+ &u(x_2,t_2) u_x(x_2,t_2) - u (x_1,t_2) u_x(x_1,t_2) - 
+ u(x_2,t_1) u_x(x_2,t_1) + u(x_1,t_1) u_x(x_1,t_1)
+\end{align*}
+We consider now several popular boundary conditions for our equation:
+\begin{itemize}
+\item{\bf Periodic}  Suppose that $u$ is periodic in $x$ with period $p$ and
+satisfies the Kortwieg - de Vries equation.  Then we integrals over $t$
+cancel against each other as do the endpoint terms, leaving us with
+\[
+ \int_{x_1}^{x_2} dx \, u^2(x,t_1) = 
+ \int_{x_1}^{x_2} dx \, u^2(x,t_2).
+\]
+\item{\bf Whole line}  Suppose that $u$ satisfies the Kortwieg - de Vries equation
+and that $u$ and its derivatives tend towards zero as $x \to \pm \infty$.  Then,
+taking the limit as $x_1 \to -\infty$ and $x_2 \to + \infty$, we conclude that
+\[
+ \int_{-\infty}^{+\infty} dx \, u^2(x,t_1) = 
+ \int_{-\infty}^{+\infty} dx \, u^2(x,t_2) .
+\]
+\item{Finite interval}  We may also consider our differential equation on
+a finite interval and impose suitable boundary conditions at the endpoints.
+In this case, the integrals with respect to $t$ do not cancel or automatically 
+vanish as a consequence of the boundary conditions, so they will not, in general, 
+give conserved quantities.  Nevertheless, it is at least still possible to compute 
+their value solely from the boundary data without having to know how the solution 
+behaves in the interior.
+\end{itemize}
+
+Starting with the two vector fields given above, it is possible to generate
+more such vector fields and more conserved quantities.  Since the Lie bracket
+of two vector fields with zero divergence also has zero divergence, we may
+
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,59 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{HeatEquation}
+\pmcreated{2013-03-22 12:45:36}
+\pmmodified{2013-03-22 12:45:36}
+\pmowner{drini}{3}
+\pmmodifier{drini}{3}
+\pmtitle{heat equation}
+\pmrecord{5}{33067}
+\pmprivacy{1}
+\pmauthor{drini}{3}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{35Q99}
+\pmrelated{DifferentialEquation}
+\pmrelated{Laplacian}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic} 
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+The heat equation in 1-dimension (for example, along a metal wire) is a partial differential equation of the following form:
+
+$$\frac{\partial u}{\partial t} = c^2 \cdot \frac{\partial^2 u}{\partial x^2}$$
+
+also written as
+
+$$u_{t} = c^2 \cdot u_{xx}$$
+
+Where $u:\mathbb{R}^2\to\mathbb{R}$ is the function giving the temperature at time $t$ and position $x$ and $c$ is a real valued constant. This can be easily extended to 2 or 3 dimensions as
+
+$$u_{t} = c^2 \cdot ( u_{xx} + u_{yy} )$$
+and
+$$u_{t} = c^2 \cdot ( u_{xx} + u_{yy} + u_{zz} )$$
+
+Note that in the steady state, that is when $u_{t} = 0$, we are left with the Laplacian of $u$:
+
+$$\Delta u = 0 $$
+%%%%%
+%%%%%
+\end{document}

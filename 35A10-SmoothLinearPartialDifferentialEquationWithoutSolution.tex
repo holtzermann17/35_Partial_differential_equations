@@ -1,0 +1,82 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SmoothLinearPartialDifferentialEquationWithoutSolution}
+\pmcreated{2013-03-22 17:39:38}
+\pmmodified{2013-03-22 17:39:38}
+\pmowner{jirka}{4157}
+\pmmodifier{jirka}{4157}
+\pmtitle{smooth linear partial differential equation without solution}
+\pmrecord{5}{40094}
+\pmprivacy{1}
+\pmauthor{jirka}{4157}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{35A10}
+\pmclassification{msc}{35A05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{theorem}
+\newtheorem*{thm}{Theorem}
+\newtheorem*{lemma}{Lemma}
+\newtheorem*{conj}{Conjecture}
+\newtheorem*{cor}{Corollary}
+\newtheorem*{example}{Example}
+\newtheorem*{prop}{Proposition}
+\theoremstyle{definition}
+\newtheorem*{defn}{Definition}
+\theoremstyle{remark}
+\newtheorem*{rmk}{Remark}
+
+\begin{document}
+Cauchy-Kowalewski theorem says that real analytic partial differential equations with real analytic initial data always have solutions.  On the other hand Hans Lewy showed in 1957 that this is not true if the equation is only smooth.  The example is obvious once we have the following theorem.
+
+\begin{thm}[Lewy]
+Let $x,y,z$ be independent real variables.  Let $f$ be a $C^1$ real function. 
+Suppose that there exists a $C^1$ solution $u$ to the following equation
+\begin{equation*}
+\left[
+- \frac{\partial}{\partial x}
+- i \frac{\partial}{\partial y}
++ 2i(x + i y) \frac{\partial}{\partial z}
+\right] u
+= f'(z) ,
+\end{equation*}
+in some neighbourhood of a point $(0,0,z_0).$
+Then $f$ is real analytic at $z_0.$
+\end{thm}
+
+Hence we need only pick $f$ which is smooth and not real analytic at $z_0$ and we have an example.  For example,
+let $z_0 = 0$ and $f(x) = \int_0^x e^{-1/t} ~ dt.$
+
+
+\begin{thebibliography}{9}
+\bibitem{lewy:example}
+Lewy, Hans.
+{\it \PMlinkescapetext{An example of a smooth linear partial differential equation without solution.}}
+Ann. of Math. (2) {\bf 66} (1957), 155--158. 
+\end{thebibliography}
+
+
+%%%%%
+%%%%%
+\end{document}

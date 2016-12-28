@@ -1,0 +1,90 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DerivationOfWaveEquation}
+\pmcreated{2013-03-22 18:46:36}
+\pmmodified{2013-03-22 18:46:36}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{derivation of wave equation}
+\pmrecord{10}{41570}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{35L05}
+\pmrelated{Slope}
+\pmrelated{MeanValueTheorem}
+\pmrelated{DerivationOfHeatEquation}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{string} \PMlinkescapeword{constant} \PMlinkescapeword{mass}
+\PMlinkescapeword{force}
+Let a string of \PMlinkescapetext{homogeneous} matter be tightened between the points \,$x = 0$\, and\, $x = p$\, of the $x$-axis and let the string be made vibrate in the $xy$-plane.\, Let the \PMlinkescapetext{line density of mass} of the string be the constant $\sigma$.\, We suppose that the amplitude of the vibration is so small that the tension $\vec{T}$ of the string can be regarded to be constant.
+
+The position of the string may be represented as a function
+$$y \;=\; y(x,\,t)$$
+where $t$ is the time.\, We consider an element $dm$ of the string situated on a tiny interval \, $[x,\,x\!+\!dx]$;\, thus its mass is $\sigma\,dx$.\, If the angles the vector $\vec{T}$ at the ends $x$ and $x\!+\!dx$ of the element forms with the direction of the $x$-axis are $\alpha$ and $\beta$, then the scalar \PMlinkescapetext{components of the resultant} force $\vec{F}$ of all \PMlinkescapetext{forces} on $dm$ (the gravitation omitted) are
+$$F_x \;=\; -T\cos\alpha+T\cos\beta, \quad F_y \;=\; -T\sin\alpha+T\sin\beta.$$
+Since the angles $\alpha$ and $\beta$ are very small, the ratio
+$$\frac{F_x}{F_y} \;=\; \frac{\cos\beta-\cos\alpha}{\sin\beta-\sin\alpha} \;=\; 
+\frac{-2\sin\frac{\beta-\alpha}{2}\sin\frac{\beta+\alpha}{2}}{2\sin\frac{\beta-\alpha}{2}\cos\frac{\beta+\alpha}{2}},$$
+having the expression \,$-\tan\frac{\beta+\alpha}{2}$, also is very small.\, Therefore we can omit the horizontal component $F_x$ and think that the vibration of all elements is strictly vertical.\, Because of the smallness of the angles $\alpha$ and $\beta$, their sines in the expression of 
+$F_y$ may be replaced with their tangents, and accordingly
+$$F_y \;=\; T\cdot(\tan\beta-\tan\alpha) \;=\; T\,[y'_x(x\!+\!dx,\,t)-y'_x(x,\,t)] \;=\; T\,y''_{xx}(x,\,t)\,dx,$$
+the last form due to the mean-value theorem.
+
+On the other hand, by Newton the force equals the mass times the acceleration:
+$$F_y \;=\; \sigma\,dx\,y''_{tt}(x,\,t)$$
+Equating both expressions, dividing by $T\,dx$ and denoting\, $\displaystyle\sqrt{\frac{T}{\sigma}} = c$,\, we obtain the partial differential equation
+\begin{align}
+y''_{xx} \;=\; \frac{1}{c^2}y''_{tt}
+\end{align}
+for the equation of the \PMlinkescapetext{transversely} vibrating string.\\
+
+But the equation (1) don't suffice to entirely determine the vibration.\, Since the end of the string are immovable,the function\, $y(x,\,t)$\, has in \PMlinkescapetext{addition} to satisfy the boundary conditions
+\begin{align}
+y(0,\,t) \;=\; y(p,\,t) \;=\; 0
+\end{align}
+The vibration becomes completely determined when we know still e.g. at the beginning\, $t = 0$\, the position $f(x)$ of the string and the initial velocity $g(x)$ of the points of the string; so there should be the initial conditions
+\begin{align}
+y(x,\,0) \;=\; f(x), \quad y'_t(x,\,0) \;=\; g(x).
+\end{align}
+
+
+The equation (1) is a special case of the general wave equation
+\begin{align}
+\nabla^2u \;=\; \frac{1}{c^2}u''_{tt}
+\end{align}
+where\, $u =u(x,\,y,\,z,\,t)$.\, The equation (4) rules the spatial waves in $\mathbb{R}$.\, The number $c$ can be shown to be the velocity of propagation of the wave motion.
+
+\begin{thebibliography}{9}
+\bibitem{K.V.}{\sc K. V\"ais\"al\"a:} {\em Matematiikka IV}.\, Handout Nr. 141.\quad Teknillisen korkeakoulun ylioppilaskunta, Otaniemi, Finland (1967).
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

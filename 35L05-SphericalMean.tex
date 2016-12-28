@@ -1,0 +1,72 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SphericalMean}
+\pmcreated{2013-03-22 14:09:04}
+\pmmodified{2013-03-22 14:09:04}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{spherical mean}
+\pmrecord{7}{35568}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{35L05}
+\pmclassification{msc}{26E60}
+\pmrelated{WaveEquation}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\def\sse{\subseteq}
+\def\bigtimes{\mathop{\mbox{\Huge $\times$}}}
+\def\impl{\Rightarrow}
+\def\R{\mathbb{R}}
+\def\del{\partial}
+\begin{document}
+\PMlinkescapeword{name}
+\PMlinkescapeword{identity}
+\PMlinkescapeword{independent}
+\PMlinkescapeword{unit}
+
+Let $h$ be a function (usually real or complex valued) on $\R^n$ ($n\ge1$).
+Its \emph{spherical mean} at point $x$ over a sphere of radius $r$ is defined as
+\begin{equation*}
+  M_h(x,r) = \frac{1}{A(n-1)} \int_{\|\xi\|=1} h(x+r\xi)\, dS
+    = \frac{1}{A(n-1,r)} \int_{\|\xi\|=|r|} h(x+\xi)\, dS,
+\end{equation*}
+where the integral is over the surface of the unit $n-1$-sphere. Here $A(n-1)$ is is the area of the unit sphere, while $A(n-1,r)=r^{n-1}A(n-1)$ is the \PMlinkname{area of a sphere of radius $r$}{AreaOfTheNSphere}. In essense, the spherical mean $M_h(x,r)$ is just the average of $h$ over the surface of a sphere of radius $r$ centered at $x$, as the name suggests.
+
+The spherical mean is defined for both positive and negative $r$ and is
+independent of its sign. As $r\to 0$, if $h$ is continuous, $M_h(x,r)\to
+h(x)$. If $h$ has two continuous derivatives (is in $C^2(\R^n)$) then the
+following identity holds:
+\begin{equation*}
+  \nabla^2_x M_h(x,r) = \left(\frac{\del^2}{\del r^2} + \frac{n-1}{r}
+    \frac{\del}{\del r}\right) M_h(x,r),
+\end{equation*}
+where $\nabla^2$ is the Laplacian.
+
+Spherical means are used to obtain an explicit general solution for the wave
+equation in $n$ space and one time dimensions.
+%%%%%
+%%%%%
+\end{document}

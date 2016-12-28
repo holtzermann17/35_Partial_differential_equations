@@ -1,0 +1,50 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DependenceOnInitialConditionsOfSolutionsOfOrdinaryDifferentialEquations}
+\pmcreated{2013-03-22 13:37:19}
+\pmmodified{2013-03-22 13:37:19}
+\pmowner{Daume}{40}
+\pmmodifier{Daume}{40}
+\pmtitle{dependence on initial conditions of solutions of ordinary differential equations}
+\pmrecord{7}{34257}
+\pmprivacy{1}
+\pmauthor{Daume}{40}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{35-00}
+\pmclassification{msc}{34-00}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic} 
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $E\subset W$ where $W$ is a normed vector space, $f\in C^1(E)$ is a continuous differentiable map $f: E \to W$. Furthermore consider the ordinary differential equation
+$$\dot{x} = f(x)$$
+with the initial condition
+\begin{center}
+$x(0) = x_0$.
+\end{center}
+Let $x(t)$ be the solution of the above initial value problem defined as
+$$x:I \to E$$
+where $I = [-a,a]$.  Then there exist $\delta >0$ such that for all $y_0 \in N_\delta (x_0)$\textit{($y_0$ in the $\delta$ neighborhood of $x_0$)} has a unique solution $y(t)$ to the initial value problem above except for the initial value changed to $x(0)=y_0$.  In addition $y(t)$ is twice continouously differentialble function of $t$ over the interval $I$.
+%%%%%
+%%%%%
+\end{document}

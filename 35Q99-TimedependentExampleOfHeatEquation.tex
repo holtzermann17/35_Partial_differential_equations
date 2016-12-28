@@ -1,0 +1,144 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TimedependentExampleOfHeatEquation}
+\pmcreated{2013-03-22 16:32:47}
+\pmmodified{2013-03-22 16:32:47}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{time-dependent example of heat equation}
+\pmrecord{10}{38729}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{35Q99}
+\pmsynonym{solving a time-dependent heat equation}{TimedependentExampleOfHeatEquation}
+%\pmkeywords{heat equation}
+%\pmkeywords{Fourier double series}
+%\pmkeywords{eigenvalues}
+\pmrelated{ExampleOfSolvingTheHeatEquation}
+\pmrelated{EigenvalueProblem}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+The initial temperature (at\, $t = 0$) of a \PMlinkescapetext{thin homogeneous} plate
+   $$A = \{(x,\,y)\in\mathbb{R}^2\vdots\,\,\,0 < x < a,\,\,0 < y < b\}$$
+in the $xy$-plane is given by the function\, $f = f(x,\,y)$.\, The faces of the plate are supposed completely isolating.\, After the \PMlinkescapetext{moment}\, $t = 0$\, the boundaries of $A$ are held in the temperature $0$.\, Determine the temperature function
+                         $$u = u(x,\,y,\,t)$$
+on $A$ (where $t$ is the time).
+
+Since it's a question of a two-dimensional heat \PMlinkescapetext{flow}, the heat equation gets the form
+\begin{align}
+  \nabla^2u \equiv u''_{xx}+u''_{yy} = \frac{1}{c^2}u'_t.
+\end{align}
+One have to find for (1) a solution function $u$ which satisfies the initial condition
+\begin{align}
+  u(x,\,y,\,0) = f(x,\,y)\,\,\,\mathrm{in}\,\,\,A
+\end{align}
+and the boundary condition
+\begin{align}
+  u(x,\,y,\,t) = 0\,\,\,     \mathrm{on\,\,boundary\,\,of}\,\,A\,\,\,\mathrm{for}\,\,t > 0.
+\end{align}
+
+For finding a simple solution of the differential equation (1) we try the form
+\begin{align}
+u(x,\,y,\,t) := X(x)Y(y)T(t),
+\end{align}
+whence the boundary condition reads
+\begin{align}
+X(0) = Y(0) = X(a) = Y(b) = 0.
+\end{align}
+Substituting (4) in (1) and dividing this equation by $XYT$ give the form
+\begin{align}
+\frac{X''}{X}+\frac{Y''}{Y} = \frac{1}{c^2}\!\cdot\!\frac{T'}{T}.
+\end{align}
+It's easily understood that such a condition requires that the both addends of the left side and the right side ought to be constants:
+\begin{align}
+\frac{X''}{X} = -k_1^2,\,\, \frac{Y''}{Y} = -k_2^2,\,\, 
+\frac{1}{c^2}\!\cdot\!\frac{T'}{T} = -k^2,
+\end{align}
+where\, $k^2 = k_1^2+k_2^2$.\, We soon explain why these constants are negative.
+Because the equations (7) may be written
+$$X'' = -k_1^2X,\,\,\, Y'' = -k_2^2Y,\,\,\, T' = -k^2c^2T,$$ 
+the general solutions of these ordinary differential equations are
+\begin{align}
+\begin{cases}
+ X = C_1\cos{k_1x}+D_1\sin{k_1x},\\
+ Y = C_2\cos{k_2y}+D_2\sin{k_2y},\\
+ T = Ce^{-k^2c^2t}.
+\end{cases}
+\end{align}
+Now we remark that if the right side of the third equation (7) were\, $+k^2$, then we had\, $T = Ce^{k^2c^2t}$\, which is impossible, since such a $T$ and along with this also the temperature\, $u = XYT$\, would ascend infinitely when\, $t\to\infty$.\, And since, by symmetry, the right sides the two first equations (7) must have the same sign, also they must by (6) be negative.
+
+The two first boundary conditions (5) imply by (8) that\, $C_1 = C_2 = 0$,\, and then the two last conditions (5) require that
+$$D_1\sin{k_1a} = 0,\,\,\, D_2\sin{k_2b} = 0.$$
+If we had\, $D_1 = 0$\, or\, $D_2 = 0$,\, then $X$ or $Y$ would vanish identically, which cannot occur.\, Thus we have
+$$\sin{k_1a} = 0\,\,\, \mathrm{and}\,\,\, \sin{k_2b} = 0,$$
+whence only the eigenvalues
+\begin{align*}
+\begin{cases}
+  k_1 = \frac{m\pi}{a}\,\,\,(m = 1,\,2,\,3,\,\ldots)\\
+  k_2 = \frac{n\pi}{b}\,\,\,(n = 1,\,2,\,3,\,\ldots)
+\end{cases}
+\end{align*}
+are possible for the obtained $X$ and $Y$.\, Considering the equation\, $k^2 = k_1^2+k_2^2$\, we may denote
+\begin{align}
+ q_{mn} := k^2c^2 =
+\left[\left(\frac{m\pi}{a}\right)^2\!+\!\left(\frac{n\pi}{b}\right)^2\right]c^2
+\end{align}
+ for all\,\, $m,\,n \in \mathbb{Z}_+.$
+
+Altogether we have infinitely many solutions
+$$u_{mn} = XYT = CD_1D_2e^{-q_{mn}t}\sin\frac{m\pi x}{a}\sin\frac{n\pi y}{b}
+= c_{mn}e^{-q_{mn}t}\sin\frac{m\pi x}{a}\sin\frac{n\pi y}{b}$$
+of the equation (1), where the coefficients $c_{mn}$ are, for the present, arbitrary constants.\, These solutions fulfil the boundary condition (3).\, The sum of the solutions, i.e. the double series
+\begin{align}
+  u(x,\,y,\,t) := \sum_{m=1}^\infty\sum_{n=1}^\infty 
+  c_{mn}e^{-q_{mn}t}\sin\frac{m\pi x}{a}\sin\frac{n\pi y}{b},
+\end{align}
+provided it converges, is also a solution of the linear differential equation (1) and fulfils the boundary condition.\, In order to fulfil also the initial condition (2), one must have
+$$\sum_{m=1}^\infty\sum_{n=1}^\infty 
+c_{mn}e^{-q_{mn}t}\sin\frac{m\pi x}{a}\sin\frac{n\pi y}{b} = f(x,\,y).$$
+But this equation presents the Fourier double sine series \PMlinkescapetext{expansion} of\, $f(x,\,y)$\, in the rectangle $A$, and therefore we have the expression
+\begin{align}  
+c_{mn} := \frac{4}{ab}
+\int_0^a\!\int_0^b f(x,\,y)\,\sin\frac{m\pi x}{a}\sin\frac{n\pi y}{b}\,dx\,dy
+\end{align}
+for the coefficients.
+
+The result of calculating the solution of our problem is the temperature function (10) with the formulae (9) and (11).
+
+\begin{thebibliography}{9}
+\bibitem{K.V.}{\sc K. V\"ais\"al\"a:} {\em Matematiikka IV}.\, Hand-out Nr. 141.\quad Teknillisen korkeakoulun ylioppilaskunta, Otaniemi, Finland (1967).
+\end{thebibliography}
+ 
+
+
+
+%%%%%
+%%%%%
+\end{document}

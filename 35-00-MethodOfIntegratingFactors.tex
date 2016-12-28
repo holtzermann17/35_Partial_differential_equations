@@ -1,0 +1,101 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{MethodOfIntegratingFactors}
+\pmcreated{2013-03-22 16:31:48}
+\pmmodified{2013-03-22 16:31:48}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{method of integrating factors}
+\pmrecord{21}{38710}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{35-00}
+\pmclassification{msc}{34-00}
+\pmrelated{ErnstLindelof}
+\pmdefines{integrating factor}
+\pmdefines{Euler multiplicator}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{connection} \PMlinkescapeword{equivalent}
+
+The {\em method of integrating factors} is in principle a means for solving ordinary differential equations of first \PMlinkescapetext{order}.\, It has not great practical significance, but is theoretically important.\\
+
+Let us consider a differential equation solved for the derivative $y'$ of the unknown function and write the equation in the form
+\begin{align}
+  X(x,\,y)\,dx+Y(x,\,y)\,dy \;=\; 0.
+\end{align}
+We assume that the functions $X$ and $Y$ have continuous partial derivatives in a region $R$ of $\mathbb{R}^2$.
+
+If there is a solution of (1) which may be expressed in the form
+  $$f(x,\,y) \;=\; C$$
+with $f$ having continuous partial derivatives in $R$ and with $C$ an arbitrary constant, then it's not difficult to see that such an $f$ satisfies the linear partial differential equation
+\begin{align}
+  X\frac{\partial f}{\partial y}-Y\frac{\partial f}{\partial x} \;=\; 0.
+\end{align}
+Conversely, every non-constant solution $f$ of (2) gives also a solution\, $f(x,\,y) = C$\, of (1).\, Thus, solving (1) and solving (2) are \PMlinkname{equivalent}{Equivalent3} tasks.
+
+It's straightforward to show that if\, $f_0(x,\,y)$\, is a non-constant solution of the equation (2), then all solutions of this equation are\, $F(f_0(x,\,y))$\, where $F$ is a freely chosen function with (mostly) continuous derivative.
+
+The connection of the equations (1) and (2) may be presented also in another form.\, Suppose that\, $f(x,\,y) = C$\, is any solution of (1).\, Then (2) implies  the proportion equation
+  $$\frac{f_x'}{X} \;=\; \frac{f_y'}{Y}.$$
+If we denote the common value of these two ratios by\, $\mu(x,\,y) = \mu$,\, then we have
+  $$f_x' \;=\; \mu X, \qquad  f_y' \;=\; \mu Y.$$
+This gives to the differential of the function $f$ the expression
+  $$d\,f(x,\,y) \;=\; \mu(x,\,y)(X(x,\,y)\,dx+Y(x,\,y)\,dy).$$
+We see that\, $\mu(x,\,y)$\, is the {\em integrating factor} or {\em Euler multiplicator} of the given differential equation (1), i.e. the left hand side of (1) turns, when multiplied by\, $\mu(x,\,y)$,\, to an \PMlinkname{exact differential}{ExactDifferentialForm}.
+
+Conversely, any integrating factor $\mu$ of (1), i.e. such that\, 
+$\mu X\,dx+\mu Y\,dy$\, is the differential of some function $f$, is easily seen to determine the solutions of the form\, $f(x,\,y) = C$\, of (1).\, Altogether, solving the differential equation (1) is equivalent with finding an integrating factor of the equation.
+
+When an integrating factor $\mu$ of (1) is available, the solution function $f$
+can be gotten from the line integral
+$$f(x,\,y) \;=:\; \int_{P_0}^P [\mu(x,\,y)X(x,\,y)\,dx+\mu(x,\,y)Y(x,\,y)\,dy]$$
+along any curve $\gamma$ connecting an arbitrarily chosen point \,$P_0 =(x_0,\,y_0)$\, and the point\, $P = (x,\,y)$\, in the region $R$.\\
+
+\textbf{Note.}\, In general, it's very hard to find a suitable integrating factor.\, One special case where such can be found, is that $X$ and $Y$ are homogeneous functions of same \PMlinkname{degree}{HomogeneousFunction}: then the expression $\displaystyle\frac{1}{xX+yY}$ is an integrating factor.\\
+
+\textbf{Example.}\, In the differential equation
+    $$(x^4+y^4)\,dx-xy^3\,dy \;=\; 0$$
+we see that\, $X =: x^4+y^4$\, and\, $Y =: -xy^3$\, both define a \PMlinkname{homogeneous function of degree}{HomogeneousFunction} 4.\, Thus we have the integrating factor\, $\displaystyle\mu =: \frac{1}{x^5+xy^4-xy^4} = \frac{1}{x^5}$,\, and the left hand side of the equation
+    $$\left(\frac{1}{x}+\frac{y^4}{x^5}\right)\,dx-\frac{y^3}{x^4}\,dy \;=\; 0$$
+is an exact differential.\, We can integrate it along the broken line, first from\, $(1,\,0)$\, to\, $(x,\,0)$\, and then still to\, $(x,\,y)$,\, obtaining
+$$f(x,\,y) \;=:\; \int_1^x\left(\frac{1}{x}+\frac{0^4}{x^5}\right)\,dx
+-\int_0^y\frac{y^3\,dy}{x^4} \;=\; \ln|x|-\frac{y^4}{4x^4}.$$
+So the general solution of the given differential equation is
+$$\ln|x|-\frac{y^4}{4x^4} \;=\; C.$$
+
+
+\begin{thebibliography}{9}
+\bibitem{3L}{\sc E. Lindel\"of:} {\em Differentiali- ja integralilasku III 1}.\, Mercatorin Kirjapaino Osakeyhti\"o, Helsinki (1935).
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

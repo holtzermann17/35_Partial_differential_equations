@@ -1,0 +1,46 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DifferentialEquationsOfJacobivarthetaFunctions}
+\pmcreated{2013-03-22 14:41:19}
+\pmmodified{2013-03-22 14:41:19}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{differential equations of Jacobi $\vartheta$ functions}
+\pmrecord{10}{36296}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{35H30}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+The theta functions \PMlinkescapetext{satisfy} the following partial differential equation:
+ $${\pi i \over 4} {\partial^2 \vartheta_i \over \partial z^2} + {\partial \vartheta_i \over \partial \tau} = 0$$
+
+It is easy to check that each \PMlinkescapetext{term} in the series which define the theta functions \PMlinkescapetext{satisfies} this differential equation.  Furthermore, by the Weierstrass M-test, the series obtained by differentiating the series which define the theta functions term-by-term converge absolutely, and hence one may compute derivatives of the theta functions by taking derivatives of the series term-by-term.
+
+Students of mathematical physics will recognize this equation as a one-dimensional diffusion equation.  Furthermore, as may be seen by examining the series defining the theta functions, the theta functions approach periodic delta distributions in the limit $\tau \to 0$.  Hence, the theta functions are the Green's functions of the one-dimensional diffusion equation with periodic boundary conditions.
+%%%%%
+%%%%%
+\end{document}

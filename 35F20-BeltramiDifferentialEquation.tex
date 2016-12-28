@@ -1,0 +1,66 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{BeltramiDifferentialEquation}
+\pmcreated{2013-03-22 14:08:34}
+\pmmodified{2013-03-22 14:08:34}
+\pmowner{jirka}{4157}
+\pmmodifier{jirka}{4157}
+\pmtitle{Beltrami differential equation}
+\pmrecord{8}{35557}
+\pmprivacy{1}
+\pmauthor{jirka}{4157}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{35F20}
+\pmclassification{msc}{30C62}
+\pmrelated{QuasiconformalMapping}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Suppose that $\mu : G \subset {\mathbb{C}} \rightarrow {\mathbb{C}}$ is a measurable function, then the partial differential equation
+\begin{equation*}
+f_{\bar{z}}(z) = \mu(z)f_z(z)
+\end{equation*}
+is called the {\em Beltrami differential equation}.
+
+If furthermore $\lvert \mu(z) \rvert < 1$ and
+in fact $\lvert \mu(z) \rvert$ has a uniform bound less then 1 over the domain of definition, then the solution is a quasiconformal mapping with \PMlinkname{complex dilation}{QuasiconformalMapping} $\mu(z)$ and \PMlinkname{maximal small dilatation}{QuasiconformalMapping} $d_f = \sup_z \lvert \mu(z) \rvert$.
+
+A conformal mapping has $f_{\bar{z}} \equiv 0$ and so the solution can be conformal if and only if $\mu \equiv 0$.
+
+The partial derivatives $f_z$ and $f_{\bar{z}}$ (where $\bar{z}$ is the complex conjugate of $z$) can here be given in terms of
+the real and imaginary parts of $f = u + iv$ as
+\begin{align*}
+f_z & = \frac{1}{2} ( u_x + v_y ) + \frac{i}{2} ( v_x - u_y ),
+\\
+f_{\bar{z}} & = \frac{1}{2} ( u_x - v_y ) + \frac{i}{2} ( v_x + u_y ).
+\end{align*}
+
+\begin{thebibliography}{9}
+\bibitem{ahlfors}
+L.\@ V.\@ Ahlfors.  \emph{\PMlinkescapetext{Lectures on Quasiconformal
+Mappings}}.  Van Nostrand-Reinhold, Princeton, New Jersey, 1966
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}
