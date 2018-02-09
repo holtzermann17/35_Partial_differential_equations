@@ -1,0 +1,323 @@
+<!DOCTYPE html><html>
+<head>
+<title>example of solving the heat equation</title>
+<!--Generated on Fri Feb  9 20:44:41 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">example of solving the heat equation</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">Let a .  Determine the temperature function  <math id="p1.m1" class="ltx_Math" alttext="(x,\,y)\mapsto u(x,\,y)" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo rspace="4.2pt">,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>↦</mo><mrow><mi>u</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo rspace="4.2pt">,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>  on the plate, when the faces of the plate are .
+<br class="ltx_break"></p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">The equation of the heat flow (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/HeatEquation</span>) in this  case is</p>
+<table id="S0.EGx1" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.E1"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E1.m1" class="ltx_Math" alttext="\displaystyle\nabla^{2}u\;\equiv\;u^{\prime\prime}_{xx}+u^{\prime\prime}_{yy}%
+\;=\;0" display="inline"><mrow><mrow><msup><mo>∇</mo><mn>2</mn></msup><mo>⁡</mo><mpadded width="+2.8pt"><mi>u</mi></mpadded></mrow><mo rspace="5.3pt">≡</mo><mrow><msubsup><mi>u</mi><mrow><mi>x</mi><mo>⁢</mo><mi>x</mi></mrow><mo>′′</mo></msubsup><mo>+</mo><mpadded width="+2.8pt"><msubsup><mi>u</mi><mrow><mi>y</mi><mo>⁢</mo><mi>y</mi></mrow><mo>′′</mo></msubsup></mpadded></mrow><mo>=</mo><mn> 0</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">under the boundary conditions</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="u(0,\,y)=0,\qquad u(\pi,\,y)=0,\qquad u(x,\,\pi)=C,\qquad u^{\prime}_{y}(x,\,0%
+)=0." display="block"><mrow><mrow><mrow><mrow><mi>u</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo rspace="4.2pt">,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow><mo rspace="22.5pt">,</mo><mrow><mrow><mrow><mi>u</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>π</mi><mo rspace="4.2pt">,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow><mo rspace="22.5pt">,</mo><mrow><mrow><mrow><mi>u</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo rspace="4.2pt">,</mo><mi>π</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi>C</mi></mrow><mo rspace="22.5pt">,</mo><mrow><mrow><msubsup><mi>u</mi><mi>y</mi><mo>′</mo></msubsup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mn> 0</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">We first try to separate the variables, i.e. seek the solution of (1) of the form</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="u(x,\,y)\;:=\;X(x)\,Y(y)." display="block"><mrow><mrow><mrow><mi>u</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo rspace="4.2pt">,</mo><mi>y</mi><mo rspace="5.3pt" stretchy="false">)</mo></mrow></mrow><mo rspace="5.3pt">:=</mo><mrow><mi>X</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo rspace="4.2pt" stretchy="false">)</mo></mrow><mo>⁢</mo><mi>Y</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Then we get</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="u^{\prime}_{x}=X^{\prime}Y,\qquad u^{\prime\prime}_{xx}=X^{\prime\prime}Y,%
+\qquad u^{\prime}_{y}=XY^{\prime},\qquad u^{\prime\prime}_{yy}=XY^{\prime%
+\prime}," display="block"><mrow><mrow><mrow><msubsup><mi>u</mi><mi>x</mi><mo>′</mo></msubsup><mo>=</mo><mrow><msup><mi>X</mi><mo>′</mo></msup><mo>⁢</mo><mi>Y</mi></mrow></mrow><mo rspace="22.5pt">,</mo><mrow><mrow><msubsup><mi>u</mi><mrow><mi>x</mi><mo>⁢</mo><mi>x</mi></mrow><mo>′′</mo></msubsup><mo>=</mo><mrow><msup><mi>X</mi><mo>′′</mo></msup><mo>⁢</mo><mi>Y</mi></mrow></mrow><mo rspace="22.5pt">,</mo><mrow><mrow><msubsup><mi>u</mi><mi>y</mi><mo>′</mo></msubsup><mo>=</mo><mrow><mi>X</mi><mo>⁢</mo><msup><mi>Y</mi><mo>′</mo></msup></mrow></mrow><mo rspace="22.5pt">,</mo><mrow><msubsup><mi>u</mi><mrow><mi>y</mi><mo>⁢</mo><mi>y</mi></mrow><mo>′′</mo></msubsup><mo>=</mo><mrow><mi>X</mi><mo>⁢</mo><msup><mi>Y</mi><mo>′′</mo></msup></mrow></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and thus (1) gets the form</p>
+<table id="S0.EGx2" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.E2"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E2.m1" class="ltx_Math" alttext="\displaystyle X^{\prime\prime}Y+XY^{\prime\prime}\;=\;0" display="inline"><mrow><mrow><mrow><msup><mi>X</mi><mo>′′</mo></msup><mo>⁢</mo><mi>Y</mi></mrow><mo>+</mo><mrow><mi>X</mi><mo>⁢</mo><mpadded width="+2.8pt"><msup><mi>Y</mi><mo>′′</mo></msup></mpadded></mrow></mrow><mo>=</mo><mn> 0</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">and the boundary conditions</p>
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="X(0)\;=\;X(\pi)\;=\;0,\quad X(x)\;=\;\frac{C}{Y(\pi)},\quad Y^{\prime}(0)\;=\;0." display="block"><mrow><mrow><mrow><mrow><mi>X</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo rspace="5.3pt" stretchy="false">)</mo></mrow></mrow><mo rspace="5.3pt">=</mo><mrow><mi>X</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>π</mi><mo rspace="5.3pt" stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn> 0</mn></mrow><mo rspace="12.5pt">,</mo><mrow><mrow><mrow><mi>X</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo rspace="5.3pt" stretchy="false">)</mo></mrow></mrow><mo rspace="5.3pt">=</mo><mfrac><mi>C</mi><mrow><mi>Y</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>π</mi><mo stretchy="false">)</mo></mrow></mrow></mfrac></mrow><mo rspace="12.5pt">,</mo><mrow><mrow><msup><mi>Y</mi><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo rspace="5.3pt" stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn> 0</mn></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">We separate the variables in (2):</p>
+<table id="S0.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex5.m1" class="ltx_Math" alttext="\frac{X^{\prime\prime}}{X}\;=\;-\frac{Y^{\prime\prime}}{Y}" display="block"><mrow><mpadded width="+2.8pt"><mfrac><msup><mi>X</mi><mo>′′</mo></msup><mi>X</mi></mfrac></mpadded><mo rspace="5.3pt">=</mo><mrow><mo>-</mo><mfrac><msup><mi>Y</mi><mo>′′</mo></msup><mi>Y</mi></mfrac></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">This equation is not possible unless both sides are equal to a same negative  <math id="p2.m1" class="ltx_Math" alttext="-k^{2}" display="inline"><mrow><mo>-</mo><msup><mi>k</mi><mn>2</mn></msup></mrow></math>, which implies for  <math id="p2.m2" class="ltx_Math" alttext="X^{\prime\prime}=-k^{2}X" display="inline"><mrow><msup><mi>X</mi><mo>′′</mo></msup><mo>=</mo><mrow><mo>-</mo><mrow><msup><mi>k</mi><mn>2</mn></msup><mo>⁢</mo><mi>X</mi></mrow></mrow></mrow></math>  the solution</p>
+<table id="S0.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex6.m1" class="ltx_Math" alttext="X\;:=\;C_{1}\cos{kx}+C_{2}\sin{kx}" display="block"><mrow><mpadded width="+2.8pt"><mi>X</mi></mpadded><mo rspace="5.3pt">:=</mo><mrow><mrow><msub><mi>C</mi><mn>1</mn></msub><mo>⁢</mo><mrow><mi>cos</mi><mo>⁡</mo><mrow><mi>k</mi><mo>⁢</mo><mi>x</mi></mrow></mrow></mrow><mo>+</mo><mrow><msub><mi>C</mi><mn>2</mn></msub><mo>⁢</mo><mrow><mi>sin</mi><mo>⁡</mo><mrow><mi>k</mi><mo>⁢</mo><mi>x</mi></mrow></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and for  <math id="p2.m3" class="ltx_Math" alttext="Y^{\prime\prime}\;=\;k^{2}Y" display="inline"><mrow><mpadded width="+2.8pt"><msup><mi>Y</mi><mo>′′</mo></msup></mpadded><mo rspace="5.3pt">=</mo><mrow><msup><mi>k</mi><mn>2</mn></msup><mo>⁢</mo><mi>Y</mi></mrow></mrow></math>  the solution</p>
+<table id="S0.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex7.m1" class="ltx_Math" alttext="Y\;:=\;D_{1}\cosh{ky}+D_{2}\sinh{ky}." display="block"><mrow><mrow><mpadded width="+2.8pt"><mi>Y</mi></mpadded><mo rspace="5.3pt">:=</mo><mrow><mrow><msub><mi>D</mi><mn>1</mn></msub><mo>⁢</mo><mrow><mi>cosh</mi><mo>⁡</mo><mrow><mi>k</mi><mo>⁢</mo><mi>y</mi></mrow></mrow></mrow><mo>+</mo><mrow><msub><mi>D</mi><mn>2</mn></msub><mo>⁢</mo><mrow><mi>sinh</mi><mo>⁡</mo><mrow><mi>k</mi><mo>⁢</mo><mi>y</mi></mrow></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">The two first boundary conditions give  <math id="p2.m4" class="ltx_Math" alttext="0=X(0)=C_{1}" display="inline"><mrow><mn>0</mn><mo>=</mo><mrow><mi>X</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msub><mi>C</mi><mn>1</mn></msub></mrow></math>,  <math id="p2.m5" class="ltx_Math" alttext="0=X(\pi)=0+C_{2}\sin{k\pi}" display="inline"><mrow><mn>0</mn><mo>=</mo><mrow><mi>X</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>π</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mn>0</mn><mo>+</mo><mrow><msub><mi>C</mi><mn>2</mn></msub><mo>⁢</mo><mrow><mi>sin</mi><mo>⁡</mo><mrow><mi>k</mi><mo>⁢</mo><mi>π</mi></mrow></mrow></mrow></mrow></mrow></math>,  and since  <math id="p2.m6" class="ltx_Math" alttext="C_{2}\neq 0" display="inline"><mrow><msub><mi>C</mi><mn>2</mn></msub><mo>≠</mo><mn>0</mn></mrow></math>,  we must have  <math id="p2.m7" class="ltx_Math" alttext="\sin{k\pi}=0" display="inline"><mrow><mrow><mi>sin</mi><mo>⁡</mo><mrow><mi>k</mi><mo>⁢</mo><mi>π</mi></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math>,  i.e.</p>
+<table id="S0.Ex8" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex8.m1" class="ltx_Math" alttext="0\;&lt;\;k\;:=\;n\;=\;1,\,2,\,3,\,\ldots" display="block"><mrow><mrow><mpadded width="+2.8pt"><mn>0</mn></mpadded><mo rspace="5.3pt">&lt;</mo><mpadded width="+2.8pt"><mi>k</mi></mpadded><mo rspace="5.3pt">:=</mo><mpadded width="+2.8pt"><mi>n</mi></mpadded><mo>=</mo><mn> 1</mn></mrow><mo>,</mo><mrow><mn> 2</mn><mo>,</mo><mn> 3</mn><mo rspace="4.2pt">,</mo><mi mathvariant="normal">…</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Therefore</p>
+<table id="S0.Ex9" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex9.m1" class="ltx_Math" alttext="X(x)\;:=\;C_{2}\sin{nx},\quad Y^{\prime}(y)\;\equiv\;nD_{1}\sinh{ny}+nD_{2}%
+\cosh{ny}." display="block"><mrow><mrow><mrow><mrow><mi>X</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo rspace="5.3pt" stretchy="false">)</mo></mrow></mrow><mo rspace="5.3pt">:=</mo><mrow><msub><mi>C</mi><mn>2</mn></msub><mo>⁢</mo><mrow><mi>sin</mi><mo>⁡</mo><mrow><mi>n</mi><mo>⁢</mo><mi>x</mi></mrow></mrow></mrow></mrow><mo rspace="12.5pt">,</mo><mrow><mrow><msup><mi>Y</mi><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo rspace="5.3pt" stretchy="false">)</mo></mrow></mrow><mo rspace="5.3pt">≡</mo><mrow><mrow><mi>n</mi><mo>⁢</mo><msub><mi>D</mi><mn>1</mn></msub><mo>⁢</mo><mrow><mi>sinh</mi><mo>⁡</mo><mrow><mi>n</mi><mo>⁢</mo><mi>y</mi></mrow></mrow></mrow><mo>+</mo><mrow><mi>n</mi><mo>⁢</mo><msub><mi>D</mi><mn>2</mn></msub><mo>⁢</mo><mrow><mi>cosh</mi><mo>⁡</mo><mrow><mi>n</mi><mo>⁢</mo><mi>y</mi></mrow></mrow></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">The fourth boundary condition now yields that  <math id="p2.m8" class="ltx_Math" alttext="0=Y^{\prime}(0)=nD_{2}" display="inline"><mrow><mn>0</mn><mo>=</mo><mrow><msup><mi>Y</mi><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>n</mi><mo>⁢</mo><msub><mi>D</mi><mn>2</mn></msub></mrow></mrow></math>; 
+thus  <math id="p2.m9" class="ltx_Math" alttext="D_{2}=0" display="inline"><mrow><msub><mi>D</mi><mn>2</mn></msub><mo>=</mo><mn>0</mn></mrow></math>  and  <math id="p2.m10" class="ltx_Math" alttext="Y(y):=D_{1}\cosh{ny}." display="inline"><mrow><mrow><mrow><mi>Y</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><mo>:=</mo><mrow><msub><mi>D</mi><mn>1</mn></msub><mo>⁢</mo><mrow><mi>cosh</mi><mo>⁡</mo><mrow><mi>n</mi><mo>⁢</mo><mi>y</mi></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math>  So (1) has infinitely many solutions</p>
+<table id="S0.EGx3" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.E3"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E3.m1" class="ltx_Math" alttext="\displaystyle u_{n}\;:=\;C_{2}D_{1}\sin{nx}\cosh{ny}\;=\;A_{n}\sin{nx}\cosh{ny}" display="inline"><mrow><mpadded width="+2.8pt"><msub><mi>u</mi><mi>n</mi></msub></mpadded><mo rspace="5.3pt">:=</mo><mrow><msub><mi>C</mi><mn>2</mn></msub><mo>⁢</mo><msub><mi>D</mi><mn>1</mn></msub><mo>⁢</mo><mrow><mi>sin</mi><mo>⁡</mo><mrow><mi>n</mi><mo>⁢</mo><mi>x</mi></mrow></mrow><mo>⁢</mo><mrow><mi>cosh</mi><mo>⁡</mo><mrow><mi>n</mi><mo>⁢</mo><mpadded width="+2.8pt"><mi>y</mi></mpadded></mrow></mrow></mrow><mo rspace="5.3pt">=</mo><mrow><msub><mi>A</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mi>sin</mi><mo>⁡</mo><mrow><mi>n</mi><mo>⁢</mo><mi>x</mi></mrow></mrow><mo>⁢</mo><mrow><mi>cosh</mi><mo>⁡</mo><mrow><mi>n</mi><mo>⁢</mo><mi>y</mi></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">with  <math id="p2.m11" class="ltx_Math" alttext="n\in\mathbb{Z}_{+}" display="inline"><mrow><mi>n</mi><mo>∈</mo><msub><mi>ℤ</mi><mo>+</mo></msub></mrow></math>  and they all satisfy the boundary conditions except the third.  Because of the linearity of (1), also the sum</p>
+<table id="S0.Ex10" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex10.m1" class="ltx_Math" alttext="u\;:=\;\sum_{n=1}^{\infty}A_{n}\sin{nx}\cosh{ny}" display="block"><mrow><mpadded width="+2.8pt"><mi>u</mi></mpadded><mo rspace="5.3pt">:=</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mi mathvariant="normal">∞</mi></munderover><mrow><msub><mi>A</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mi>sin</mi><mo>⁡</mo><mrow><mi>n</mi><mo>⁢</mo><mi>x</mi></mrow></mrow><mo>⁢</mo><mrow><mi>cosh</mi><mo>⁡</mo><mrow><mi>n</mi><mo>⁢</mo><mi>y</mi></mrow></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">of the functions (3) satisfy (1) and those boundary conditions, provided that this series converges.  The third boundary condition requires that</p>
+<table id="S0.Ex11" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex11.m1" class="ltx_Math" alttext="C\;=\;u(x,\,\pi)\;=\;\sum_{n=1}^{\infty}A_{n}\sin{nx}\cosh{n\pi}\;=\;\sum_{n=1%
+}^{\infty}(A_{n}\cosh{n\pi})\sinh{nx}" display="block"><mrow><mpadded width="+2.8pt"><mi>C</mi></mpadded><mo rspace="5.3pt">=</mo><mrow><mi>u</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo rspace="4.2pt">,</mo><mi>π</mi><mo rspace="5.3pt" stretchy="false">)</mo></mrow></mrow><mo rspace="5.3pt">=</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mi mathvariant="normal">∞</mi></munderover><mrow><msub><mi>A</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mi>sin</mi><mo>⁡</mo><mrow><mi>n</mi><mo>⁢</mo><mi>x</mi></mrow></mrow><mo>⁢</mo><mrow><mi>cosh</mi><mo>⁡</mo><mrow><mi>n</mi><mo>⁢</mo><mpadded width="+2.8pt"><mi>π</mi></mpadded></mrow></mrow></mrow></mrow><mo rspace="5.3pt">=</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mi mathvariant="normal">∞</mi></munderover><mrow><mrow><mo stretchy="false">(</mo><mrow><msub><mi>A</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mi>cosh</mi><mo>⁡</mo><mrow><mi>n</mi><mo>⁢</mo><mi>π</mi></mrow></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mi>sinh</mi><mo>⁡</mo><mrow><mi>n</mi><mo>⁢</mo><mi>x</mi></mrow></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">on the interval  <math id="p2.m12" class="ltx_Math" alttext="0\leqq x\leqq\pi" display="inline"><mrow><mn>0</mn><mo>≦</mo><mi>x</mi><mo>≦</mo><mi>π</mi></mrow></math>.  But this is the Fourier sine series of the constant function  <math id="p2.m13" class="ltx_Math" alttext="x\mapsto C" display="inline"><mrow><mi>x</mi><mo>↦</mo><mi>C</mi></mrow></math>  on the half-interval  <math id="p2.m14" class="ltx_Math" alttext="[0,\,\pi]" display="inline"><mrow><mo stretchy="false">[</mo><mn>0</mn><mo rspace="4.2pt">,</mo><mi>π</mi><mo stretchy="false">]</mo></mrow></math>,  whence</p>
+<table id="S0.Ex12" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex12.m1" class="ltx_Math" alttext="A_{n}\cosh{n\pi}\;=\;\frac{2}{\pi}\int_{0}^{\pi}C\sin{nx}\,dx\;=\;\frac{2C}{n%
+\pi}(1\!-\!(-1)^{n})\quad\forall n\in\mathbb{Z}_{+}." display="block"><mrow><mrow><mrow><mrow><msub><mi>A</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mi>cosh</mi><mo>⁡</mo><mrow><mi>n</mi><mo>⁢</mo><mpadded width="+2.8pt"><mi>π</mi></mpadded></mrow></mrow></mrow><mo rspace="5.3pt">=</mo><mrow><mfrac><mn>2</mn><mi>π</mi></mfrac><mo>⁢</mo><mrow><msubsup><mo largeop="true" symmetric="true">∫</mo><mn>0</mn><mi>π</mi></msubsup><mrow><mi>C</mi><mo>⁢</mo><mrow><mi>sin</mi><mo>⁡</mo><mrow><mi>n</mi><mo>⁢</mo><mpadded width="+1.7pt"><mi>x</mi></mpadded><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mpadded width="+2.8pt"><mi>x</mi></mpadded></mrow></mrow></mrow></mrow></mrow><mo rspace="5.3pt">=</mo><mrow><mfrac><mrow><mn>2</mn><mo>⁢</mo><mi>C</mi></mrow><mrow><mi>n</mi><mo>⁢</mo><mi>π</mi></mrow></mfrac><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mpadded width="-1.7pt"><mn>1</mn></mpadded><mo rspace="0.8pt">-</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mi>n</mi></msup></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo mathvariant="italic" separator="true"> </mo><mrow><mrow><mo>∀</mo><mi>n</mi></mrow><mo>∈</mo><msub><mi>ℤ</mi><mo>+</mo></msub></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">The even (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/EvenNumber</span>) <math id="p2.m15" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>’s here give 0 and the odd (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/EvenNumber</span>) give</p>
+<table id="S0.Ex13" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex13.m1" class="ltx_Math" alttext="A_{2m+1}\;:=\;\frac{4C}{(2m\!+\!1)\pi\cosh(2m\!+\!1)\pi}\quad(m=0,\,1,\,2,\,\ldots)" display="block"><mrow><mpadded width="+2.8pt"><msub><mi>A</mi><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow><mo>+</mo><mn>1</mn></mrow></msub></mpadded><mo rspace="5.3pt">:=</mo><mfrac><mrow><mn>4</mn><mo>⁢</mo><mi>C</mi></mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mpadded width="-1.7pt"><mi>m</mi></mpadded></mrow><mo rspace="0.8pt">+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mrow><mi>cosh</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mpadded width="-1.7pt"><mi>m</mi></mpadded></mrow><mo rspace="0.8pt">+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>⁢</mo><mi>π</mi></mrow></mfrac><mo mathvariant="italic" separator="true"> </mo><mrow><mo stretchy="false">(</mo><mi>m</mi><mo>=</mo><mn>0</mn><mo>,</mo><mn> 1</mn><mo>,</mo><mn> 2</mn><mo rspace="4.2pt">,</mo><mi mathvariant="normal">…</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">Thus we obtain the solution</p>
+<table id="S0.Ex14" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex14.m1" class="ltx_Math" alttext="u(x,\,y)\;:=\;\frac{4C}{\pi}\sum_{m=0}^{\infty}\frac{\sin(2m\!+\!1)x\cosh(2m\!%
++\!1)y}{(2m\!+\!1)\cosh(2m\!+\!1)\pi}." display="block"><mrow><mrow><mrow><mi>u</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo rspace="4.2pt">,</mo><mi>y</mi><mo rspace="5.3pt" stretchy="false">)</mo></mrow></mrow><mo rspace="5.3pt">:=</mo><mrow><mfrac><mrow><mn>4</mn><mo>⁢</mo><mi>C</mi></mrow><mi>π</mi></mfrac><mo>⁢</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>m</mi><mo>=</mo><mn>0</mn></mrow><mi mathvariant="normal">∞</mi></munderover><mfrac><mrow><mrow><mi>sin</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mpadded width="-1.7pt"><mi>m</mi></mpadded></mrow><mo rspace="0.8pt">+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>⁢</mo><mi>x</mi><mo>⁢</mo><mrow><mi>cosh</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mpadded width="-1.7pt"><mi>m</mi></mpadded></mrow><mo rspace="0.8pt">+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>⁢</mo><mi>y</mi></mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mpadded width="-1.7pt"><mi>m</mi></mpadded></mrow><mo rspace="0.8pt">+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mi>cosh</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mpadded width="-1.7pt"><mi>m</mi></mpadded></mrow><mo rspace="0.8pt">+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>⁢</mo><mi>π</mi></mrow></mfrac></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">It can be shown that this series converges in the whole  of the plate.</p>
+</div>
+<section id="S0.SSx1" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">Visualization of the solution</h2>
+
+<figure id="S0.F1" class="ltx_figure"><img src="heat-surface.eps" id="S0.F1.g1" class="ltx_graphics ltx_centering" alt="">
+<figcaption class="ltx_caption ltx_centering"><span class="ltx_tag ltx_tag_figure">Figure 1: </span>Surface plot of the solution <math id="S0.F1.m3" class="ltx_Math" alttext="u(x,\,y)" display="inline"><mrow><mi>u</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo rspace="4.2pt">,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow></math>, for <math id="S0.F1.m4" class="ltx_Math" alttext="C=1" display="inline"><mrow><mi>C</mi><mo>=</mo><mn>1</mn></mrow></math></figcaption>
+</figure>
+<figure id="S0.F2" class="ltx_figure"><img src="heat-color.eps" id="S0.F2.g1" class="ltx_graphics ltx_centering" alt="">
+<figcaption class="ltx_caption ltx_centering"><span class="ltx_tag ltx_tag_figure">Figure 2: </span>Color-coded plot of the temperature <math id="S0.F2.m2" class="ltx_Math" alttext="u(x,\,y)" display="inline"><mrow><mi>u</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo rspace="4.2pt">,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow></math></figcaption>
+</figure>
+<div id="S0.SSx1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Remark.</span>  The function <math id="S0.SSx1.p1.m1" class="ltx_Math" alttext="u" display="inline"><mi>u</mi></math> has been approximated in the plot by computing a partial sum of the true infinite-series solution.  However,
+there is substantial numerical error in the approximate solution near 
+<math id="S0.SSx1.p1.m2" class="ltx_Math" alttext="y=\pi" display="inline"><mrow><mi>y</mi><mo>=</mo><mi>π</mi></mrow></math>,  evident in the small oscillations observed in the surface plot, that should not be there in .  This phenomenon is actually inevitable given that the boundary conditions are actually discontinuous at the corners  <math id="S0.SSx1.p1.m3" class="ltx_Math" alttext="(0,\,\pi)" display="inline"><mrow><mo stretchy="false">(</mo><mn>0</mn><mo rspace="4.2pt">,</mo><mi>π</mi><mo stretchy="false">)</mo></mrow></math>  and  <math id="S0.SSx1.p1.m4" class="ltx_Math" alttext="(\pi,\,\pi)" display="inline"><mrow><mo stretchy="false">(</mo><mi>π</mi><mo rspace="4.2pt">,</mo><mi>π</mi><mo stretchy="false">)</mo></mrow></math>.</p>
+</div>
+<div id="S0.SSx1.p2" class="ltx_para">
+<p class="ltx_p">More precisely, observe that when  <math id="S0.SSx1.p2.m1" class="ltx_Math" alttext="y=\pi" display="inline"><mrow><mi>y</mi><mo>=</mo><mi>π</mi></mrow></math>,  the  for  <math id="S0.SSx1.p2.m2" class="ltx_Math" alttext="u(x,\,y)" display="inline"><mrow><mi>u</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo rspace="4.2pt">,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow></math>  reduces to the Fourier series
+</p>
+<table id="S0.Ex15" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex15.m1" class="ltx_Math" alttext="\frac{4C}{\pi}\left(\sin{x}+\frac{\sin{3x}}{3}+\frac{\sin{5x}}{5}+\cdots\right)" display="block"><mrow><mfrac><mrow><mn>4</mn><mo>⁢</mo><mi>C</mi></mrow><mi>π</mi></mfrac><mo>⁢</mo><mrow><mo>(</mo><mrow><mrow><mi>sin</mi><mo>⁡</mo><mi>x</mi></mrow><mo>+</mo><mfrac><mrow><mi>sin</mi><mo>⁡</mo><mrow><mn>3</mn><mo>⁢</mo><mi>x</mi></mrow></mrow><mn>3</mn></mfrac><mo>+</mo><mfrac><mrow><mi>sin</mi><mo>⁡</mo><mrow><mn>5</mn><mo>⁢</mo><mi>x</mi></mrow></mrow><mn>5</mn></mfrac><mo>+</mo><mi mathvariant="normal">⋯</mi></mrow><mo>)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">for the discontinuous function on  <math id="S0.SSx1.p2.m3" class="ltx_Math" alttext="[-\pi,\,\pi]" display="inline"><mrow><mo stretchy="false">[</mo><mrow><mo>-</mo><mi>π</mi></mrow><mo rspace="4.2pt">,</mo><mi>π</mi><mo stretchy="false">]</mo></mrow></math>:</p>
+<table id="S0.Ex16" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex16.m1" class="ltx_Math" alttext="x\mapsto\begin{cases}C\,,&amp;0&lt;x&lt;\pi\\
+-C\,,&amp;-\pi&lt;x&lt;0\end{cases}\," display="block"><mrow><mi>x</mi><mo>↦</mo><mpadded width="+1.7pt"><mrow><mo>{</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="left"><mrow><mpadded width="+1.7pt"><mi>C</mi></mpadded><mo>,</mo></mrow></mtd><mtd columnalign="left"><mrow><mn>0</mn><mo>&lt;</mo><mi>x</mi><mo>&lt;</mo><mi>π</mi></mrow></mtd></mtr><mtr><mtd columnalign="left"><mrow><mrow><mo>-</mo><mpadded width="+1.7pt"><mi>C</mi></mpadded></mrow><mo>,</mo></mrow></mtd><mtd columnalign="left"><mrow><mrow><mo>-</mo><mi>π</mi></mrow><mo>&lt;</mo><mi>x</mi><mo>&lt;</mo><mn>0</mn></mrow></mtd></mtr></mtable></mrow></mpadded></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">That means the Fourier  will necessarily be subject to the <span class="ltx_text ltx_font_italic">Gibbs phenomenon</span>.  Of course, the series also cannot converge absolutely; in other  of the series decay too slowly in magnitude, adversely affecting the numerical solution.</p>
+</div>
+<div id="S0.SSx1.p3" class="ltx_para">
+<ul id="I1" class="ltx_itemize">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_typewriter">http://gold-saucer.afraid.org/math/planetmath/ExampleOfSolvingTheHeatEquation/heat.py</span>Python program to compute  <math id="I1.i1.p1.m1" class="ltx_Math" alttext="u(x,\,y)" display="inline"><mrow><mi>u</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo rspace="4.2pt">,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow></math>  and produce the two figures</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="S0.SSx1.p4" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_t">Title</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">example of solving the heat equation</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Canonical name</td>
+<td class="ltx_td ltx_align_left ltx_border_r">ExampleOfSolvingTheHeatEquation</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Date of creation</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2014-09-28 17:02:21</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified on</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2014-09-28 17:02:21</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Owner</td>
+<td class="ltx_td ltx_align_left ltx_border_r">pahio (2872)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified by</td>
+<td class="ltx_td ltx_align_left ltx_border_r">pahio (2872)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Numerical id</td>
+<td class="ltx_td ltx_align_left ltx_border_r">25</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Author</td>
+<td class="ltx_td ltx_align_left ltx_border_r">pahio (2872)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Entry type</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Example</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 35Q99</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">stationary example of heat equation</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">LaplacesEquation</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">BlackScholesPDE</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">AnalyticSolutionOfBlackScholesPDE</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">SolvingTheWaveEquationByDBernoulli</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">TimeDependentExampleOfHeatEquation</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">ExampleOfSummationByParts</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 20:44:41 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

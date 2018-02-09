@@ -1,0 +1,171 @@
+<!DOCTYPE html><html>
+<head>
+<title>Green’s function</title>
+<!--Generated on Fri Feb  9 20:43:32 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">Green’s function</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<section id="Sx1" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">Some general preliminary considerations</h2>
+
+<div id="Sx1.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="Sx1.p1.m1" class="ltx_Math" alttext="(\Omega,\mu)" display="inline"><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">Ω</mi><mo>,</mo><mi>μ</mi><mo stretchy="false">)</mo></mrow></math> be a bounded measure space and <math id="Sx1.p1.m2" class="ltx_Math" alttext="\mathcal{F}(\Omega)" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">ℱ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">Ω</mi><mo stretchy="false">)</mo></mrow></mrow></math> be a linear function
+space of bounded functions defined on <math id="Sx1.p1.m3" class="ltx_Math" alttext="\Omega" display="inline"><mi mathvariant="normal">Ω</mi></math>, i.e. <math id="Sx1.p1.m4" class="ltx_Math" alttext="\mathcal{F}(\Omega)\subset\mathcal{L}^{\infty}(\Omega)" display="inline"><mrow><mrow><mi class="ltx_font_mathcaligraphic">ℱ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">Ω</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⊂</mo><mrow><msup><mi class="ltx_font_mathcaligraphic">ℒ</mi><mi mathvariant="normal">∞</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">Ω</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.
+We would like to note two types of functionals from the dual space <math id="Sx1.p1.m5" class="ltx_Math" alttext="(\mathcal{F}(\Omega))^{*}" display="inline"><msup><mrow><mo stretchy="false">(</mo><mrow><mi class="ltx_font_mathcaligraphic">ℱ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">Ω</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>*</mo></msup></math>, which
+will be used here:</p>
+<ol id="I1" class="ltx_enumerate">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p">Each function <math id="I1.i1.p1.m1" class="ltx_Math" alttext="g(x)\in\mathcal{L}^{1}(\Omega)" display="inline"><mrow><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>∈</mo><mrow><msup><mi class="ltx_font_mathcaligraphic">ℒ</mi><mn>1</mn></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">Ω</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> defines a functional <math id="I1.i1.p1.m2" class="ltx_Math" alttext="\varphi\in(\mathcal{F}(\Omega))^{*}" display="inline"><mrow><mi>φ</mi><mo>∈</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi class="ltx_font_mathcaligraphic">ℱ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">Ω</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>*</mo></msup></mrow></math> in the
+following way:</p>
+<table id="Sx1.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx1.Ex1.m1" class="ltx_Math" alttext="\varphi(f)=\int\limits_{\Omega}g(x)\,f(x)\,d\mu." display="block"><mrow><mrow><mrow><mi>φ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>f</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><munder><mo largeop="true" movablelimits="false" symmetric="true">∫</mo><mi mathvariant="normal">Ω</mi></munder><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo rspace="4.2pt" stretchy="false">)</mo></mrow><mo>⁢</mo><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo rspace="4.2pt" stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo>𝑑</mo><mi>μ</mi></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Such functional we will call <span class="ltx_text ltx_font_italic">regular</span> functional and function <math id="I1.i1.p1.m3" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math> — its <span class="ltx_text ltx_font_italic">generator</span>.</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p">For each <math id="I1.i2.p1.m1" class="ltx_Math" alttext="x\in\Omega" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi mathvariant="normal">Ω</mi></mrow></math>, we will consider a functional <math id="I1.i2.p1.m2" class="ltx_Math" alttext="\delta_{x}\in(\mathcal{F}(\Omega))^{*}" display="inline"><mrow><msub><mi>δ</mi><mi>x</mi></msub><mo>∈</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi class="ltx_font_mathcaligraphic">ℱ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">Ω</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>*</mo></msup></mrow></math> defined as follows:</p>
+<table id="Sx1.E1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx1.E1.m1" class="ltx_Math" alttext="\delta_{x}(f)=f(x)." display="block"><mrow><mrow><mrow><msub><mi>δ</mi><mi>x</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>f</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1)</span></td>
+</tr>
+</table>
+<p class="ltx_p">Since generally, we can not speak about values at the point for functions from <math id="I1.i2.p1.m3" class="ltx_Math" alttext="\mathcal{(}L)^{\infty}" display="inline"><msup><mrow><mo stretchy="false">(</mo><mi>L</mi><mo stretchy="false">)</mo></mrow><mi mathvariant="normal">∞</mi></msup></math>,
+in the following, we assume some regularity for functions from considered spaces, so that
+(<a href="#Sx1.E1" title="(1) ‣ 2. ‣ Some general preliminary considerations ‣ Green’s function" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1</span></a>) is correctly defined.</p>
+</div>
+</li>
+</ol>
+</div>
+</section>
+<section id="Sx2" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">Necessary notations and motivation</h2>
+
+<div id="Sx2.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="Sx2.p1.m1" class="ltx_Math" alttext="(\Omega_{x},\mu_{x}),\,(\Omega_{y},\mu_{y})" display="inline"><mrow><mrow><mo stretchy="false">(</mo><msub><mi mathvariant="normal">Ω</mi><mi>x</mi></msub><mo>,</mo><msub><mi>μ</mi><mi>x</mi></msub><mo stretchy="false">)</mo></mrow><mo rspace="4.2pt">,</mo><mrow><mo stretchy="false">(</mo><msub><mi mathvariant="normal">Ω</mi><mi>y</mi></msub><mo>,</mo><msub><mi>μ</mi><mi>y</mi></msub><mo stretchy="false">)</mo></mrow></mrow></math> be some bounded measure spaces; <math id="Sx2.p1.m2" class="ltx_Math" alttext="\mathcal{F}(\Omega_{x}),\mathcal{G}(\Omega_{y})" display="inline"><mrow><mrow><mi class="ltx_font_mathcaligraphic">ℱ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi mathvariant="normal">Ω</mi><mi>x</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mrow><mi class="ltx_font_mathcaligraphic">𝒢</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi mathvariant="normal">Ω</mi><mi>y</mi></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></math> be some
+linear function spaces. Let <math id="Sx2.p1.m3" class="ltx_Math" alttext="A:\mathcal{F}(\Omega_{x})\rightarrow\mathcal{G}(\Omega_{y})" display="inline"><mrow><mi>A</mi><mo>:</mo><mrow><mrow><mi class="ltx_font_mathcaligraphic">ℱ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi mathvariant="normal">Ω</mi><mi>x</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>→</mo><mrow><mi class="ltx_font_mathcaligraphic">𝒢</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi mathvariant="normal">Ω</mi><mi>y</mi></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math> be a linear operator which has a well-defined
+inverse <math id="Sx2.p1.m4" class="ltx_Math" alttext="A^{-1}:\mathcal{G}(\Omega_{y})\rightarrow\mathcal{F}(\Omega_{x})" display="inline"><mrow><msup><mi>A</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>:</mo><mrow><mrow><mi class="ltx_font_mathcaligraphic">𝒢</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi mathvariant="normal">Ω</mi><mi>y</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>→</mo><mrow><mi class="ltx_font_mathcaligraphic">ℱ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi mathvariant="normal">Ω</mi><mi>x</mi></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math>.</p>
+</div>
+<div id="Sx2.p2" class="ltx_para">
+<p class="ltx_p">Consider an operator equation:</p>
+<table id="Sx2.E2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx2.E2.m1" class="ltx_Math" alttext="Af=g" display="block"><mrow><mrow><mi>A</mi><mo>⁢</mo><mi>f</mi></mrow><mo>=</mo><mi>g</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2)</span></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="Sx2.p2.m1" class="ltx_Math" alttext="f\in\mathcal{F}(\Omega_{x})" display="inline"><mrow><mi>f</mi><mo>∈</mo><mrow><mi class="ltx_font_mathcaligraphic">ℱ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi mathvariant="normal">Ω</mi><mi>x</mi></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></math> is unknown and <math id="Sx2.p2.m2" class="ltx_Math" alttext="g\in\mathcal{G}(\Omega_{y})" display="inline"><mrow><mi>g</mi><mo>∈</mo><mrow><mi class="ltx_font_mathcaligraphic">𝒢</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi mathvariant="normal">Ω</mi><mi>y</mi></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></math> is given. We are interested to have an integral representation
+for solution of (<a href="#Sx2.E2" title="(2) ‣ Necessary notations and motivation ‣ Green’s function" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2</span></a>). For this purpose we write:</p>
+<table id="Sx2.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx2.Ex2.m1" class="ltx_Math" alttext="f(x)=\delta_{x}(f)=\delta_{x}(A^{-1}(g))=[\,(A^{-1})^{*}\delta_{x}\,](g)." display="block"><mrow><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mi>δ</mi><mi>x</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>f</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mi>δ</mi><mi>x</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>A</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>g</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mo rspace="4.2pt" stretchy="false">[</mo><mrow><msup><mrow><mo stretchy="false">(</mo><msup><mi>A</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo stretchy="false">)</mo></mrow><mo>*</mo></msup><mo>⁢</mo><mpadded width="+1.7pt"><msub><mi>δ</mi><mi>x</mi></msub></mpadded></mrow><mo stretchy="false">]</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>g</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</section>
+<section id="Sx3" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">Definition of Green’s function</h2>
+
+<div id="Sx3.p1" class="ltx_para">
+<p class="ltx_p">If <math id="Sx3.p1.m1" class="ltx_Math" alttext="\forall x\in\Omega_{x}" display="inline"><mrow><mrow><mo>∀</mo><mi>x</mi></mrow><mo>∈</mo><msub><mi mathvariant="normal">Ω</mi><mi>x</mi></msub></mrow></math> the functional <math id="Sx3.p1.m2" class="ltx_Math" alttext="(A^{-1})^{*}\delta_{x}" display="inline"><mrow><msup><mrow><mo stretchy="false">(</mo><msup><mi>A</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo stretchy="false">)</mo></mrow><mo>*</mo></msup><mo>⁢</mo><msub><mi>δ</mi><mi>x</mi></msub></mrow></math> is regular with generator
+<math id="Sx3.p1.m3" class="ltx_Math" alttext="G(\cdot,y)\in\mathcal{L}^{1}(\Omega_{y})" display="inline"><mrow><mrow><mi>G</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mo>⋅</mo><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><mo>∈</mo><mrow><msup><mi class="ltx_font_mathcaligraphic">ℒ</mi><mn>1</mn></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi mathvariant="normal">Ω</mi><mi>y</mi></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, then <math id="Sx3.p1.m4" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> is called <span class="ltx_text ltx_font_bold">Green’s function of
+operator <math id="Sx3.p1.m5" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math></span> and solution of (<a href="#Sx2.E2" title="(2) ‣ Necessary notations and motivation ‣ Green’s function" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2</span></a>) admits the following integral representation:</p>
+<table id="Sx3.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx3.Ex3.m1" class="ltx_Math" alttext="f(x)=\int\limits_{\Omega_{y}}G(x,y)\,g(y)\,d\mu_{y}" display="block"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><munder><mo largeop="true" movablelimits="false" symmetric="true">∫</mo><msub><mi mathvariant="normal">Ω</mi><mi>y</mi></msub></munder><mrow><mi>G</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo rspace="4.2pt" stretchy="false">)</mo></mrow><mo>⁢</mo><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo rspace="4.2pt" stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo>𝑑</mo><msub><mi>μ</mi><mi>y</mi></msub></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">Green’s function</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">GreensFunction</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 14:43:36</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 14:43:36</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">PrimeFan (13766)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">PrimeFan (13766)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">7</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">PrimeFan (13766)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 35C15</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">PoissonsEquation</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 20:43:32 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,1087 @@
+<!DOCTYPE html><html>
+<head>
+<title>Laplace equation in cylindrical coordinates</title>
+<!--Generated on Fri Feb  9 20:43:50 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">Laplace equation in cylindrical coordinates</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<section id="S1" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">1 </span>Laplace Equation in Cylindrical Coordinates</h2>
+
+<div id="S1.p1" class="ltx_para">
+<p class="ltx_p">Solutions to the Laplace equation in cylindrical coordinates have wide applicability from fluid mechanics to electrostatics.
+Applying the method of separation of variables to Laplace’s partial differential equation and then enumerating the various forms
+of solutions will lay down a foundation for solving problems in this coordinate system. Finally, the use of Bessel functions
+in the solution reminds us why they are synonymous with the cylindrical domain.</p>
+</div>
+<section id="S1.SS1" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">1.1 </span>Separation of Variables</h3>
+
+<div id="S1.SS1.p1" class="ltx_para">
+<p class="ltx_p">Beginning with the Laplacian in cylindrical coordinates, apply the operator to a potential function and set it equal to zero to get the Laplace equation</p>
+</div>
+<div id="S1.SS1.p2" class="ltx_para">
+<table id="S1.E1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.E1.m1" class="ltx_Math" alttext="\nabla^{2}\Phi=\frac{1}{r}\frac{\partial}{\partial r}\left(r\frac{\partial\Phi%
+}{\partial r}\right)+\frac{1}{r^{2}}\frac{\partial^{2}\Phi}{\partial\theta^{2}%
+}+\frac{\partial^{2}\Phi}{\partial z^{2}}=0." display="block"><mrow><mrow><mrow><msup><mo>∇</mo><mn>2</mn></msup><mo>⁡</mo><mi mathvariant="normal">Φ</mi></mrow><mo>=</mo><mrow><mrow><mfrac><mn>1</mn><mi>r</mi></mfrac><mo>⁢</mo><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><mi>r</mi></mrow></mfrac><mo>⁢</mo><mrow><mo>(</mo><mrow><mi>r</mi><mo>⁢</mo><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi mathvariant="normal">Φ</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>r</mi></mrow></mfrac></mrow><mo>)</mo></mrow></mrow><mo>+</mo><mrow><mfrac><mn>1</mn><msup><mi>r</mi><mn>2</mn></msup></mfrac><mo>⁢</mo><mfrac><mrow><msup><mo>∂</mo><mn>2</mn></msup><mo>⁡</mo><mi mathvariant="normal">Φ</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>θ</mi><mn>2</mn></msup></mrow></mfrac></mrow><mo>+</mo><mfrac><mrow><msup><mo>∂</mo><mn>2</mn></msup><mo>⁡</mo><mi mathvariant="normal">Φ</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>z</mi><mn>2</mn></msup></mrow></mfrac></mrow><mo>=</mo><mn>0</mn></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1)</span></td>
+</tr>
+</table>
+</div>
+<div id="S1.SS1.p3" class="ltx_para">
+<p class="ltx_p">First expand out the terms</p>
+</div>
+<div id="S1.SS1.p4" class="ltx_para">
+<table id="S1.E2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.E2.m1" class="ltx_Math" alttext="\nabla^{2}\Phi=\frac{1}{r}\frac{\partial\Phi}{\partial r}+\frac{\partial^{2}%
+\Phi}{\partial r^{2}}+\frac{1}{r^{2}}\frac{\partial^{2}\Phi}{\partial\theta^{2%
+}}+\frac{\partial^{2}\Phi}{\partial z^{2}}=0." display="block"><mrow><mrow><mrow><msup><mo>∇</mo><mn>2</mn></msup><mo>⁡</mo><mi mathvariant="normal">Φ</mi></mrow><mo>=</mo><mrow><mrow><mfrac><mn>1</mn><mi>r</mi></mfrac><mo>⁢</mo><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi mathvariant="normal">Φ</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>r</mi></mrow></mfrac></mrow><mo>+</mo><mfrac><mrow><msup><mo>∂</mo><mn>2</mn></msup><mo>⁡</mo><mi mathvariant="normal">Φ</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>r</mi><mn>2</mn></msup></mrow></mfrac><mo>+</mo><mrow><mfrac><mn>1</mn><msup><mi>r</mi><mn>2</mn></msup></mfrac><mo>⁢</mo><mfrac><mrow><msup><mo>∂</mo><mn>2</mn></msup><mo>⁡</mo><mi mathvariant="normal">Φ</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>θ</mi><mn>2</mn></msup></mrow></mfrac></mrow><mo>+</mo><mfrac><mrow><msup><mo>∂</mo><mn>2</mn></msup><mo>⁡</mo><mi mathvariant="normal">Φ</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>z</mi><mn>2</mn></msup></mrow></mfrac></mrow><mo>=</mo><mn>0</mn></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2)</span></td>
+</tr>
+</table>
+</div>
+<div id="S1.SS1.p5" class="ltx_para">
+<p class="ltx_p">Then apply the method of separation of variables by assuming the solution is in the form</p>
+</div>
+<div id="S1.SS1.p6" class="ltx_para">
+<table id="S1.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex1.m1" class="ltx_Math" alttext="\Phi\left(r,\theta,z\right)=R(r)P(\theta)Z(z)." display="block"><mrow><mrow><mrow><mi mathvariant="normal">Φ</mi><mo>⁢</mo><mrow><mo>(</mo><mi>r</mi><mo>,</mo><mi>θ</mi><mo>,</mo><mi>z</mi><mo>)</mo></mrow></mrow><mo>=</mo><mrow><mi>R</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>r</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>θ</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>Z</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S1.SS1.p7" class="ltx_para">
+<p class="ltx_p">Plug this into (2) and note how we can bring out the functions that are not affected by the derivatives</p>
+</div>
+<div id="S1.SS1.p8" class="ltx_para">
+<table id="S1.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex2.m1" class="ltx_Math" alttext="\frac{PZ}{r}\frac{dR}{dr}+PZ\frac{d^{2}R}{dr^{2}}+\frac{RZ}{r^{2}}\frac{d^{2}P%
+}{d\theta^{2}}+RP\frac{d^{2}Z}{dz^{2}}=0." display="block"><mrow><mrow><mrow><mrow><mfrac><mrow><mi>P</mi><mo>⁢</mo><mi>Z</mi></mrow><mi>r</mi></mfrac><mo>⁢</mo><mfrac><mrow><mi>d</mi><mo>⁢</mo><mi>R</mi></mrow><mrow><mi>d</mi><mo>⁢</mo><mi>r</mi></mrow></mfrac></mrow><mo>+</mo><mrow><mi>P</mi><mo>⁢</mo><mi>Z</mi><mo>⁢</mo><mfrac><mrow><msup><mi>d</mi><mn>2</mn></msup><mo>⁢</mo><mi>R</mi></mrow><mrow><mi>d</mi><mo>⁢</mo><msup><mi>r</mi><mn>2</mn></msup></mrow></mfrac></mrow><mo>+</mo><mrow><mfrac><mrow><mi>R</mi><mo>⁢</mo><mi>Z</mi></mrow><msup><mi>r</mi><mn>2</mn></msup></mfrac><mo>⁢</mo><mfrac><mrow><msup><mi>d</mi><mn>2</mn></msup><mo>⁢</mo><mi>P</mi></mrow><mrow><mi>d</mi><mo>⁢</mo><msup><mi>θ</mi><mn>2</mn></msup></mrow></mfrac></mrow><mo>+</mo><mrow><mi>R</mi><mo>⁢</mo><mi>P</mi><mo>⁢</mo><mfrac><mrow><msup><mi>d</mi><mn>2</mn></msup><mo>⁢</mo><mi>Z</mi></mrow><mrow><mi>d</mi><mo>⁢</mo><msup><mi>z</mi><mn>2</mn></msup></mrow></mfrac></mrow></mrow><mo>=</mo><mn>0</mn></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S1.SS1.p9" class="ltx_para">
+<p class="ltx_p">Divide by <math id="S1.SS1.p9.m1" class="ltx_Math" alttext="R(r)P(\theta)Z(z)" display="inline"><mrow><mi>R</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>r</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>θ</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>Z</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow></math> and use short hand notation to get</p>
+</div>
+<div id="S1.SS1.p10" class="ltx_para">
+<table id="S1.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex3.m1" class="ltx_Math" alttext="\frac{1}{Rr}\frac{dR}{dr}+\frac{1}{R}\frac{d^{2}R}{dr^{2}}+\frac{1}{Pr^{2}}%
+\frac{d^{2}P}{d\theta^{2}}+\frac{1}{Z}\frac{d^{2}Z}{dz^{2}}=0." display="block"><mrow><mrow><mrow><mrow><mfrac><mn>1</mn><mrow><mi>R</mi><mo>⁢</mo><mi>r</mi></mrow></mfrac><mo>⁢</mo><mfrac><mrow><mi>d</mi><mo>⁢</mo><mi>R</mi></mrow><mrow><mi>d</mi><mo>⁢</mo><mi>r</mi></mrow></mfrac></mrow><mo>+</mo><mrow><mfrac><mn>1</mn><mi>R</mi></mfrac><mo>⁢</mo><mfrac><mrow><msup><mi>d</mi><mn>2</mn></msup><mo>⁢</mo><mi>R</mi></mrow><mrow><mi>d</mi><mo>⁢</mo><msup><mi>r</mi><mn>2</mn></msup></mrow></mfrac></mrow><mo>+</mo><mrow><mfrac><mn>1</mn><mrow><mi>P</mi><mo>⁢</mo><msup><mi>r</mi><mn>2</mn></msup></mrow></mfrac><mo>⁢</mo><mfrac><mrow><msup><mi>d</mi><mn>2</mn></msup><mo>⁢</mo><mi>P</mi></mrow><mrow><mi>d</mi><mo>⁢</mo><msup><mi>θ</mi><mn>2</mn></msup></mrow></mfrac></mrow><mo>+</mo><mrow><mfrac><mn>1</mn><mi>Z</mi></mfrac><mo>⁢</mo><mfrac><mrow><msup><mi>d</mi><mn>2</mn></msup><mo>⁢</mo><mi>Z</mi></mrow><mrow><mi>d</mi><mo>⁢</mo><msup><mi>z</mi><mn>2</mn></msup></mrow></mfrac></mrow></mrow><mo>=</mo><mn>0</mn></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S1.SS1.p11" class="ltx_para">
+<p class="ltx_p">“Separating” the z term to the other side gives</p>
+</div>
+<div id="S1.SS1.p12" class="ltx_para">
+<table id="S1.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex4.m1" class="ltx_Math" alttext="\frac{1}{Rr}\frac{dR}{dr}+\frac{1}{R}\frac{d^{2}R}{dr^{2}}+\frac{1}{Pr^{2}}%
+\frac{d^{2}P}{d\theta^{2}}=-\frac{1}{Z}\frac{d^{2}Z}{dz^{2}}." display="block"><mrow><mrow><mrow><mrow><mfrac><mn>1</mn><mrow><mi>R</mi><mo>⁢</mo><mi>r</mi></mrow></mfrac><mo>⁢</mo><mfrac><mrow><mi>d</mi><mo>⁢</mo><mi>R</mi></mrow><mrow><mi>d</mi><mo>⁢</mo><mi>r</mi></mrow></mfrac></mrow><mo>+</mo><mrow><mfrac><mn>1</mn><mi>R</mi></mfrac><mo>⁢</mo><mfrac><mrow><msup><mi>d</mi><mn>2</mn></msup><mo>⁢</mo><mi>R</mi></mrow><mrow><mi>d</mi><mo>⁢</mo><msup><mi>r</mi><mn>2</mn></msup></mrow></mfrac></mrow><mo>+</mo><mrow><mfrac><mn>1</mn><mrow><mi>P</mi><mo>⁢</mo><msup><mi>r</mi><mn>2</mn></msup></mrow></mfrac><mo>⁢</mo><mfrac><mrow><msup><mi>d</mi><mn>2</mn></msup><mo>⁢</mo><mi>P</mi></mrow><mrow><mi>d</mi><mo>⁢</mo><msup><mi>θ</mi><mn>2</mn></msup></mrow></mfrac></mrow></mrow><mo>=</mo><mrow><mo>-</mo><mrow><mfrac><mn>1</mn><mi>Z</mi></mfrac><mo>⁢</mo><mfrac><mrow><msup><mi>d</mi><mn>2</mn></msup><mo>⁢</mo><mi>Z</mi></mrow><mrow><mi>d</mi><mo>⁢</mo><msup><mi>z</mi><mn>2</mn></msup></mrow></mfrac></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S1.SS1.p13" class="ltx_para">
+<p class="ltx_p">This equation can only be satisfied for all values if both sides are equal to a constant, <math id="S1.SS1.p13.m1" class="ltx_Math" alttext="\lambda" display="inline"><mi>λ</mi></math>, such that</p>
+</div>
+<div id="S1.SS1.p14" class="ltx_para">
+<table id="S1.E3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.E3.m1" class="ltx_Math" alttext="-\frac{1}{Z}\frac{d^{2}Z}{dz^{2}}=\lambda" display="block"><mrow><mrow><mo>-</mo><mrow><mfrac><mn>1</mn><mi>Z</mi></mfrac><mo>⁢</mo><mfrac><mrow><msup><mi>d</mi><mn>2</mn></msup><mo>⁢</mo><mi>Z</mi></mrow><mrow><mi>d</mi><mo>⁢</mo><msup><mi>z</mi><mn>2</mn></msup></mrow></mfrac></mrow></mrow><mo>=</mo><mi>λ</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3)</span></td>
+</tr>
+</table>
+</div>
+<div id="S1.SS1.p15" class="ltx_para">
+<table id="S1.E4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.E4.m1" class="ltx_Math" alttext="\frac{1}{Rr}\frac{dR}{dr}+\frac{1}{R}\frac{d^{2}R}{dr^{2}}+\frac{1}{Pr^{2}}%
+\frac{d^{2}P}{d\theta^{2}}=\lambda." display="block"><mrow><mrow><mrow><mrow><mfrac><mn>1</mn><mrow><mi>R</mi><mo>⁢</mo><mi>r</mi></mrow></mfrac><mo>⁢</mo><mfrac><mrow><mi>d</mi><mo>⁢</mo><mi>R</mi></mrow><mrow><mi>d</mi><mo>⁢</mo><mi>r</mi></mrow></mfrac></mrow><mo>+</mo><mrow><mfrac><mn>1</mn><mi>R</mi></mfrac><mo>⁢</mo><mfrac><mrow><msup><mi>d</mi><mn>2</mn></msup><mo>⁢</mo><mi>R</mi></mrow><mrow><mi>d</mi><mo>⁢</mo><msup><mi>r</mi><mn>2</mn></msup></mrow></mfrac></mrow><mo>+</mo><mrow><mfrac><mn>1</mn><mrow><mi>P</mi><mo>⁢</mo><msup><mi>r</mi><mn>2</mn></msup></mrow></mfrac><mo>⁢</mo><mfrac><mrow><msup><mi>d</mi><mn>2</mn></msup><mo>⁢</mo><mi>P</mi></mrow><mrow><mi>d</mi><mo>⁢</mo><msup><mi>θ</mi><mn>2</mn></msup></mrow></mfrac></mrow></mrow><mo>=</mo><mi>λ</mi></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4)</span></td>
+</tr>
+</table>
+</div>
+<div id="S1.SS1.p16" class="ltx_para">
+<p class="ltx_p">Before we can focus on solutions, we need to further separate (4), so multiply (4) by <math id="S1.SS1.p16.m1" class="ltx_Math" alttext="r^{2}" display="inline"><msup><mi>r</mi><mn>2</mn></msup></math></p>
+</div>
+<div id="S1.SS1.p17" class="ltx_para">
+<table id="S1.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex5.m1" class="ltx_Math" alttext="\frac{r}{R}\frac{dR}{dr}+\frac{r^{2}}{R}\frac{d^{2}R}{dr^{2}}+\frac{1}{P}\frac%
+{d^{2}P}{d\theta^{2}}=\lambda r^{2}." display="block"><mrow><mrow><mrow><mrow><mfrac><mi>r</mi><mi>R</mi></mfrac><mo>⁢</mo><mfrac><mrow><mi>d</mi><mo>⁢</mo><mi>R</mi></mrow><mrow><mi>d</mi><mo>⁢</mo><mi>r</mi></mrow></mfrac></mrow><mo>+</mo><mrow><mfrac><msup><mi>r</mi><mn>2</mn></msup><mi>R</mi></mfrac><mo>⁢</mo><mfrac><mrow><msup><mi>d</mi><mn>2</mn></msup><mo>⁢</mo><mi>R</mi></mrow><mrow><mi>d</mi><mo>⁢</mo><msup><mi>r</mi><mn>2</mn></msup></mrow></mfrac></mrow><mo>+</mo><mrow><mfrac><mn>1</mn><mi>P</mi></mfrac><mo>⁢</mo><mfrac><mrow><msup><mi>d</mi><mn>2</mn></msup><mo>⁢</mo><mi>P</mi></mrow><mrow><mi>d</mi><mo>⁢</mo><msup><mi>θ</mi><mn>2</mn></msup></mrow></mfrac></mrow></mrow><mo>=</mo><mrow><mi>λ</mi><mo>⁢</mo><msup><mi>r</mi><mn>2</mn></msup></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S1.SS1.p18" class="ltx_para">
+<p class="ltx_p">Separate the terms</p>
+</div>
+<div id="S1.SS1.p19" class="ltx_para">
+<table id="S1.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex6.m1" class="ltx_Math" alttext="\frac{r}{R}\frac{dR}{dr}+\frac{r^{2}}{R}\frac{d^{2}R}{dr^{2}}-\lambda r^{2}=-%
+\frac{1}{P}\frac{d^{2}P}{d\theta^{2}}." display="block"><mrow><mrow><mrow><mrow><mrow><mfrac><mi>r</mi><mi>R</mi></mfrac><mo>⁢</mo><mfrac><mrow><mi>d</mi><mo>⁢</mo><mi>R</mi></mrow><mrow><mi>d</mi><mo>⁢</mo><mi>r</mi></mrow></mfrac></mrow><mo>+</mo><mrow><mfrac><msup><mi>r</mi><mn>2</mn></msup><mi>R</mi></mfrac><mo>⁢</mo><mfrac><mrow><msup><mi>d</mi><mn>2</mn></msup><mo>⁢</mo><mi>R</mi></mrow><mrow><mi>d</mi><mo>⁢</mo><msup><mi>r</mi><mn>2</mn></msup></mrow></mfrac></mrow></mrow><mo>-</mo><mrow><mi>λ</mi><mo>⁢</mo><msup><mi>r</mi><mn>2</mn></msup></mrow></mrow><mo>=</mo><mrow><mo>-</mo><mrow><mfrac><mn>1</mn><mi>P</mi></mfrac><mo>⁢</mo><mfrac><mrow><msup><mi>d</mi><mn>2</mn></msup><mo>⁢</mo><mi>P</mi></mrow><mrow><mi>d</mi><mo>⁢</mo><msup><mi>θ</mi><mn>2</mn></msup></mrow></mfrac></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S1.SS1.p20" class="ltx_para">
+<p class="ltx_p">As before, set both sides to a constant, <math id="S1.SS1.p20.m1" class="ltx_Math" alttext="\kappa" display="inline"><mi>κ</mi></math></p>
+</div>
+<div id="S1.SS1.p21" class="ltx_para">
+<table id="S1.E5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.E5.m1" class="ltx_Math" alttext="-\frac{1}{P}\frac{d^{2}P}{d\theta^{2}}=\kappa" display="block"><mrow><mrow><mo>-</mo><mrow><mfrac><mn>1</mn><mi>P</mi></mfrac><mo>⁢</mo><mfrac><mrow><msup><mi>d</mi><mn>2</mn></msup><mo>⁢</mo><mi>P</mi></mrow><mrow><mi>d</mi><mo>⁢</mo><msup><mi>θ</mi><mn>2</mn></msup></mrow></mfrac></mrow></mrow><mo>=</mo><mi>κ</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5)</span></td>
+</tr>
+</table>
+</div>
+<div id="S1.SS1.p22" class="ltx_para">
+<table id="S1.E6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.E6.m1" class="ltx_Math" alttext="\frac{r}{R}\frac{dR}{dr}+\frac{r^{2}}{R}\frac{d^{2}R}{dr^{2}}-\lambda r^{2}=\kappa." display="block"><mrow><mrow><mrow><mrow><mrow><mfrac><mi>r</mi><mi>R</mi></mfrac><mo>⁢</mo><mfrac><mrow><mi>d</mi><mo>⁢</mo><mi>R</mi></mrow><mrow><mi>d</mi><mo>⁢</mo><mi>r</mi></mrow></mfrac></mrow><mo>+</mo><mrow><mfrac><msup><mi>r</mi><mn>2</mn></msup><mi>R</mi></mfrac><mo>⁢</mo><mfrac><mrow><msup><mi>d</mi><mn>2</mn></msup><mo>⁢</mo><mi>R</mi></mrow><mrow><mi>d</mi><mo>⁢</mo><msup><mi>r</mi><mn>2</mn></msup></mrow></mfrac></mrow></mrow><mo>-</mo><mrow><mi>λ</mi><mo>⁢</mo><msup><mi>r</mi><mn>2</mn></msup></mrow></mrow><mo>=</mo><mi>κ</mi></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(6)</span></td>
+</tr>
+</table>
+</div>
+<div id="S1.SS1.p23" class="ltx_para">
+<p class="ltx_p">Now there are three differential equations and we know the form of these solutions. The differential equations of
+(3) and (5) are ordinary differential equations, while (6) is a little more complicated and we must turn to Bessel functions.</p>
+</div>
+</section>
+<section id="S1.SS2" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">1.2 </span>Axial Solutions (<math id="S1.SS2.m1" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math>)</h3>
+
+<div id="S1.SS2.p1" class="ltx_para">
+<p class="ltx_p">Following the guidelines setup in [Etgen] for linear homogeneous differential equations, the first step in solving</p>
+</div>
+<div id="S1.SS2.p2" class="ltx_para">
+<table id="S1.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex7.m1" class="ltx_Math" alttext="\frac{d^{2}Z}{dz^{2}}+Z\lambda=0" display="block"><mrow><mrow><mfrac><mrow><msup><mi>d</mi><mn>2</mn></msup><mo>⁢</mo><mi>Z</mi></mrow><mrow><mi>d</mi><mo>⁢</mo><msup><mi>z</mi><mn>2</mn></msup></mrow></mfrac><mo>+</mo><mrow><mi>Z</mi><mo>⁢</mo><mi>λ</mi></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S1.SS2.p3" class="ltx_para">
+<p class="ltx_p">is to find the roots of the characteristic polynomial</p>
+</div>
+<div id="S1.SS2.p4" class="ltx_para">
+<table id="S1.Ex8" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex8.m1" class="ltx_Math" alttext="C(r)=r^{2}+\lambda=0" display="block"><mrow><mrow><mi>C</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>r</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msup><mi>r</mi><mn>2</mn></msup><mo>+</mo><mi>λ</mi></mrow><mo>=</mo><mn>0</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S1.SS2.p5" class="ltx_para">
+<table id="S1.Ex9" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex9.m1" class="ltx_Math" alttext="r=\pm\sqrt{-\lambda}." display="block"><mrow><mrow><mi>r</mi><mo>=</mo><mrow><mo>±</mo><msqrt><mrow><mo>-</mo><mi>λ</mi></mrow></msqrt></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S1.SS2.p6" class="ltx_para">
+<p class="ltx_p">Although, one can go forward using the square root, here we will introduce another constant, <math id="S1.SS2.p6.m1" class="ltx_Math" alttext="\gamma" display="inline"><mi>γ</mi></math> to imply
+the following cases. So if we want real roots, then we want to ensure a negative constant</p>
+</div>
+<div id="S1.SS2.p7" class="ltx_para">
+<table id="S1.Ex10" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex10.m1" class="ltx_Math" alttext="\lambda=-\gamma^{2}" display="block"><mrow><mi>λ</mi><mo>=</mo><mrow><mo>-</mo><msup><mi>γ</mi><mn>2</mn></msup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S1.SS2.p8" class="ltx_para">
+<p class="ltx_p">and if we want complex roots, then we want to ensure a positive constant</p>
+</div>
+<div id="S1.SS2.p9" class="ltx_para">
+<table id="S1.Ex11" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex11.m1" class="ltx_Math" alttext="\lambda=\gamma^{2}," display="block"><mrow><mrow><mi>λ</mi><mo>=</mo><msup><mi>γ</mi><mn>2</mn></msup></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S1.SS2.p10" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Case 1</span>: <math id="S1.SS2.p10.m1" class="ltx_Math" alttext="\lambda\leq 0" display="inline"><mrow><mi>λ</mi><mo>≤</mo><mn>0</mn></mrow></math> and real roots <math id="S1.SS2.p10.m2" class="ltx_Math" alttext="(\lambda=-\gamma^{2})" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mi>λ</mi><mo>=</mo><mrow><mo>-</mo><msup><mi>γ</mi><mn>2</mn></msup></mrow></mrow><mo stretchy="false">)</mo></mrow></math>.</p>
+</div>
+<div id="S1.SS2.p11" class="ltx_para">
+<p class="ltx_p">For every real root, there will be an exponential in the general solution. The real roots are</p>
+</div>
+<div id="S1.SS2.p12" class="ltx_para">
+<table id="S1.Ex12" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex12.m1" class="ltx_Math" alttext="r_{1}=\gamma" display="block"><mrow><msub><mi>r</mi><mn>1</mn></msub><mo>=</mo><mi>γ</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table id="S1.Ex13" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex13.m1" class="ltx_Math" alttext="r_{2}=-\gamma" display="block"><mrow><msub><mi>r</mi><mn>2</mn></msub><mo>=</mo><mrow><mo>-</mo><mi>γ</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table id="S1.Ex14" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex14.m1" class="ltx_Math" alttext="r_{3}=0." display="block"><mrow><mrow><msub><mi>r</mi><mn>3</mn></msub><mo>=</mo><mn>0</mn></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S1.SS2.p13" class="ltx_para">
+<p class="ltx_p">Therefore, the solutions for these roots are</p>
+</div>
+<div id="S1.SS2.p14" class="ltx_para">
+<table id="S1.Ex15" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex15.m1" class="ltx_Math" alttext="h_{1}(z)=C_{1}e^{\gamma z}" display="block"><mrow><mrow><msub><mi>h</mi><mn>1</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mi>C</mi><mn>1</mn></msub><mo>⁢</mo><msup><mi>e</mi><mrow><mi>γ</mi><mo>⁢</mo><mi>z</mi></mrow></msup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table id="S1.Ex16" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex16.m1" class="ltx_Math" alttext="h_{2}(z)=C_{2}e^{-\gamma z}" display="block"><mrow><mrow><msub><mi>h</mi><mn>2</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mi>C</mi><mn>2</mn></msub><mo>⁢</mo><msup><mi>e</mi><mrow><mo>-</mo><mrow><mi>γ</mi><mo>⁢</mo><mi>z</mi></mrow></mrow></msup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table id="S1.Ex17" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex17.m1" class="ltx_Math" alttext="h_{3}(z)=C_{3}ze^{0}=C_{3}z." display="block"><mrow><mrow><mrow><msub><mi>h</mi><mn>3</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mi>C</mi><mn>3</mn></msub><mo>⁢</mo><mi>z</mi><mo>⁢</mo><msup><mi>e</mi><mn>0</mn></msup></mrow><mo>=</mo><mrow><msub><mi>C</mi><mn>3</mn></msub><mo>⁢</mo><mi>z</mi></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S1.SS2.p15" class="ltx_para">
+<p class="ltx_p">Combining these using the principle of superposition, gives the general solution,</p>
+</div>
+<div id="S1.SS2.p16" class="ltx_para">
+<table id="S1.E7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.E7.m1" class="ltx_Math" alttext="Z_{\gamma}(z)=C_{1}e^{\gamma z}+C_{2}e^{-\gamma z}+C_{3}z+C_{4}." display="block"><mrow><mrow><mrow><msub><mi>Z</mi><mi>γ</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><msub><mi>C</mi><mn>1</mn></msub><mo>⁢</mo><msup><mi>e</mi><mrow><mi>γ</mi><mo>⁢</mo><mi>z</mi></mrow></msup></mrow><mo>+</mo><mrow><msub><mi>C</mi><mn>2</mn></msub><mo>⁢</mo><msup><mi>e</mi><mrow><mo>-</mo><mrow><mi>γ</mi><mo>⁢</mo><mi>z</mi></mrow></mrow></msup></mrow><mo>+</mo><mrow><msub><mi>C</mi><mn>3</mn></msub><mo>⁢</mo><mi>z</mi></mrow><mo>+</mo><msub><mi>C</mi><mn>4</mn></msub></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(7)</span></td>
+</tr>
+</table>
+</div>
+<div id="S1.SS2.p17" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Case 2</span>: <math id="S1.SS2.p17.m1" class="ltx_Math" alttext="\lambda&gt;0" display="inline"><mrow><mi>λ</mi><mo>&gt;</mo><mn>0</mn></mrow></math> and complex roots <math id="S1.SS2.p17.m2" class="ltx_Math" alttext="(\lambda=\gamma^{2})" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mi>λ</mi><mo>=</mo><msup><mi>γ</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow></math>.</p>
+</div>
+<div id="S1.SS2.p18" class="ltx_para">
+<p class="ltx_p">The roots are</p>
+<table id="S1.Ex18" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex18.m1" class="ltx_Math" alttext="r_{4}=i\gamma" display="block"><mrow><msub><mi>r</mi><mn>4</mn></msub><mo>=</mo><mrow><mi>i</mi><mo>⁢</mo><mi>γ</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table id="S1.Ex19" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex19.m1" class="ltx_Math" alttext="r_{5}=-i\gamma" display="block"><mrow><msub><mi>r</mi><mn>5</mn></msub><mo>=</mo><mrow><mo>-</mo><mrow><mi>i</mi><mo>⁢</mo><mi>γ</mi></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S1.SS2.p19" class="ltx_para">
+<p class="ltx_p">and the corresponding solutions</p>
+</div>
+<div id="S1.SS2.p20" class="ltx_para">
+<table id="S1.Ex20" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex20.m1" class="ltx_Math" alttext="h_{4}(z)=C_{5}e^{0}\cos(\gamma z)=C_{5}\cos(\gamma z)" display="block"><mrow><mrow><msub><mi>h</mi><mn>4</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mi>C</mi><mn>5</mn></msub><mo>⁢</mo><msup><mi>e</mi><mn>0</mn></msup><mo>⁢</mo><mrow><mi>cos</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>γ</mi><mo>⁢</mo><mi>z</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mrow><msub><mi>C</mi><mn>5</mn></msub><mo>⁢</mo><mrow><mi>cos</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>γ</mi><mo>⁢</mo><mi>z</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table id="S1.Ex21" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex21.m1" class="ltx_Math" alttext="h_{5}(z)=C_{6}e^{0}\sin(\gamma z)=C_{6}\sin(\gamma z)." display="block"><mrow><mrow><mrow><msub><mi>h</mi><mn>5</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mi>C</mi><mn>6</mn></msub><mo>⁢</mo><msup><mi>e</mi><mn>0</mn></msup><mo>⁢</mo><mrow><mi>sin</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>γ</mi><mo>⁢</mo><mi>z</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mrow><msub><mi>C</mi><mn>6</mn></msub><mo>⁢</mo><mrow><mi>sin</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>γ</mi><mo>⁢</mo><mi>z</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S1.SS2.p21" class="ltx_para">
+<p class="ltx_p">Combining these into a general solution yields</p>
+</div>
+<div id="S1.SS2.p22" class="ltx_para">
+<table id="S1.Ex22" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex22.m1" class="ltx_Math" alttext="Z_{\gamma}(z)=C_{5}\cos(\gamma z)+C_{6}\sin(\gamma z)+C_{7}." display="block"><mrow><mrow><mrow><msub><mi>Z</mi><mi>γ</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><msub><mi>C</mi><mn>5</mn></msub><mo>⁢</mo><mrow><mi>cos</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>γ</mi><mo>⁢</mo><mi>z</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>+</mo><mrow><msub><mi>C</mi><mn>6</mn></msub><mo>⁢</mo><mrow><mi>sin</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>γ</mi><mo>⁢</mo><mi>z</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>+</mo><msub><mi>C</mi><mn>7</mn></msub></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</section>
+<section id="S1.SS3" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">1.3 </span>Azimuthal Solutions (<math id="S1.SS3.m1" class="ltx_Math" alttext="\theta" display="inline"><mi>θ</mi></math>)</h3>
+
+<div id="S1.SS3.p1" class="ltx_para">
+<p class="ltx_p">Azimuthal solutions for</p>
+</div>
+<div id="S1.SS3.p2" class="ltx_para">
+<table id="S1.Ex23" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex23.m1" class="ltx_Math" alttext="\frac{d^{2}P}{d\theta^{2}}+\kappa P=0" display="block"><mrow><mrow><mfrac><mrow><msup><mi>d</mi><mn>2</mn></msup><mo>⁢</mo><mi>P</mi></mrow><mrow><mi>d</mi><mo>⁢</mo><msup><mi>θ</mi><mn>2</mn></msup></mrow></mfrac><mo>+</mo><mrow><mi>κ</mi><mo>⁢</mo><mi>P</mi></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S1.SS3.p3" class="ltx_para">
+<p class="ltx_p">are in the most general sense obtained similarly to the axial solutions with the characteristic polynomial</p>
+</div>
+<div id="S1.SS3.p4" class="ltx_para">
+<table id="S1.Ex24" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex24.m1" class="ltx_Math" alttext="C(r)=r^{2}+\kappa=0" display="block"><mrow><mrow><mi>C</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>r</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msup><mi>r</mi><mn>2</mn></msup><mo>+</mo><mi>κ</mi></mrow><mo>=</mo><mn>0</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S1.SS3.p5" class="ltx_para">
+<table id="S1.Ex25" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex25.m1" class="ltx_Math" alttext="r=\pm\sqrt{-\kappa}." display="block"><mrow><mrow><mi>r</mi><mo>=</mo><mrow><mo>±</mo><msqrt><mrow><mo>-</mo><mi>κ</mi></mrow></msqrt></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S1.SS3.p6" class="ltx_para">
+<p class="ltx_p">Using another constant, <math id="S1.SS3.p6.m1" class="ltx_Math" alttext="\nu" display="inline"><mi>ν</mi></math> to ensure positive or negative constants, we get two cases.</p>
+</div>
+<div id="S1.SS3.p7" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Case 1</span>: <math id="S1.SS3.p7.m1" class="ltx_Math" alttext="\kappa\leq 0" display="inline"><mrow><mi>κ</mi><mo>≤</mo><mn>0</mn></mrow></math> and real roots <math id="S1.SS3.p7.m2" class="ltx_Math" alttext="(\kappa=-\nu^{2})" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mi>κ</mi><mo>=</mo><mrow><mo>-</mo><msup><mi>ν</mi><mn>2</mn></msup></mrow></mrow><mo stretchy="false">)</mo></mrow></math>.</p>
+</div>
+<div id="S1.SS3.p8" class="ltx_para">
+<p class="ltx_p">The solutions for these roots are then</p>
+</div>
+<div id="S1.SS3.p9" class="ltx_para">
+<table id="S1.Ex26" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex26.m1" class="ltx_Math" alttext="h_{1}(z)=C_{1}e^{\nu\theta}" display="block"><mrow><mrow><msub><mi>h</mi><mn>1</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mi>C</mi><mn>1</mn></msub><mo>⁢</mo><msup><mi>e</mi><mrow><mi>ν</mi><mo>⁢</mo><mi>θ</mi></mrow></msup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table id="S1.Ex27" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex27.m1" class="ltx_Math" alttext="h_{2}(z)=C_{2}e^{-\nu\theta}" display="block"><mrow><mrow><msub><mi>h</mi><mn>2</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mi>C</mi><mn>2</mn></msub><mo>⁢</mo><msup><mi>e</mi><mrow><mo>-</mo><mrow><mi>ν</mi><mo>⁢</mo><mi>θ</mi></mrow></mrow></msup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table id="S1.Ex28" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex28.m1" class="ltx_Math" alttext="h_{3}(z)=C_{3}\theta e^{0}=C_{3}\theta." display="block"><mrow><mrow><mrow><msub><mi>h</mi><mn>3</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mi>C</mi><mn>3</mn></msub><mo>⁢</mo><mi>θ</mi><mo>⁢</mo><msup><mi>e</mi><mn>0</mn></msup></mrow><mo>=</mo><mrow><msub><mi>C</mi><mn>3</mn></msub><mo>⁢</mo><mi>θ</mi></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S1.SS3.p10" class="ltx_para">
+<p class="ltx_p">Combining these for the general solution,</p>
+</div>
+<div id="S1.SS3.p11" class="ltx_para">
+<table id="S1.E8" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.E8.m1" class="ltx_Math" alttext="P_{\nu}(\theta)=C_{1}e^{\nu\theta}+C_{2}e^{-\nu\theta}+C_{3}\theta+C_{4}." display="block"><mrow><mrow><mrow><msub><mi>P</mi><mi>ν</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>θ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><msub><mi>C</mi><mn>1</mn></msub><mo>⁢</mo><msup><mi>e</mi><mrow><mi>ν</mi><mo>⁢</mo><mi>θ</mi></mrow></msup></mrow><mo>+</mo><mrow><msub><mi>C</mi><mn>2</mn></msub><mo>⁢</mo><msup><mi>e</mi><mrow><mo>-</mo><mrow><mi>ν</mi><mo>⁢</mo><mi>θ</mi></mrow></mrow></msup></mrow><mo>+</mo><mrow><msub><mi>C</mi><mn>3</mn></msub><mo>⁢</mo><mi>θ</mi></mrow><mo>+</mo><msub><mi>C</mi><mn>4</mn></msub></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(8)</span></td>
+</tr>
+</table>
+</div>
+<div id="S1.SS3.p12" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Case 2</span>: <math id="S1.SS3.p12.m1" class="ltx_Math" alttext="\kappa&gt;0" display="inline"><mrow><mi>κ</mi><mo>&gt;</mo><mn>0</mn></mrow></math> and complex roots <math id="S1.SS3.p12.m2" class="ltx_Math" alttext="(\kappa=\nu^{2})" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mi>κ</mi><mo>=</mo><msup><mi>ν</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow></math>.</p>
+</div>
+<div id="S1.SS3.p13" class="ltx_para">
+<p class="ltx_p">The roots are</p>
+</div>
+<div id="S1.SS3.p14" class="ltx_para">
+<table id="S1.Ex29" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex29.m1" class="ltx_Math" alttext="r_{4}=i\nu" display="block"><mrow><msub><mi>r</mi><mn>4</mn></msub><mo>=</mo><mrow><mi>i</mi><mo>⁢</mo><mi>ν</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table id="S1.Ex30" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex30.m1" class="ltx_Math" alttext="r_{5}=-i\nu" display="block"><mrow><msub><mi>r</mi><mn>5</mn></msub><mo>=</mo><mrow><mo>-</mo><mrow><mi>i</mi><mo>⁢</mo><mi>ν</mi></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S1.SS3.p15" class="ltx_para">
+<p class="ltx_p">and the corresponding solutions</p>
+</div>
+<div id="S1.SS3.p16" class="ltx_para">
+<table id="S1.Ex31" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex31.m1" class="ltx_Math" alttext="h_{4}(\theta)=C_{5}e^{0}\cos(\nu\theta)=C_{5}\cos(\nu\theta)" display="block"><mrow><mrow><msub><mi>h</mi><mn>4</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>θ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mi>C</mi><mn>5</mn></msub><mo>⁢</mo><msup><mi>e</mi><mn>0</mn></msup><mo>⁢</mo><mrow><mi>cos</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>ν</mi><mo>⁢</mo><mi>θ</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mrow><msub><mi>C</mi><mn>5</mn></msub><mo>⁢</mo><mrow><mi>cos</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>ν</mi><mo>⁢</mo><mi>θ</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table id="S1.Ex32" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex32.m1" class="ltx_Math" alttext="h_{5}(\theta)=C_{6}e^{0}\sin(\nu\theta)=C_{6}\sin(\nu\theta)." display="block"><mrow><mrow><mrow><msub><mi>h</mi><mn>5</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>θ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mi>C</mi><mn>6</mn></msub><mo>⁢</mo><msup><mi>e</mi><mn>0</mn></msup><mo>⁢</mo><mrow><mi>sin</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>ν</mi><mo>⁢</mo><mi>θ</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mrow><msub><mi>C</mi><mn>6</mn></msub><mo>⁢</mo><mrow><mi>sin</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>ν</mi><mo>⁢</mo><mi>θ</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S1.SS3.p17" class="ltx_para">
+<p class="ltx_p">Combining these into a general solution</p>
+</div>
+<div id="S1.SS3.p18" class="ltx_para">
+<table id="S1.Ex33" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex33.m1" class="ltx_Math" alttext="P_{\nu}(\theta)=C_{5}\cos(\nu\theta)+C_{6}\sin(\nu\theta)+C_{7}." display="block"><mrow><mrow><mrow><msub><mi>P</mi><mi>ν</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>θ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><msub><mi>C</mi><mn>5</mn></msub><mo>⁢</mo><mrow><mi>cos</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>ν</mi><mo>⁢</mo><mi>θ</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>+</mo><mrow><msub><mi>C</mi><mn>6</mn></msub><mo>⁢</mo><mrow><mi>sin</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>ν</mi><mo>⁢</mo><mi>θ</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>+</mo><msub><mi>C</mi><mn>7</mn></msub></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S1.SS3.p19" class="ltx_para">
+<p class="ltx_p">For the first glimpse at simplification, we will note a restriction on <math id="S1.SS3.p19.m1" class="ltx_Math" alttext="\kappa" display="inline"><mi>κ</mi></math>
+that is used when it is required that the solution be periodic to ensure <math id="S1.SS3.p19.m2" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> is single valued</p>
+</div>
+<div id="S1.SS3.p20" class="ltx_para">
+<table id="S1.Ex34" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex34.m1" class="ltx_Math" alttext="P(\theta)=P(\theta+2n\pi)." display="block"><mrow><mrow><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>θ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>θ</mi><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi><mo>⁢</mo><mi>π</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S1.SS3.p21" class="ltx_para">
+<p class="ltx_p">Then we are left with either the periodic solutions that occur with complex roots or the zero case. So not only</p>
+</div>
+<div id="S1.SS3.p22" class="ltx_para">
+<table id="S1.Ex35" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex35.m1" class="ltx_Math" alttext="(\kappa=\nu^{2})" display="block"><mrow><mo stretchy="false">(</mo><mrow><mi>κ</mi><mo>=</mo><msup><mi>ν</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S1.SS3.p23" class="ltx_para">
+<p class="ltx_p">but also <math id="S1.SS3.p23.m1" class="ltx_Math" alttext="\nu" display="inline"><mi>ν</mi></math> must be an integer, i.e.</p>
+</div>
+<div id="S1.SS3.p24" class="ltx_para">
+<table id="S1.E9" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.E9.m1" class="ltx_Math" alttext="P_{\nu}(\theta)=C_{5}\cos(\nu\theta)+C_{6}\sin(\nu\theta)+C_{7}\,\,\,\,\,\,\,%
+\,\,\,\,\nu=0,1,2,..." display="block"><mrow><mrow><mrow><msub><mi>P</mi><mi>ν</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>θ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><msub><mi>C</mi><mn>5</mn></msub><mo>⁢</mo><mrow><mi>cos</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>ν</mi><mo>⁢</mo><mi>θ</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>+</mo><mrow><msub><mi>C</mi><mn>6</mn></msub><mo>⁢</mo><mrow><mi>sin</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>ν</mi><mo>⁢</mo><mi>θ</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>+</mo><msub><mi>C</mi><mn>7</mn></msub></mrow></mrow><mo mathvariant="italic" separator="true">   </mo><mrow><mi>ν</mi><mo>=</mo><mrow><mn>0</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mi mathvariant="normal">…</mi></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(9)</span></td>
+</tr>
+</table>
+</div>
+<div id="S1.SS3.p25" class="ltx_para">
+<p class="ltx_p">Note, that <math id="S1.SS3.p25.m1" class="ltx_Math" alttext="\nu=0" display="inline"><mrow><mi>ν</mi><mo>=</mo><mn>0</mn></mrow></math>, is still a solution, but to be periodic we can only have a constant</p>
+</div>
+<div id="S1.SS3.p26" class="ltx_para">
+<table id="S1.Ex36" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex36.m1" class="ltx_Math" alttext="P(\theta)=C_{4}." display="block"><mrow><mrow><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>θ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msub><mi>C</mi><mn>4</mn></msub></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</section>
+<section id="S1.SS4" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">1.4 </span>Radial Solutions (<math id="S1.SS4.m1" class="ltx_Math" alttext="r" display="inline"><mi>r</mi></math>)</h3>
+
+<div id="S1.SS4.p1" class="ltx_para">
+<p class="ltx_p">The radial solutions are the more difficult ones to understand for this problem and are solved using a power series.
+The two types of solutions generated based on the choices of constants from the <math id="S1.SS4.p1.m1" class="ltx_Math" alttext="\theta" display="inline"><mi>θ</mi></math> and <math id="S1.SS4.p1.m2" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math> solutions (excluding non-periodic solutions for <math id="S1.SS4.p1.m3" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math>)
+leads to the Bessel functions and the modified Bessel functions. The first step for both these cases is to transform (6)
+into the Bessel differential equation.</p>
+</div>
+<div id="S1.SS4.p2" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Case 1</span>: <math id="S1.SS4.p2.m1" class="ltx_Math" alttext="\lambda&lt;0" display="inline"><mrow><mi>λ</mi><mo>&lt;</mo><mn>0</mn></mrow></math> <math id="S1.SS4.p2.m2" class="ltx_Math" alttext="(\lambda=-\gamma^{2})" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mi>λ</mi><mo>=</mo><mrow><mo>-</mo><msup><mi>γ</mi><mn>2</mn></msup></mrow></mrow><mo stretchy="false">)</mo></mrow></math>, <math id="S1.SS4.p2.m3" class="ltx_Math" alttext="\kappa&gt;0" display="inline"><mrow><mi>κ</mi><mo>&gt;</mo><mn>0</mn></mrow></math> <math id="S1.SS4.p2.m4" class="ltx_Math" alttext="(\kappa=\nu^{2})" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mi>κ</mi><mo>=</mo><msup><mi>ν</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow></math>.</p>
+</div>
+<div id="S1.SS4.p3" class="ltx_para">
+<p class="ltx_p">Substitute <math id="S1.SS4.p3.m1" class="ltx_Math" alttext="\gamma" display="inline"><mi>γ</mi></math> and <math id="S1.SS4.p3.m2" class="ltx_Math" alttext="\nu" display="inline"><mi>ν</mi></math> into the radial equation (6) to get</p>
+</div>
+<div id="S1.SS4.p4" class="ltx_para">
+<table id="S1.E10" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.E10.m1" class="ltx_Math" alttext="\frac{r}{R}\frac{dR}{dr}+\frac{r^{2}}{R}\frac{d^{2}R}{dr^{2}}+\gamma^{2}r^{2}-%
+\nu^{2}=0." display="block"><mrow><mrow><mrow><mrow><mrow><mfrac><mi>r</mi><mi>R</mi></mfrac><mo>⁢</mo><mfrac><mrow><mi>d</mi><mo>⁢</mo><mi>R</mi></mrow><mrow><mi>d</mi><mo>⁢</mo><mi>r</mi></mrow></mfrac></mrow><mo>+</mo><mrow><mfrac><msup><mi>r</mi><mn>2</mn></msup><mi>R</mi></mfrac><mo>⁢</mo><mfrac><mrow><msup><mi>d</mi><mn>2</mn></msup><mo>⁢</mo><mi>R</mi></mrow><mrow><mi>d</mi><mo>⁢</mo><msup><mi>r</mi><mn>2</mn></msup></mrow></mfrac></mrow><mo>+</mo><mrow><msup><mi>γ</mi><mn>2</mn></msup><mo>⁢</mo><msup><mi>r</mi><mn>2</mn></msup></mrow></mrow><mo>-</mo><msup><mi>ν</mi><mn>2</mn></msup></mrow><mo>=</mo><mn>0</mn></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(10)</span></td>
+</tr>
+</table>
+</div>
+<div id="S1.SS4.p5" class="ltx_para">
+<p class="ltx_p">Next, use the substitution</p>
+</div>
+<div id="S1.SS4.p6" class="ltx_para">
+<table id="S1.Ex37" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex37.m1" class="ltx_Math" alttext="x=\gamma r" display="block"><mrow><mi>x</mi><mo>=</mo><mrow><mi>γ</mi><mo>⁢</mo><mi>r</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table id="S1.Ex38" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex38.m1" class="ltx_Math" alttext="r=\frac{x}{\gamma}." display="block"><mrow><mrow><mi>r</mi><mo>=</mo><mfrac><mi>x</mi><mi>γ</mi></mfrac></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S1.SS4.p7" class="ltx_para">
+<p class="ltx_p">Therefore, the derivatives are
+</p>
+</div>
+<div id="S1.SS4.p8" class="ltx_para">
+<table id="S1.Ex39" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex39.m1" class="ltx_Math" alttext="dx=\gamma dr" display="block"><mrow><mrow><mi>d</mi><mo>⁢</mo><mi>x</mi></mrow><mo>=</mo><mrow><mi>γ</mi><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>r</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table id="S1.Ex40" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex40.m1" class="ltx_Math" alttext="dr=\frac{dx}{\gamma}" display="block"><mrow><mrow><mi>d</mi><mo>⁢</mo><mi>r</mi></mrow><mo>=</mo><mfrac><mrow><mi>d</mi><mo>⁢</mo><mi>x</mi></mrow><mi>γ</mi></mfrac></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S1.SS4.p9" class="ltx_para">
+<p class="ltx_p">and make a special note that</p>
+</div>
+<div id="S1.SS4.p10" class="ltx_para">
+<table id="S1.Ex41" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex41.m1" class="ltx_Math" alttext="\frac{d^{2}}{dx^{2}}=\frac{d}{dx}\frac{d}{dx}" display="block"><mrow><mfrac><msup><mi>d</mi><mn>2</mn></msup><mrow><mi>d</mi><mo>⁢</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac><mo>=</mo><mrow><mfrac><mi>d</mi><mrow><mi>d</mi><mo>⁢</mo><mi>x</mi></mrow></mfrac><mo>⁢</mo><mfrac><mi>d</mi><mrow><mi>d</mi><mo>⁢</mo><mi>x</mi></mrow></mfrac></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S1.SS4.p11" class="ltx_para">
+<p class="ltx_p">so</p>
+</div>
+<div id="S1.SS4.p12" class="ltx_para">
+<table id="S1.Ex42" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex42.m1" class="ltx_Math" alttext="dx^{2}=dx*dx=\gamma^{2}dr^{2}" display="block"><mrow><mrow><mi>d</mi><mo>⁢</mo><msup><mi>x</mi><mn>2</mn></msup></mrow><mo>=</mo><mrow><mrow><mrow><mi>d</mi><mo>⁢</mo><mi>x</mi></mrow><mo>*</mo><mi>d</mi></mrow><mo>⁢</mo><mi>x</mi></mrow><mo>=</mo><mrow><msup><mi>γ</mi><mn>2</mn></msup><mo>⁢</mo><mi>d</mi><mo>⁢</mo><msup><mi>r</mi><mn>2</mn></msup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table id="S1.Ex43" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex43.m1" class="ltx_Math" alttext="dr^{2}=\frac{dx^{2}}{\gamma^{2}}." display="block"><mrow><mrow><mrow><mi>d</mi><mo>⁢</mo><msup><mi>r</mi><mn>2</mn></msup></mrow><mo>=</mo><mfrac><mrow><mi>d</mi><mo>⁢</mo><msup><mi>x</mi><mn>2</mn></msup></mrow><msup><mi>γ</mi><mn>2</mn></msup></mfrac></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S1.SS4.p13" class="ltx_para">
+<p class="ltx_p">Substituting these relationships into (10) gives us</p>
+</div>
+<div id="S1.SS4.p14" class="ltx_para">
+<table id="S1.Ex44" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex44.m1" class="ltx_Math" alttext="\frac{x\gamma}{\gamma R}\frac{dR}{dx}+\frac{x^{2}\gamma^{2}}{\gamma^{2}R}\frac%
+{d^{2}R}{dx^{2}}+x^{2}-\nu^{2}=0." display="block"><mrow><mrow><mrow><mrow><mrow><mfrac><mrow><mi>x</mi><mo>⁢</mo><mi>γ</mi></mrow><mrow><mi>γ</mi><mo>⁢</mo><mi>R</mi></mrow></mfrac><mo>⁢</mo><mfrac><mrow><mi>d</mi><mo>⁢</mo><mi>R</mi></mrow><mrow><mi>d</mi><mo>⁢</mo><mi>x</mi></mrow></mfrac></mrow><mo>+</mo><mrow><mfrac><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>⁢</mo><msup><mi>γ</mi><mn>2</mn></msup></mrow><mrow><msup><mi>γ</mi><mn>2</mn></msup><mo>⁢</mo><mi>R</mi></mrow></mfrac><mo>⁢</mo><mfrac><mrow><msup><mi>d</mi><mn>2</mn></msup><mo>⁢</mo><mi>R</mi></mrow><mrow><mi>d</mi><mo>⁢</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac></mrow><mo>+</mo><msup><mi>x</mi><mn>2</mn></msup></mrow><mo>-</mo><msup><mi>ν</mi><mn>2</mn></msup></mrow><mo>=</mo><mn>0</mn></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S1.SS4.p15" class="ltx_para">
+<p class="ltx_p">Finally, multiply by <math id="S1.SS4.p15.m1" class="ltx_Math" alttext="R/x^{2}" display="inline"><mrow><mi>R</mi><mo>/</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></math> to get the <em class="ltx_emph ltx_font_italic">Bessel differential equation</em></p>
+</div>
+<div id="S1.SS4.p16" class="ltx_para">
+<table id="S1.E11" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.E11.m1" class="ltx_Math" alttext="\frac{d^{2}R}{dx^{2}}+\frac{1}{x}\frac{dR}{dx}+\left(1-\frac{\nu^{2}}{x^{2}}%
+\right)R=0." display="block"><mrow><mrow><mrow><mfrac><mrow><msup><mi>d</mi><mn>2</mn></msup><mo>⁢</mo><mi>R</mi></mrow><mrow><mi>d</mi><mo>⁢</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac><mo>+</mo><mrow><mfrac><mn>1</mn><mi>x</mi></mfrac><mo>⁢</mo><mfrac><mrow><mi>d</mi><mo>⁢</mo><mi>R</mi></mrow><mrow><mi>d</mi><mo>⁢</mo><mi>x</mi></mrow></mfrac></mrow><mo>+</mo><mrow><mrow><mo>(</mo><mrow><mn>1</mn><mo>-</mo><mfrac><msup><mi>ν</mi><mn>2</mn></msup><msup><mi>x</mi><mn>2</mn></msup></mfrac></mrow><mo>)</mo></mrow><mo>⁢</mo><mi>R</mi></mrow></mrow><mo>=</mo><mn>0</mn></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(11)</span></td>
+</tr>
+</table>
+</div>
+<div id="S1.SS4.p17" class="ltx_para">
+<p class="ltx_p">Delving into all the nuances of solving Bessel’s differential equation is beyond the scope of this article, however, the curious
+are directed to Watson’s in depth treatise [Watson]. Here, we will just present the results as we did for the previous
+differential equations. The general solution is a linear combination of the Bessel function of the first kind <math id="S1.SS4.p17.m1" class="ltx_Math" alttext="J_{\nu}(r)" display="inline"><mrow><msub><mi>J</mi><mi>ν</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>r</mi><mo stretchy="false">)</mo></mrow></mrow></math>
+and the Bessel function of the second kind <math id="S1.SS4.p17.m2" class="ltx_Math" alttext="Y_{\nu}(r)" display="inline"><mrow><msub><mi>Y</mi><mi>ν</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>r</mi><mo stretchy="false">)</mo></mrow></mrow></math>. Remebering that <math id="S1.SS4.p17.m3" class="ltx_Math" alttext="\nu" display="inline"><mi>ν</mi></math> is a positive integer or zero.</p>
+</div>
+<div id="S1.SS4.p18" class="ltx_para">
+<table id="S1.E12" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.E12.m1" class="ltx_Math" alttext="R_{\nu}(r)=C_{1}J_{\nu}(\gamma r)+C_{2}Y_{\nu}(\gamma r)+C_{3}" display="block"><mrow><mrow><msub><mi>R</mi><mi>ν</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>r</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><msub><mi>C</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>J</mi><mi>ν</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>γ</mi><mo>⁢</mo><mi>r</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><msub><mi>C</mi><mn>2</mn></msub><mo>⁢</mo><msub><mi>Y</mi><mi>ν</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>γ</mi><mo>⁢</mo><mi>r</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><msub><mi>C</mi><mn>3</mn></msub></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(12)</span></td>
+</tr>
+</table>
+</div>
+<div id="S1.SS4.p19" class="ltx_para">
+<p class="ltx_p">Bessel function of the first kind:</p>
+</div>
+<div id="S1.SS4.p20" class="ltx_para">
+<table id="S1.Ex45" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex45.m1" class="ltx_Math" alttext="J_{\nu}(x)=\sum_{m=0}^{\infty}\frac{(-1)^{m}(\frac{-1}{2}x)^{\nu+2m}}{m!(m+\nu%
+)!}." display="block"><mrow><mrow><mrow><msub><mi>J</mi><mi>ν</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>m</mi><mo>=</mo><mn>0</mn></mrow><mi mathvariant="normal">∞</mi></munderover><mfrac><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mi>m</mi></msup><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mfrac><mrow><mo>-</mo><mn>1</mn></mrow><mn>2</mn></mfrac><mo>⁢</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow><mrow><mi>ν</mi><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow></mrow></msup></mrow><mrow><mrow><mi>m</mi><mo lspace="0pt" rspace="3.5pt">!</mo></mrow><mo>⁢</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>m</mi><mo>+</mo><mi>ν</mi></mrow><mo stretchy="false">)</mo></mrow><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mrow></mfrac></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S1.SS4.p21" class="ltx_para">
+<p class="ltx_p">Bessel function of the second kind (using Hankel’s formula):</p>
+</div>
+<div id="S1.SS4.p22" class="ltx_para">
+<table id="S1.Ex46" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex46.m1" class="ltx_Math" alttext="Y_{\nu}(x)=2J_{\nu}(x)\left(\eta+ln\left(\frac{x}{2}\right)\right)-\left(\frac%
+{x}{2}\right)^{-\nu}\sum_{m=0}^{\nu-1}\frac{(\nu-m-1)!}{m!}\left(\frac{x}{2}%
+\right)^{2m}" display="block"><mrow><mrow><msub><mi>Y</mi><mi>ν</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><msub><mi>J</mi><mi>ν</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo>(</mo><mrow><mi>η</mi><mo>+</mo><mrow><mi>l</mi><mo>⁢</mo><mi>n</mi><mo>⁢</mo><mrow><mo>(</mo><mfrac><mi>x</mi><mn>2</mn></mfrac><mo>)</mo></mrow></mrow></mrow><mo>)</mo></mrow></mrow><mo>-</mo><mrow><msup><mrow><mo>(</mo><mfrac><mi>x</mi><mn>2</mn></mfrac><mo>)</mo></mrow><mrow><mo>-</mo><mi>ν</mi></mrow></msup><mo>⁢</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>m</mi><mo>=</mo><mn>0</mn></mrow><mrow><mi>ν</mi><mo>-</mo><mn>1</mn></mrow></munderover><mrow><mfrac><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>ν</mi><mo>-</mo><mi>m</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo lspace="0pt" rspace="3.5pt">!</mo></mrow><mrow><mi>m</mi><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mfrac><mo>⁢</mo><msup><mrow><mo>(</mo><mfrac><mi>x</mi><mn>2</mn></mfrac><mo>)</mo></mrow><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow></msup></mrow></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table id="S1.Ex47" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex47.m1" class="ltx_Math" alttext="\,\,\,\,\,-\sum_{m=0}^{\infty}\frac{(-1)^{m}(\frac{x}{2})^{\nu+2m}}{m!(\nu+m)!%
+}\left\{\frac{1}{1}+\frac{1}{2}+...+\frac{1}{m}+\frac{1}{1}+\frac{1}{2}+...+%
+\frac{1}{\nu+m}\right\}." display="block"><mrow><mrow><mo lspace="10.8pt">-</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>m</mi><mo>=</mo><mn>0</mn></mrow><mi mathvariant="normal">∞</mi></munderover><mrow><mfrac><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mi>m</mi></msup><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mfrac><mi>x</mi><mn>2</mn></mfrac><mo stretchy="false">)</mo></mrow><mrow><mi>ν</mi><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow></mrow></msup></mrow><mrow><mrow><mi>m</mi><mo lspace="0pt" rspace="3.5pt">!</mo></mrow><mo>⁢</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>ν</mi><mo>+</mo><mi>m</mi></mrow><mo stretchy="false">)</mo></mrow><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mrow></mfrac><mo>⁢</mo><mrow><mo>{</mo><mrow><mfrac><mn>1</mn><mn>1</mn></mfrac><mo>+</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>+</mo><mi mathvariant="normal">…</mi><mo>+</mo><mfrac><mn>1</mn><mi>m</mi></mfrac><mo>+</mo><mfrac><mn>1</mn><mn>1</mn></mfrac><mo>+</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>+</mo><mi mathvariant="normal">…</mi><mo>+</mo><mfrac><mn>1</mn><mrow><mi>ν</mi><mo>+</mo><mi>m</mi></mrow></mfrac></mrow><mo>}</mo></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S1.SS4.p23" class="ltx_para">
+<p class="ltx_p">For the unfortunate person who has to evaluate this function, note that when <math id="S1.SS4.p23.m1" class="ltx_Math" alttext="m=0" display="inline"><mrow><mi>m</mi><mo>=</mo><mn>0</mn></mrow></math>, the singularity is taken care of by replacing the series in brackets by</p>
+</div>
+<div id="S1.SS4.p24" class="ltx_para">
+<table id="S1.Ex48" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex48.m1" class="ltx_Math" alttext="\left\{\frac{1}{1}+\frac{1}{2}+...+\frac{1}{\nu}\right\}." display="block"><mrow><mrow><mo>{</mo><mrow><mfrac><mn>1</mn><mn>1</mn></mfrac><mo>+</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>+</mo><mi mathvariant="normal">…</mi><mo>+</mo><mfrac><mn>1</mn><mi>ν</mi></mfrac></mrow><mo>}</mo></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S1.SS4.p25" class="ltx_para">
+<p class="ltx_p">Some solace can be found since most physical problems need to be analytic at <math id="S1.SS4.p25.m1" class="ltx_Math" alttext="x=0" display="inline"><mrow><mi>x</mi><mo>=</mo><mn>0</mn></mrow></math> and therefore <math id="S1.SS4.p25.m2" class="ltx_Math" alttext="Y_{\nu}(x)" display="inline"><mrow><msub><mi>Y</mi><mi>ν</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math> breaks down at <math id="S1.SS4.p25.m3" class="ltx_Math" alttext="ln(0)" display="inline"><mrow><mi>l</mi><mo>⁢</mo><mi>n</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow></math>.
+This leads to the choice of constant <math id="S1.SS4.p25.m4" class="ltx_Math" alttext="C_{2}" display="inline"><msub><mi>C</mi><mn>2</mn></msub></math> to be zero.</p>
+</div>
+<div id="S1.SS4.p26" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Case 2</span>: <math id="S1.SS4.p26.m1" class="ltx_Math" alttext="\lambda&gt;0" display="inline"><mrow><mi>λ</mi><mo>&gt;</mo><mn>0</mn></mrow></math> <math id="S1.SS4.p26.m2" class="ltx_Math" alttext="(\lambda=\gamma^{2})" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mi>λ</mi><mo>=</mo><msup><mi>γ</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow></math>, <math id="S1.SS4.p26.m3" class="ltx_Math" alttext="\kappa&gt;0" display="inline"><mrow><mi>κ</mi><mo>&gt;</mo><mn>0</mn></mrow></math> <math id="S1.SS4.p26.m4" class="ltx_Math" alttext="(\kappa=\nu^{2})" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mi>κ</mi><mo>=</mo><msup><mi>ν</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow></math>.
+</p>
+</div>
+<div id="S1.SS4.p27" class="ltx_para">
+<p class="ltx_p">Using the previous method of substitution, we just get the change of sign</p>
+</div>
+<div id="S1.SS4.p28" class="ltx_para">
+<table id="S1.E13" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.E13.m1" class="ltx_Math" alttext="\frac{d^{2}R}{dx^{2}}+\frac{1}{x}\frac{dR}{dx}-\left(1+\frac{\nu^{2}}{x^{2}}%
+\right)R=0." display="block"><mrow><mrow><mrow><mrow><mfrac><mrow><msup><mi>d</mi><mn>2</mn></msup><mo>⁢</mo><mi>R</mi></mrow><mrow><mi>d</mi><mo>⁢</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac><mo>+</mo><mrow><mfrac><mn>1</mn><mi>x</mi></mfrac><mo>⁢</mo><mfrac><mrow><mi>d</mi><mo>⁢</mo><mi>R</mi></mrow><mrow><mi>d</mi><mo>⁢</mo><mi>x</mi></mrow></mfrac></mrow></mrow><mo>-</mo><mrow><mrow><mo>(</mo><mrow><mn>1</mn><mo>+</mo><mfrac><msup><mi>ν</mi><mn>2</mn></msup><msup><mi>x</mi><mn>2</mn></msup></mfrac></mrow><mo>)</mo></mrow><mo>⁢</mo><mi>R</mi></mrow></mrow><mo>=</mo><mn>0</mn></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(13)</span></td>
+</tr>
+</table>
+</div>
+<div id="S1.SS4.p29" class="ltx_para">
+<p class="ltx_p">This leads to the modified Bessel functions as a solution, which are also known as the pure imaginary Bessel functions. The
+general solution is denoted</p>
+</div>
+<div id="S1.SS4.p30" class="ltx_para">
+<table id="S1.E14" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.E14.m1" class="ltx_Math" alttext="R_{\nu}(r)=C_{1}I_{\nu}(\gamma r)+C_{2}K_{\nu}(\gamma r)+C_{3}" display="block"><mrow><mrow><msub><mi>R</mi><mi>ν</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>r</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><msub><mi>C</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>I</mi><mi>ν</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>γ</mi><mo>⁢</mo><mi>r</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><msub><mi>C</mi><mn>2</mn></msub><mo>⁢</mo><msub><mi>K</mi><mi>ν</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>γ</mi><mo>⁢</mo><mi>r</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><msub><mi>C</mi><mn>3</mn></msub></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(14)</span></td>
+</tr>
+</table>
+</div>
+<div id="S1.SS4.p31" class="ltx_para">
+<p class="ltx_p">where <math id="S1.SS4.p31.m1" class="ltx_Math" alttext="I_{\nu}" display="inline"><msub><mi>I</mi><mi>ν</mi></msub></math> is the modified Bessel function of the first kind and <math id="S1.SS4.p31.m2" class="ltx_Math" alttext="K_{\nu}" display="inline"><msub><mi>K</mi><mi>ν</mi></msub></math> is the modified Bessel function of the
+second kind</p>
+</div>
+<div id="S1.SS4.p32" class="ltx_para">
+<table id="S1.Ex49" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex49.m1" class="ltx_Math" alttext="I_{\nu}(\gamma r)=i^{-\nu}J_{\nu}(i\gamma r)" display="block"><mrow><mrow><msub><mi>I</mi><mi>ν</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>γ</mi><mo>⁢</mo><mi>r</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msup><mi>i</mi><mrow><mo>-</mo><mi>ν</mi></mrow></msup><mo>⁢</mo><msub><mi>J</mi><mi>ν</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>i</mi><mo>⁢</mo><mi>γ</mi><mo>⁢</mo><mi>r</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table id="S1.Ex50" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex50.m1" class="ltx_Math" alttext="K_{\nu}(\gamma r)=\frac{\pi}{2}i^{\nu+1}\left(J_{\nu}(i\gamma r)+iY_{\nu}(i%
+\gamma r)\right)." display="block"><mrow><mrow><mrow><msub><mi>K</mi><mi>ν</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>γ</mi><mo>⁢</mo><mi>r</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mfrac><mi>π</mi><mn>2</mn></mfrac><mo>⁢</mo><msup><mi>i</mi><mrow><mi>ν</mi><mo>+</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo>(</mo><mrow><mrow><msub><mi>J</mi><mi>ν</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>i</mi><mo>⁢</mo><mi>γ</mi><mo>⁢</mo><mi>r</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mi>i</mi><mo>⁢</mo><msub><mi>Y</mi><mi>ν</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>i</mi><mo>⁢</mo><mi>γ</mi><mo>⁢</mo><mi>r</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>)</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</section>
+<section id="S1.SS5" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">1.5 </span>Combined Solution</h3>
+
+<div id="S1.SS5.p1" class="ltx_para">
+<p class="ltx_p">Keeping track of all the different cases and choosing the right terms for boundary conditions is a daunting task when one attempts
+to solve Laplace’s equation. The short hand notation used in [Kusse] and [Arfken] will be presented here
+to help organize the choices as a reference. It is important to remember that these solutions are only for
+the single valued azimuth cases <math id="S1.SS5.p1.m1" class="ltx_Math" alttext="(\kappa=\nu^{2})" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mi>κ</mi><mo>=</mo><msup><mi>ν</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow></math>.</p>
+</div>
+<div id="S1.SS5.p2" class="ltx_para">
+<p class="ltx_p">Once the separate solutions are obtained, the rest is simple since our solution is separable</p>
+</div>
+<div id="S1.SS5.p3" class="ltx_para">
+<table id="S1.Ex51" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex51.m1" class="ltx_Math" alttext="\Phi\left(r,\theta,z\right)=R(r)P(\theta)Z(z)." display="block"><mrow><mrow><mrow><mi mathvariant="normal">Φ</mi><mo>⁢</mo><mrow><mo>(</mo><mi>r</mi><mo>,</mo><mi>θ</mi><mo>,</mo><mi>z</mi><mo>)</mo></mrow></mrow><mo>=</mo><mrow><mi>R</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>r</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>θ</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>Z</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S1.SS5.p4" class="ltx_para">
+<p class="ltx_p">So we just combine the individual solutions to get the general solutions to the Laplace equation in cylindrical coordinates.</p>
+</div>
+<div id="S1.SS5.p5" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Case 1</span>: <math id="S1.SS5.p5.m1" class="ltx_Math" alttext="\lambda&lt;0" display="inline"><mrow><mi>λ</mi><mo>&lt;</mo><mn>0</mn></mrow></math> <math id="S1.SS5.p5.m2" class="ltx_Math" alttext="(\lambda=-\gamma^{2})" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mi>λ</mi><mo>=</mo><mrow><mo>-</mo><msup><mi>γ</mi><mn>2</mn></msup></mrow></mrow><mo stretchy="false">)</mo></mrow></math>, <math id="S1.SS5.p5.m3" class="ltx_Math" alttext="\kappa&gt;0" display="inline"><mrow><mi>κ</mi><mo>&gt;</mo><mn>0</mn></mrow></math> <math id="S1.SS5.p5.m4" class="ltx_Math" alttext="(\kappa=\nu^{2})" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mi>κ</mi><mo>=</mo><msup><mi>ν</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow></math>.</p>
+</div>
+<div id="S1.SS5.p6" class="ltx_para">
+<table id="S1.E15" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.E15.m1" class="ltx_Math" alttext="\Phi\left(r,\theta,z\right)=\sum_{\nu}\sum_{\gamma}\left\{\begin{array}[]{c}e^%
+{\gamma z}\\
+e^{-\gamma z}\end{array}\right.\left\{\begin{array}[]{c}\cos(\nu\theta)\\
+\sin(\nu\theta)\end{array}\right.\left\{\begin{array}[]{c}J_{\nu}(\gamma r)\\
+Y_{\nu}(\gamma r)\end{array}\right." display="block"><mrow><mrow><mi mathvariant="normal">Φ</mi><mo>⁢</mo><mrow><mo>(</mo><mi>r</mi><mo>,</mo><mi>θ</mi><mo>,</mo><mi>z</mi><mo>)</mo></mrow></mrow><mo>=</mo><mrow><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mi>ν</mi></munder><mrow><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mi>γ</mi></munder><mrow><mrow><mo>{</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><msup><mi>e</mi><mrow><mi>γ</mi><mo>⁢</mo><mi>z</mi></mrow></msup></mtd></mtr><mtr><mtd columnalign="center"><msup><mi>e</mi><mrow><mo>-</mo><mrow><mi>γ</mi><mo>⁢</mo><mi>z</mi></mrow></mrow></msup></mtd></mtr></mtable><mi></mi></mrow><mo>⁢</mo><mrow><mo>{</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mrow><mi>cos</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>ν</mi><mo>⁢</mo><mi>θ</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mtd></mtr><mtr><mtd columnalign="center"><mrow><mi>sin</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>ν</mi><mo>⁢</mo><mi>θ</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mtd></mtr></mtable><mi></mi></mrow><mo>⁢</mo><mrow><mo>{</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mrow><msub><mi>J</mi><mi>ν</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>γ</mi><mo>⁢</mo><mi>r</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mtd></mtr><mtr><mtd columnalign="center"><mrow><msub><mi>Y</mi><mi>ν</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>γ</mi><mo>⁢</mo><mi>r</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mtd></mtr></mtable><mi></mi></mrow></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(15)</span></td>
+</tr>
+</table>
+</div>
+<div id="S1.SS5.p7" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Case 2</span>: <math id="S1.SS5.p7.m1" class="ltx_Math" alttext="\lambda&gt;0" display="inline"><mrow><mi>λ</mi><mo>&gt;</mo><mn>0</mn></mrow></math> <math id="S1.SS5.p7.m2" class="ltx_Math" alttext="(\lambda=\gamma^{2})" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mi>λ</mi><mo>=</mo><msup><mi>γ</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow></math>, <math id="S1.SS5.p7.m3" class="ltx_Math" alttext="\kappa&gt;0" display="inline"><mrow><mi>κ</mi><mo>&gt;</mo><mn>0</mn></mrow></math> <math id="S1.SS5.p7.m4" class="ltx_Math" alttext="(\kappa=\nu^{2})" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mi>κ</mi><mo>=</mo><msup><mi>ν</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow></math>.</p>
+</div>
+<div id="S1.SS5.p8" class="ltx_para">
+<table id="S1.E16" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.E16.m1" class="ltx_Math" alttext="\Phi\left(r,\theta,z\right)=\sum_{\nu}\sum_{\gamma}\left\{\begin{array}[]{c}%
+\cos(\gamma z)\\
+\sin(\gamma z)\end{array}\right.\left\{\begin{array}[]{c}\cos(\nu\theta)\\
+\sin(\nu\theta)\end{array}\right.\left\{\begin{array}[]{c}I_{\nu}(\gamma r)\\
+K_{\nu}(\gamma r)\end{array}\right." display="block"><mrow><mrow><mi mathvariant="normal">Φ</mi><mo>⁢</mo><mrow><mo>(</mo><mi>r</mi><mo>,</mo><mi>θ</mi><mo>,</mo><mi>z</mi><mo>)</mo></mrow></mrow><mo>=</mo><mrow><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mi>ν</mi></munder><mrow><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mi>γ</mi></munder><mrow><mrow><mo>{</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mrow><mi>cos</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>γ</mi><mo>⁢</mo><mi>z</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mtd></mtr><mtr><mtd columnalign="center"><mrow><mi>sin</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>γ</mi><mo>⁢</mo><mi>z</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mtd></mtr></mtable><mi></mi></mrow><mo>⁢</mo><mrow><mo>{</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mrow><mi>cos</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>ν</mi><mo>⁢</mo><mi>θ</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mtd></mtr><mtr><mtd columnalign="center"><mrow><mi>sin</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>ν</mi><mo>⁢</mo><mi>θ</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mtd></mtr></mtable><mi></mi></mrow><mo>⁢</mo><mrow><mo>{</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mrow><msub><mi>I</mi><mi>ν</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>γ</mi><mo>⁢</mo><mi>r</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mtd></mtr><mtr><mtd columnalign="center"><mrow><msub><mi>K</mi><mi>ν</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>γ</mi><mo>⁢</mo><mi>r</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mtd></mtr></mtable><mi></mi></mrow></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(16)</span></td>
+</tr>
+</table>
+</div>
+<div id="S1.SS5.p9" class="ltx_para">
+<p class="ltx_p">Interpreting the short hand notation is as simple as expanding terms and not forgetting the linear solutions, i.e. <math id="S1.SS5.p9.m1" class="ltx_Math" alttext="(\gamma=0)" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mi>γ</mi><mo>=</mo><mn>0</mn></mrow><mo stretchy="false">)</mo></mrow></math> .
+As an example, case 1, expanded out while ignoring the linear terms would give</p>
+</div>
+<div id="S1.SS5.p10" class="ltx_para">
+<table id="S1.E17" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.E17.m1" class="ltx_Math" alttext="\Phi\left(r,\theta,z\right)=\sum_{\nu}\sum_{\gamma}\left\{\begin{array}[]{c}\,%
+A_{\nu\gamma}e^{\gamma z}\cos(\nu\theta)J_{\nu}(\gamma r)\\
++B_{\nu\gamma}e^{\gamma z}\cos(\nu\theta)Y_{\nu}(\gamma r)\\
++C_{\nu\gamma}e^{\gamma z}\sin(\nu\theta)J_{\nu}(\gamma r)\\
++D_{\nu\gamma}e^{\gamma z}\sin(\nu\theta)Y_{\nu}(\gamma r)\\
++E_{\nu\gamma}e^{-\gamma z}\cos(\nu\theta)J_{\nu}(\gamma r)\\
++F_{\nu\gamma}e^{-\gamma z}\cos(\nu\theta)Y_{\nu}(\gamma r)\\
++G_{\nu\gamma}e^{-\gamma z}\sin(\nu\theta)J_{\nu}(\gamma r)\\
++H_{\nu\gamma}e^{-\gamma z}\sin(\nu\theta)Y_{\nu}(\gamma r)\\
+\par
+\end{array}\right\}." display="block"><mrow><mrow><mrow><mi mathvariant="normal">Φ</mi><mo>⁢</mo><mrow><mo>(</mo><mi>r</mi><mo>,</mo><mi>θ</mi><mo>,</mo><mi>z</mi><mo>)</mo></mrow></mrow><mo>=</mo><mrow><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mi>ν</mi></munder><mrow><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mi>γ</mi></munder><mrow><mo>{</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mrow><msub><mpadded lspace="1.7pt" width="+1.7pt"><mi>A</mi></mpadded><mrow><mi>ν</mi><mo>⁢</mo><mi>γ</mi></mrow></msub><mo>⁢</mo><msup><mi>e</mi><mrow><mi>γ</mi><mo>⁢</mo><mi>z</mi></mrow></msup><mo>⁢</mo><mrow><mi>cos</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>ν</mi><mo>⁢</mo><mi>θ</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>⁢</mo><msub><mi>J</mi><mi>ν</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>γ</mi><mo>⁢</mo><mi>r</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mtd></mtr><mtr><mtd columnalign="center"><mrow><mo>+</mo><mrow><msub><mi>B</mi><mrow><mi>ν</mi><mo>⁢</mo><mi>γ</mi></mrow></msub><mo>⁢</mo><msup><mi>e</mi><mrow><mi>γ</mi><mo>⁢</mo><mi>z</mi></mrow></msup><mo>⁢</mo><mrow><mi>cos</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>ν</mi><mo>⁢</mo><mi>θ</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>⁢</mo><msub><mi>Y</mi><mi>ν</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>γ</mi><mo>⁢</mo><mi>r</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mtd></mtr><mtr><mtd columnalign="center"><mrow><mo>+</mo><mrow><msub><mi>C</mi><mrow><mi>ν</mi><mo>⁢</mo><mi>γ</mi></mrow></msub><mo>⁢</mo><msup><mi>e</mi><mrow><mi>γ</mi><mo>⁢</mo><mi>z</mi></mrow></msup><mo>⁢</mo><mrow><mi>sin</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>ν</mi><mo>⁢</mo><mi>θ</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>⁢</mo><msub><mi>J</mi><mi>ν</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>γ</mi><mo>⁢</mo><mi>r</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mtd></mtr><mtr><mtd columnalign="center"><mrow><mo>+</mo><mrow><msub><mi>D</mi><mrow><mi>ν</mi><mo>⁢</mo><mi>γ</mi></mrow></msub><mo>⁢</mo><msup><mi>e</mi><mrow><mi>γ</mi><mo>⁢</mo><mi>z</mi></mrow></msup><mo>⁢</mo><mrow><mi>sin</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>ν</mi><mo>⁢</mo><mi>θ</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>⁢</mo><msub><mi>Y</mi><mi>ν</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>γ</mi><mo>⁢</mo><mi>r</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mtd></mtr><mtr><mtd columnalign="center"><mrow><mo>+</mo><mrow><msub><mi>E</mi><mrow><mi>ν</mi><mo>⁢</mo><mi>γ</mi></mrow></msub><mo>⁢</mo><msup><mi>e</mi><mrow><mo>-</mo><mrow><mi>γ</mi><mo>⁢</mo><mi>z</mi></mrow></mrow></msup><mo>⁢</mo><mrow><mi>cos</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>ν</mi><mo>⁢</mo><mi>θ</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>⁢</mo><msub><mi>J</mi><mi>ν</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>γ</mi><mo>⁢</mo><mi>r</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mtd></mtr><mtr><mtd columnalign="center"><mrow><mo>+</mo><mrow><msub><mi>F</mi><mrow><mi>ν</mi><mo>⁢</mo><mi>γ</mi></mrow></msub><mo>⁢</mo><msup><mi>e</mi><mrow><mo>-</mo><mrow><mi>γ</mi><mo>⁢</mo><mi>z</mi></mrow></mrow></msup><mo>⁢</mo><mrow><mi>cos</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>ν</mi><mo>⁢</mo><mi>θ</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>⁢</mo><msub><mi>Y</mi><mi>ν</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>γ</mi><mo>⁢</mo><mi>r</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mtd></mtr><mtr><mtd columnalign="center"><mrow><mo>+</mo><mrow><msub><mi>G</mi><mrow><mi>ν</mi><mo>⁢</mo><mi>γ</mi></mrow></msub><mo>⁢</mo><msup><mi>e</mi><mrow><mo>-</mo><mrow><mi>γ</mi><mo>⁢</mo><mi>z</mi></mrow></mrow></msup><mo>⁢</mo><mrow><mi>sin</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>ν</mi><mo>⁢</mo><mi>θ</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>⁢</mo><msub><mi>J</mi><mi>ν</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>γ</mi><mo>⁢</mo><mi>r</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mtd></mtr><mtr><mtd columnalign="center"><mrow><mo>+</mo><mrow><msub><mi>H</mi><mrow><mi>ν</mi><mo>⁢</mo><mi>γ</mi></mrow></msub><mo>⁢</mo><msup><mi>e</mi><mrow><mo>-</mo><mrow><mi>γ</mi><mo>⁢</mo><mi>z</mi></mrow></mrow></msup><mo>⁢</mo><mrow><mi>sin</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>ν</mi><mo>⁢</mo><mi>θ</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>⁢</mo><msub><mi>Y</mi><mi>ν</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>γ</mi><mo>⁢</mo><mi>r</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mtd></mtr></mtable><mo>}</mo></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(17)</span></td>
+</tr>
+</table>
+</div>
+</section>
+</section>
+<section id="bib" class="ltx_bibliography">
+<h2 class="ltx_title ltx_title_bibliography">References</h2>
+
+<ul class="ltx_biblist">
+      
+<li id="bib.bib1" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">1</span>
+        
+<span class="ltx_bibblock"> Arfken, George, Weber, Hans, <span class="ltx_text ltx_font_italic">Mathematical Physics</span>. Academic Press, San Diego, 2001.
+
+</span>
+      </li>
+      
+<li id="bib.bib2" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">2</span>
+        
+<span class="ltx_bibblock"> Etgen, G., <span class="ltx_text ltx_font_italic">Calculus</span>. John Wiley &amp; Sons, New York, 1999.
+
+</span>
+      </li>
+      
+<li id="bib.bib3" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">3</span>
+        
+<span class="ltx_bibblock"> Guterman, M., Nitecki, Z., <span class="ltx_text ltx_font_italic">Differential Equations, 3rd Edition</span>. Saunders College Publishing, Fort Worth, 1992.
+
+</span>
+      </li>
+      
+<li id="bib.bib4" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">4</span>
+        
+<span class="ltx_bibblock"> Jackson, J.D., <span class="ltx_text ltx_font_italic">Classical Electrodynamics, 2nd Edition</span>. John Wiley &amp; Sons, New York, 1975.
+
+</span>
+      </li>
+      
+<li id="bib.bib5" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">5</span>
+        
+<span class="ltx_bibblock"> Kusse, Bruce, Westwig, Erik, <span class="ltx_text ltx_font_italic">Mathematical Physics</span>. John Wiley &amp; Sons, New York, 1998.
+
+</span>
+      </li>
+      
+<li id="bib.bib6" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">6</span>
+        
+<span class="ltx_bibblock"> Lebedev, N., <span class="ltx_text ltx_font_italic">Special Functions &amp; Their Applications</span>. Dover Publications, New York, 1995.
+
+</span>
+      </li>
+      
+<li id="bib.bib7" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">7</span>
+        
+<span class="ltx_bibblock"> Watson, G.N., <span class="ltx_text ltx_font_italic">A Treatise on the Theory of Bessel Functions</span>. Cambridge University Press, New York, 1995.
+
+</span>
+      </li>
+    
+</ul>
+</section>
+<div id="p2" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">Laplace equation in cylindrical coordinates</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">LaplaceEquationInCylindricalCoordinates</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 16:24:24</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 16:24:24</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">bloftin (6104)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">bloftin (6104)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">13</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">bloftin (6104)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Derivation</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 35J05</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_r">BesselFunction</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">BesselsEquation</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 20:43:50 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

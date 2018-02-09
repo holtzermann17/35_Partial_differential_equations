@@ -1,0 +1,241 @@
+<!DOCTYPE html><html>
+<head>
+<title>using Laplace transform to solve heat equation</title>
+<!--Generated on Fri Feb  9 20:44:00 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">using Laplace transform to solve heat equation</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">Along the whole positive <math id="p1.m1" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>-axis, we have an  heat-conducting rod, the surface of which is .  The initial temperature of the rod is 0 .  Determine the temperature function
+ <math id="p1.m2" class="ltx_Math" alttext="u(x,\,t)" display="inline"><mrow><mi>u</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo rspace="4.2pt">,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math>  when at the time  <math id="p1.m3" class="ltx_Math" alttext="t=0" display="inline"><mrow><mi>t</mi><mo>=</mo><mn>0</mn></mrow></math></p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">(a) the head  <math id="p2.m1" class="ltx_Math" alttext="x=0" display="inline"><mrow><mi>x</mi><mo>=</mo><mn>0</mn></mrow></math>  of the rod is set permanently to the constant temperature;</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">(b) through the head  <math id="p3.m1" class="ltx_Math" alttext="x=0" display="inline"><mrow><mi>x</mi><mo>=</mo><mn>0</mn></mrow></math>  one directs a constant heat flux.
+<br class="ltx_break"></p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">The heat equation in one dimension reads</p>
+<table id="S0.EGx1" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.E1"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E1.m1" class="ltx_Math" alttext="\displaystyle u_{xx}^{\prime\prime}(x,\,t)\;=\;\frac{1}{c^{2}}\,u_{t}^{\prime}%
+(x,\,t)." display="inline"><mrow><mrow><mrow><msubsup><mi>u</mi><mrow><mi>x</mi><mo>⁢</mo><mi>x</mi></mrow><mo>′′</mo></msubsup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo rspace="4.2pt">,</mo><mi>t</mi><mo rspace="5.3pt" stretchy="false">)</mo></mrow></mrow><mo rspace="5.3pt">=</mo><mrow><mpadded width="+1.7pt"><mstyle displaystyle="true"><mfrac><mn>1</mn><msup><mi>c</mi><mn>2</mn></msup></mfrac></mstyle></mpadded><mo>⁢</mo><msubsup><mi>u</mi><mi>t</mi><mo>′</mo></msubsup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo rspace="4.2pt">,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">In this we have</p>
+<table id="S0.EGx2" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex1" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\displaystyle\mbox{(a) }\begin{cases}\mbox{boundary conditions}\;\,u(\infty,\,%
+t)=0,\qquad u(0,\,t)=u_{0},\\
+\mbox{initial conditions}\qquad u(x,\,0)=0,\qquad\underbrace{u_{t}^{\prime}(x,%
+\,0)=0}_{\mbox{for\;}x\,&gt;\,0}\end{cases}" display="inline"><mrow><mtext>(a) </mtext><mo>⁢</mo><mrow><mo>{</mo><mtable columnspacing="5pt" rowspacing="0pt"><mtr><mtd columnalign="left"><mrow><mrow><mrow><mrow><mpadded width="+4.4pt"><mtext>boundary conditions</mtext></mpadded><mo>⁢</mo><mi>u</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">∞</mi><mo rspace="4.2pt">,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow><mo rspace="22.5pt">,</mo><mrow><mrow><mi>u</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo rspace="4.2pt">,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msub><mi>u</mi><mn>0</mn></msub></mrow></mrow><mo>,</mo></mrow></mtd><mtd></mtd></mtr><mtr><mtd columnalign="left"><mrow><mrow><mrow><mtext>initial conditions</mtext><mo mathsize="70%" mathvariant="italic" separator="true" stretchy="false">  </mo><mrow><mi>u</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mn> 0</mn><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mn>0</mn></mrow><mo rspace="22.5pt">,</mo><munder><munder accentunder="true"><mrow><mrow><msubsup><mi>u</mi><mi>t</mi><mo movablelimits="false">′</mo></msubsup><mo movablelimits="false">⁢</mo><mrow><mo movablelimits="false" stretchy="false">(</mo><mi>x</mi><mo movablelimits="false">,</mo><mn> 0</mn><mo movablelimits="false" stretchy="false">)</mo></mrow></mrow><mo movablelimits="false">=</mo><mn>0</mn></mrow><mo movablelimits="false">⏟</mo></munder><mrow><mrow><mtext>for </mtext><mo>⁢</mo><mpadded width="+1.7pt"><mi>x</mi></mpadded></mrow><mo>&gt;</mo><mn> 0</mn></mrow></munder></mrow></mtd><mtd></mtd></mtr></mtable></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and</p>
+<table id="S0.EGx3" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex2" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex2.m1" class="ltx_Math" alttext="\displaystyle\mbox{(b) }\begin{cases}\mbox{boundary conditions}\;\,u(\infty,\,%
+t)=0,\quad u_{x}^{\prime}(0,\,t)=-k,\\
+\mbox{initial conditions}\qquad u(x,\,0)=0,\quad\underbrace{u_{t}^{\prime}(x,%
+\,0)=0}_{\mbox{for\;}x\,&gt;\,0}.\end{cases}" display="inline"><mrow><mtext>(b) </mtext><mo>⁢</mo><mrow><mo>{</mo><mtable columnspacing="5pt" rowspacing="0pt"><mtr><mtd columnalign="left"><mrow><mrow><mrow><mrow><mpadded width="+4.4pt"><mtext>boundary conditions</mtext></mpadded><mo>⁢</mo><mi>u</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">∞</mi><mo rspace="4.2pt">,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow><mo rspace="12.5pt">,</mo><mrow><mrow><msubsup><mi>u</mi><mi>x</mi><mo>′</mo></msubsup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo rspace="4.2pt">,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo>-</mo><mi>k</mi></mrow></mrow></mrow><mo>,</mo></mrow></mtd><mtd></mtd></mtr><mtr><mtd columnalign="left"><mrow><mrow><mrow><mrow><mtext>initial conditions</mtext><mo separator="true">  </mo><mrow><mi>u</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mn> 0</mn><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mn>0</mn></mrow><mo rspace="12.5pt">,</mo><munder><munder accentunder="true"><mrow><mrow><msubsup><mi>u</mi><mi>t</mi><mo movablelimits="false">′</mo></msubsup><mo movablelimits="false">⁢</mo><mrow><mo movablelimits="false" stretchy="false">(</mo><mi>x</mi><mo movablelimits="false">,</mo><mn> 0</mn><mo movablelimits="false" stretchy="false">)</mo></mrow></mrow><mo movablelimits="false">=</mo><mn>0</mn></mrow><mo movablelimits="false">⏟</mo></munder><mrow><mrow><mtext>for </mtext><mo>⁢</mo><mpadded width="+1.7pt"><mi>x</mi></mpadded></mrow><mo>&gt;</mo><mn> 0</mn></mrow></munder></mrow><mo>.</mo></mrow></mtd><mtd></mtd></mtr></mtable></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">For solving (1), we first form its Laplace transform (see the table of Laplace transforms)</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="U_{xx}^{\prime\prime}(x,\,s)\;=\;\frac{1}{c^{2}}[s\,U(x,\,s)-u(x,\,0)]," display="block"><mrow><mrow><mrow><msubsup><mi>U</mi><mrow><mi>x</mi><mo>⁢</mo><mi>x</mi></mrow><mo>′′</mo></msubsup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo rspace="4.2pt">,</mo><mi>s</mi><mo rspace="5.3pt" stretchy="false">)</mo></mrow></mrow><mo rspace="5.3pt">=</mo><mrow><mfrac><mn>1</mn><msup><mi>c</mi><mn>2</mn></msup></mfrac><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mrow><mrow><mpadded width="+1.7pt"><mi>s</mi></mpadded><mo>⁢</mo><mi>U</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo rspace="4.2pt">,</mo><mi>s</mi><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>u</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mn> 0</mn><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">]</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">which is a  ordinary linear differential equation</p>
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="U_{xx}^{\prime\prime}(x,\,s)\;=\;\left(\frac{\sqrt{s}}{c}\right)^{2}U(x,\,s)" display="block"><mrow><mrow><msubsup><mi>U</mi><mrow><mi>x</mi><mo>⁢</mo><mi>x</mi></mrow><mo>′′</mo></msubsup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo rspace="4.2pt">,</mo><mi>s</mi><mo rspace="5.3pt" stretchy="false">)</mo></mrow></mrow><mo rspace="5.3pt">=</mo><mrow><msup><mrow><mo>(</mo><mfrac><msqrt><mi>s</mi></msqrt><mi>c</mi></mfrac><mo>)</mo></mrow><mn>2</mn></msup><mo>⁢</mo><mi>U</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo rspace="4.2pt">,</mo><mi>s</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">of order (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/ODE</span>) two.  Here, <math id="p5.m1" class="ltx_Math" alttext="s" display="inline"><mi>s</mi></math> is only a parametre, and the general solution of the equation is</p>
+<table id="S0.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex5.m1" class="ltx_Math" alttext="U(x,\,s)\;=\;C_{1}e^{\frac{\sqrt{s}}{c}x}+C_{2}e^{-\frac{\sqrt{s}}{c}x}" display="block"><mrow><mrow><mi>U</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo rspace="4.2pt">,</mo><mi>s</mi><mo rspace="5.3pt" stretchy="false">)</mo></mrow></mrow><mo rspace="5.3pt">=</mo><mrow><mrow><msub><mi>C</mi><mn>1</mn></msub><mo>⁢</mo><msup><mi>e</mi><mrow><mfrac><msqrt><mi>s</mi></msqrt><mi>c</mi></mfrac><mo>⁢</mo><mi>x</mi></mrow></msup></mrow><mo>+</mo><mrow><msub><mi>C</mi><mn>2</mn></msub><mo>⁢</mo><msup><mi>e</mi><mrow><mo>-</mo><mrow><mfrac><msqrt><mi>s</mi></msqrt><mi>c</mi></mfrac><mo>⁢</mo><mi>x</mi></mrow></mrow></msup></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">(see this entry (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/SecondOrderLinearODEWithConstantCoefficients</span>)).  Since</p>
+<table id="S0.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex6.m1" class="ltx_Math" alttext="U(\infty,\,s)\;=\;\int_{0}^{\infty}\!e^{-st}u(\infty,\,t)\,dt\;=\;\int_{0}^{%
+\infty}\!0\,dt\;\equiv\;0," display="block"><mrow><mrow><mrow><mi>U</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">∞</mi><mo rspace="4.2pt">,</mo><mi>s</mi><mo rspace="5.3pt" stretchy="false">)</mo></mrow></mrow><mo rspace="5.3pt">=</mo><mrow><mpadded width="-1.7pt"><msubsup><mo largeop="true" symmetric="true">∫</mo><mn>0</mn><mi mathvariant="normal">∞</mi></msubsup></mpadded><mrow><msup><mi>e</mi><mrow><mo>-</mo><mrow><mi>s</mi><mo>⁢</mo><mi>t</mi></mrow></mrow></msup><mo>⁢</mo><mi>u</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">∞</mi><mo rspace="4.2pt">,</mo><mi>t</mi><mo rspace="4.2pt" stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo>𝑑</mo><mpadded width="+2.8pt"><mi>t</mi></mpadded></mrow></mrow></mrow><mo rspace="5.3pt">=</mo><mrow><mpadded width="-1.7pt"><msubsup><mo largeop="true" symmetric="true">∫</mo><mn>0</mn><mi mathvariant="normal">∞</mi></msubsup></mpadded><mrow><mpadded width="+1.7pt"><mn>0</mn></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mpadded width="+2.8pt"><mi>t</mi></mpadded></mrow></mrow></mrow><mo>≡</mo><mn> 0</mn></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">we must have  <math id="p5.m2" class="ltx_Math" alttext="C_{1}=0" display="inline"><mrow><msub><mi>C</mi><mn>1</mn></msub><mo>=</mo><mn>0</mn></mrow></math>.  Thus the Laplace transform of the solution of (1) is in both cases (a) and (b)</p>
+<table id="S0.EGx4" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.E2"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E2.m1" class="ltx_Math" alttext="\displaystyle U(x,\,s)\;=\;C_{2}e^{-\frac{\sqrt{s}}{c}x}." display="inline"><mrow><mrow><mrow><mi>U</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo rspace="4.2pt">,</mo><mi>s</mi><mo rspace="5.3pt" stretchy="false">)</mo></mrow></mrow><mo rspace="5.3pt">=</mo><mrow><msub><mi>C</mi><mn>2</mn></msub><mo>⁢</mo><msup><mi>e</mi><mrow><mo>-</mo><mrow><mfrac><msqrt><mi>s</mi></msqrt><mi>c</mi></mfrac><mo>⁢</mo><mi>x</mi></mrow></mrow></msup></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2)</span></td>
+</tr></tbody>
+</table>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p">For (a), the second boundary condition implies   <math id="p6.m1" class="ltx_Math" alttext="\displaystyle U(0,\,s)=\frac{u_{0}}{s}" display="inline"><mrow><mrow><mi>U</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo rspace="4.2pt">,</mo><mi>s</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mstyle displaystyle="true"><mfrac><msub><mi>u</mi><mn>0</mn></msub><mi>s</mi></mfrac></mstyle></mrow></math>.  But by (2) we must have  <math id="p6.m2" class="ltx_Math" alttext="U(0,\,s)=C_{2}\!\cdot\!1" display="inline"><mrow><mrow><mi>U</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo rspace="4.2pt">,</mo><mi>s</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mpadded width="-1.7pt"><msub><mi>C</mi><mn>2</mn></msub></mpadded><mo rspace="0.8pt">⋅</mo><mn>1</mn></mrow></mrow></math>, whence we infer that  <math id="p6.m3" class="ltx_Math" alttext="\displaystyle C_{2}=\frac{u_{0}}{s}" display="inline"><mrow><msub><mi>C</mi><mn>2</mn></msub><mo>=</mo><mstyle displaystyle="true"><mfrac><msub><mi>u</mi><mn>0</mn></msub><mi>s</mi></mfrac></mstyle></mrow></math>.  Accordingly,</p>
+<table id="S0.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex7.m1" class="ltx_Math" alttext="U(x,\,s)\;=\;u_{0}\cdot\frac{1}{s}e^{-\frac{x}{c}\sqrt{s}}," display="block"><mrow><mrow><mrow><mi>U</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo rspace="4.2pt">,</mo><mi>s</mi><mo rspace="5.3pt" stretchy="false">)</mo></mrow></mrow><mo rspace="5.3pt">=</mo><mrow><mrow><msub><mi>u</mi><mn>0</mn></msub><mo>⋅</mo><mfrac><mn>1</mn><mi>s</mi></mfrac></mrow><mo>⁢</mo><msup><mi>e</mi><mrow><mo>-</mo><mrow><mfrac><mi>x</mi><mi>c</mi></mfrac><mo>⁢</mo><msqrt><mi>s</mi></msqrt></mrow></mrow></msup></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">which corresponds to the solution function</p>
+<table id="S0.Ex8" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex8.m1" class="ltx_Math" alttext="u(x,\,t)\;:=\;u_{0}\mbox{ erfc}\frac{x}{2c\sqrt{t}}" display="block"><mrow><mrow><mi>u</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo rspace="4.2pt">,</mo><mi>t</mi><mo rspace="5.3pt" stretchy="false">)</mo></mrow></mrow><mo rspace="5.3pt">:=</mo><mrow><msub><mi>u</mi><mn>0</mn></msub><mo>⁢</mo><mtext> erfc</mtext><mo>⁢</mo><mfrac><mi>x</mi><mrow><mn>2</mn><mo>⁢</mo><mi>c</mi><mo>⁢</mo><msqrt><mi>t</mi></msqrt></mrow></mfrac></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">of the heat equation (1).
+<br class="ltx_break"></p>
+</div>
+<div id="p7" class="ltx_para">
+<p class="ltx_p">For (b), the second boundary condition says that  <math id="p7.m1" class="ltx_Math" alttext="\displaystyle U_{x}^{\prime}(0,\,s)=-\frac{k}{s}" display="inline"><mrow><mrow><msubsup><mi>U</mi><mi>x</mi><mo>′</mo></msubsup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo rspace="4.2pt">,</mo><mi>s</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo>-</mo><mstyle displaystyle="true"><mfrac><mi>k</mi><mi>s</mi></mfrac></mstyle></mrow></mrow></math>,  and since (2) implies that 
+<math id="p7.m2" class="ltx_Math" alttext="U_{x}^{\prime}(x,\,s)=-\frac{\sqrt{s}}{c}C_{2}e^{-\frac{\sqrt{s}}{c}x}" display="inline"><mrow><mrow><msubsup><mi>U</mi><mi>x</mi><mo>′</mo></msubsup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo rspace="4.2pt">,</mo><mi>s</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo>-</mo><mrow><mfrac><msqrt><mi>s</mi></msqrt><mi>c</mi></mfrac><mo>⁢</mo><msub><mi>C</mi><mn>2</mn></msub><mo>⁢</mo><msup><mi>e</mi><mrow><mo>-</mo><mrow><mfrac><msqrt><mi>s</mi></msqrt><mi>c</mi></mfrac><mo>⁢</mo><mi>x</mi></mrow></mrow></msup></mrow></mrow></mrow></math>,  we can infer that now 
+</p>
+<table id="S0.Ex9" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex9.m1" class="ltx_Math" alttext="C_{2}\;=\;\frac{ck}{s\sqrt{s}}." display="block"><mrow><mrow><mpadded width="+2.8pt"><msub><mi>C</mi><mn>2</mn></msub></mpadded><mo rspace="5.3pt">=</mo><mfrac><mrow><mi>c</mi><mo>⁢</mo><mi>k</mi></mrow><mrow><mi>s</mi><mo>⁢</mo><msqrt><mi>s</mi></msqrt></mrow></mfrac></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Thus</p>
+<table id="S0.Ex10" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex10.m1" class="ltx_Math" alttext="U(x,\,s)\;=\;\frac{ck}{s\sqrt{s}}e^{-\frac{x}{c}\sqrt{s}}," display="block"><mrow><mrow><mrow><mi>U</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo rspace="4.2pt">,</mo><mi>s</mi><mo rspace="5.3pt" stretchy="false">)</mo></mrow></mrow><mo rspace="5.3pt">=</mo><mrow><mfrac><mrow><mi>c</mi><mo>⁢</mo><mi>k</mi></mrow><mrow><mi>s</mi><mo>⁢</mo><msqrt><mi>s</mi></msqrt></mrow></mfrac><mo>⁢</mo><msup><mi>e</mi><mrow><mo>-</mo><mrow><mfrac><mi>x</mi><mi>c</mi></mfrac><mo>⁢</mo><msqrt><mi>s</mi></msqrt></mrow></mrow></msup></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">which corresponds to</p>
+<table id="S0.Ex11" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex11.m1" class="ltx_Math" alttext="u(x,\,t)\;:=\;k\left[2c\sqrt{\frac{t}{\pi}}e^{-\frac{x^{2}}{4c^{2}t}}-x\mbox{ %
+erfc}\frac{x}{2c\sqrt{t}}\right]\!." display="block"><mrow><mrow><mrow><mi>u</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo rspace="4.2pt">,</mo><mi>t</mi><mo rspace="5.3pt" stretchy="false">)</mo></mrow></mrow><mo rspace="5.3pt">:=</mo><mrow><mi>k</mi><mo>⁢</mo><mrow><mo>[</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>c</mi><mo>⁢</mo><msqrt><mfrac><mi>t</mi><mi>π</mi></mfrac></msqrt><mo>⁢</mo><msup><mi>e</mi><mrow><mo>-</mo><mfrac><msup><mi>x</mi><mn>2</mn></msup><mrow><mn>4</mn><mo>⁢</mo><msup><mi>c</mi><mn>2</mn></msup><mo>⁢</mo><mi>t</mi></mrow></mfrac></mrow></msup></mrow><mo>-</mo><mrow><mi>x</mi><mo>⁢</mo><mtext> erfc</mtext><mo>⁢</mo><mfrac><mi>x</mi><mrow><mn>2</mn><mo>⁢</mo><mi>c</mi><mo>⁢</mo><msqrt><mi>t</mi></msqrt></mrow></mfrac></mrow></mrow><mo rspace="0.8pt">]</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<br class="ltx_break">
+</div>
+<div id="p8" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">using Laplace transform to solve heat equation</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">UsingLaplaceTransformToSolveHeatEquation</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2015-05-30 6:55:05</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2015-05-30 6:55:05</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">pahio (2872)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">pahio (2872)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">11</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">pahio (2872)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Example</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 35K20</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 35Q99</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 35K05</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Synonym</th>
+<td class="ltx_td ltx_align_left ltx_border_r">using Laplace transform to solve partial differential equation</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">LaplaceTransform</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 20:44:00 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

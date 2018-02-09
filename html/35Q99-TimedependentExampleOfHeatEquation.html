@@ -1,0 +1,314 @@
+<!DOCTYPE html><html>
+<head>
+<title>time-dependent example of heat equation</title>
+<!--Generated on Fri Feb  9 20:44:47 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">time-dependent example of heat equation</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">The initial temperature (at  <math id="p1.m1" class="ltx_Math" alttext="t=0" display="inline"><mrow><mi>t</mi><mo>=</mo><mn>0</mn></mrow></math>) of a  plate</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="A=\{(x,\,y)\in\mathbb{R}^{2}\vdots\,\,\,0&lt;x&lt;a,\,\,0&lt;y&lt;b\}" display="block"><mrow><mi>A</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo rspace="4.2pt">,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><msup><mi>ℝ</mi><mn>2</mn></msup><mi mathvariant="normal">⋮</mi><mn>   0</mn><mo>&lt;</mo><mi>x</mi><mo>&lt;</mo><mi>a</mi><mo>,</mo><mn>  0</mn><mo>&lt;</mo><mi>y</mi><mo>&lt;</mo><mi>b</mi><mo stretchy="false">}</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">in the <math id="p1.m2" class="ltx_Math" alttext="xy" display="inline"><mrow><mi>x</mi><mo>⁢</mo><mi>y</mi></mrow></math>-plane is given by the function  <math id="p1.m3" class="ltx_Math" alttext="f=f(x,\,y)" display="inline"><mrow><mi>f</mi><mo>=</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo rspace="4.2pt">,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.  The faces of the plate are supposed completely isolating.  After the   <math id="p1.m4" class="ltx_Math" alttext="t=0" display="inline"><mrow><mi>t</mi><mo>=</mo><mn>0</mn></mrow></math>  the boundaries of <math id="p1.m5" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> are held in the temperature <math id="p1.m6" class="ltx_Math" alttext="0" display="inline"><mn>0</mn></math>.  Determine the temperature function</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="u=u(x,\,y,\,t)" display="block"><mrow><mi>u</mi><mo>=</mo><mrow><mi>u</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo rspace="4.2pt">,</mo><mi>y</mi><mo rspace="4.2pt">,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">on <math id="p1.m7" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> (where <math id="p1.m8" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math> is the time).</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">Since it’s a question of a two-dimensional heat , the heat equation gets the form</p>
+<table id="A0.EGx1" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.E1"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E1.m1" class="ltx_Math" alttext="\displaystyle\nabla^{2}u\equiv u^{\prime\prime}_{xx}+u^{\prime\prime}_{yy}=%
+\frac{1}{c^{2}}u^{\prime}_{t}." display="inline"><mrow><mrow><mrow><msup><mo>∇</mo><mn>2</mn></msup><mo>⁡</mo><mi>u</mi></mrow><mo>≡</mo><mrow><msubsup><mi>u</mi><mrow><mi>x</mi><mo>⁢</mo><mi>x</mi></mrow><mo>′′</mo></msubsup><mo>+</mo><msubsup><mi>u</mi><mrow><mi>y</mi><mo>⁢</mo><mi>y</mi></mrow><mo>′′</mo></msubsup></mrow><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><msup><mi>c</mi><mn>2</mn></msup></mfrac></mstyle><mo>⁢</mo><msubsup><mi>u</mi><mi>t</mi><mo>′</mo></msubsup></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">One have to find for (1) a solution function <math id="p2.m1" class="ltx_Math" alttext="u" display="inline"><mi>u</mi></math> which satisfies the initial condition</p>
+<table id="A0.EGx2" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.E2"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E2.m1" class="ltx_Math" alttext="\displaystyle u(x,\,y,\,0)=f(x,\,y)\,\,\,\mathrm{in}\,\,\,A" display="inline"><mrow><mrow><mi>u</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo rspace="4.2pt">,</mo><mi>y</mi><mo>,</mo><mn> 0</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo rspace="4.2pt">,</mo><mi>y</mi><mo rspace="7.5pt" stretchy="false">)</mo></mrow><mo>⁢</mo><mpadded width="+5pt"><mi>in</mi></mpadded><mo>⁢</mo><mi>A</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">and the boundary condition</p>
+<table id="A0.EGx3" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.E3"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E3.m1" class="ltx_Math" alttext="\displaystyle u(x,\,y,\,t)=0\,\,\,\mathrm{on\,\,boundary\,\,of}\,\,A\,\,\,%
+\mathrm{for}\,\,t&gt;0." display="inline"><mrow><mrow><mrow><mi>u</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo rspace="4.2pt">,</mo><mi>y</mi><mo rspace="4.2pt">,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mpadded width="+5pt"><mn>0</mn></mpadded><mo>⁢</mo><mpadded width="+3.3pt"><mi>on</mi></mpadded><mo>⁢</mo><mpadded width="+3.3pt"><mi>boundary</mi></mpadded><mo>⁢</mo><mpadded width="+3.3pt"><mi>of</mi></mpadded><mo>⁢</mo><mpadded width="+5pt"><mi>A</mi></mpadded><mo>⁢</mo><mpadded width="+3.3pt"><mi>for</mi></mpadded><mo>⁢</mo><mi>t</mi></mrow><mo>&gt;</mo><mn>0</mn></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3)</span></td>
+</tr></tbody>
+</table>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">For finding a simple solution of the differential equation (1) we try the form</p>
+<table id="A0.EGx4" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.E4"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E4.m1" class="ltx_Math" alttext="\displaystyle u(x,\,y,\,t):=X(x)Y(y)T(t)," display="inline"><mrow><mrow><mrow><mi>u</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo rspace="4.2pt">,</mo><mi>y</mi><mo rspace="4.2pt">,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>:=</mo><mrow><mi>X</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>Y</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>T</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">whence the boundary condition reads</p>
+<table id="A0.EGx5" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.E5"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E5.m1" class="ltx_Math" alttext="\displaystyle X(0)=Y(0)=X(a)=Y(b)=0." display="inline"><mrow><mrow><mrow><mi>X</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>Y</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>X</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>Y</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">Substituting (4) in (1) and dividing this equation by <math id="p3.m1" class="ltx_Math" alttext="XYT" display="inline"><mrow><mi>X</mi><mo>⁢</mo><mi>Y</mi><mo>⁢</mo><mi>T</mi></mrow></math> give the form</p>
+<table id="A0.EGx6" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.E6"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E6.m1" class="ltx_Math" alttext="\displaystyle\frac{X^{\prime\prime}}{X}+\frac{Y^{\prime\prime}}{Y}=\frac{1}{c^%
+{2}}\!\cdot\!\frac{T^{\prime}}{T}." display="inline"><mrow><mrow><mrow><mstyle displaystyle="true"><mfrac><msup><mi>X</mi><mo>′′</mo></msup><mi>X</mi></mfrac></mstyle><mo>+</mo><mstyle displaystyle="true"><mfrac><msup><mi>Y</mi><mo>′′</mo></msup><mi>Y</mi></mfrac></mstyle></mrow><mo>=</mo><mrow><mpadded width="-1.7pt"><mstyle displaystyle="true"><mfrac><mn>1</mn><msup><mi>c</mi><mn>2</mn></msup></mfrac></mstyle></mpadded><mo rspace="0.8pt">⋅</mo><mstyle displaystyle="true"><mfrac><msup><mi>T</mi><mo>′</mo></msup><mi>T</mi></mfrac></mstyle></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(6)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">It’s easily understood that such a condition requires that the both addends of the left side and the right side ought to be constants:</p>
+<table id="A0.EGx7" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.E7"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E7.m1" class="ltx_Math" alttext="\displaystyle\frac{X^{\prime\prime}}{X}=-k_{1}^{2},\,\,\frac{Y^{\prime\prime}}%
+{Y}=-k_{2}^{2},\,\,\frac{1}{c^{2}}\!\cdot\!\frac{T^{\prime}}{T}=-k^{2}," display="inline"><mrow><mrow><mrow><mstyle displaystyle="true"><mfrac><msup><mi>X</mi><mo>′′</mo></msup><mi>X</mi></mfrac></mstyle><mo>=</mo><mrow><mo>-</mo><msubsup><mi>k</mi><mn>1</mn><mn>2</mn></msubsup></mrow></mrow><mo rspace="5.8pt">,</mo><mrow><mrow><mstyle displaystyle="true"><mfrac><msup><mi>Y</mi><mo>′′</mo></msup><mi>Y</mi></mfrac></mstyle><mo>=</mo><mrow><mo>-</mo><msubsup><mi>k</mi><mn>2</mn><mn>2</mn></msubsup></mrow></mrow><mo rspace="5.8pt">,</mo><mrow><mrow><mpadded width="-1.7pt"><mstyle displaystyle="true"><mfrac><mn>1</mn><msup><mi>c</mi><mn>2</mn></msup></mfrac></mstyle></mpadded><mo rspace="0.8pt">⋅</mo><mstyle displaystyle="true"><mfrac><msup><mi>T</mi><mo>′</mo></msup><mi>T</mi></mfrac></mstyle></mrow><mo>=</mo><mrow><mo>-</mo><msup><mi>k</mi><mn>2</mn></msup></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(7)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">where  <math id="p3.m2" class="ltx_Math" alttext="k^{2}=k_{1}^{2}+k_{2}^{2}" display="inline"><mrow><msup><mi>k</mi><mn>2</mn></msup><mo>=</mo><mrow><msubsup><mi>k</mi><mn>1</mn><mn>2</mn></msubsup><mo>+</mo><msubsup><mi>k</mi><mn>2</mn><mn>2</mn></msubsup></mrow></mrow></math>.  We soon explain why these constants are negative.
+Because the equations (7) may be written</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="X^{\prime\prime}=-k_{1}^{2}X,\,\,\,Y^{\prime\prime}=-k_{2}^{2}Y,\,\,\,T^{%
+\prime}=-k^{2}c^{2}T," display="block"><mrow><mrow><mrow><msup><mi>X</mi><mo>′′</mo></msup><mo>=</mo><mrow><mo>-</mo><mrow><msubsup><mi>k</mi><mn>1</mn><mn>2</mn></msubsup><mo>⁢</mo><mi>X</mi></mrow></mrow></mrow><mo rspace="7.5pt">,</mo><mrow><mrow><msup><mi>Y</mi><mo>′′</mo></msup><mo>=</mo><mrow><mo>-</mo><mrow><msubsup><mi>k</mi><mn>2</mn><mn>2</mn></msubsup><mo>⁢</mo><mi>Y</mi></mrow></mrow></mrow><mo rspace="7.5pt">,</mo><mrow><msup><mi>T</mi><mo>′</mo></msup><mo>=</mo><mrow><mo>-</mo><mrow><msup><mi>k</mi><mn>2</mn></msup><mo>⁢</mo><msup><mi>c</mi><mn>2</mn></msup><mo>⁢</mo><mi>T</mi></mrow></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">the general solutions of these ordinary differential equations are</p>
+<table id="A0.EGx8" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.E8"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E8.m1" class="ltx_Math" alttext="\displaystyle\begin{cases}X=C_{1}\cos{k_{1}x}+D_{1}\sin{k_{1}x},\\
+Y=C_{2}\cos{k_{2}y}+D_{2}\sin{k_{2}y},\\
+T=Ce^{-k^{2}c^{2}t}.\end{cases}" display="inline"><mrow><mo>{</mo><mtable columnspacing="5pt" rowspacing="0pt"><mtr><mtd columnalign="left"><mrow><mrow><mi>X</mi><mo>=</mo><mrow><mrow><msub><mi>C</mi><mn>1</mn></msub><mo>⁢</mo><mrow><mi>cos</mi><mo>⁡</mo><mrow><msub><mi>k</mi><mn>1</mn></msub><mo>⁢</mo><mi>x</mi></mrow></mrow></mrow><mo>+</mo><mrow><msub><mi>D</mi><mn>1</mn></msub><mo>⁢</mo><mrow><mi>sin</mi><mo>⁡</mo><mrow><msub><mi>k</mi><mn>1</mn></msub><mo>⁢</mo><mi>x</mi></mrow></mrow></mrow></mrow></mrow><mo>,</mo></mrow></mtd><mtd></mtd></mtr><mtr><mtd columnalign="left"><mrow><mrow><mi>Y</mi><mo>=</mo><mrow><mrow><msub><mi>C</mi><mn>2</mn></msub><mo>⁢</mo><mrow><mi>cos</mi><mo>⁡</mo><mrow><msub><mi>k</mi><mn>2</mn></msub><mo>⁢</mo><mi>y</mi></mrow></mrow></mrow><mo>+</mo><mrow><msub><mi>D</mi><mn>2</mn></msub><mo>⁢</mo><mrow><mi>sin</mi><mo>⁡</mo><mrow><msub><mi>k</mi><mn>2</mn></msub><mo>⁢</mo><mi>y</mi></mrow></mrow></mrow></mrow></mrow><mo>,</mo></mrow></mtd><mtd></mtd></mtr><mtr><mtd columnalign="left"><mrow><mrow><mi>T</mi><mo>=</mo><mrow><mi>C</mi><mo>⁢</mo><msup><mi>e</mi><mrow><mo>-</mo><mrow><msup><mi>k</mi><mn>2</mn></msup><mo>⁢</mo><msup><mi>c</mi><mn>2</mn></msup><mo>⁢</mo><mi>t</mi></mrow></mrow></msup></mrow></mrow><mo>.</mo></mrow></mtd><mtd></mtd></mtr></mtable></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(8)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">Now we remark that if the right side of the third equation (7) were  <math id="p3.m3" class="ltx_Math" alttext="+k^{2}" display="inline"><mrow><mo>+</mo><msup><mi>k</mi><mn>2</mn></msup></mrow></math>, then we had  <math id="p3.m4" class="ltx_Math" alttext="T=Ce^{k^{2}c^{2}t}" display="inline"><mrow><mi>T</mi><mo>=</mo><mrow><mi>C</mi><mo>⁢</mo><msup><mi>e</mi><mrow><msup><mi>k</mi><mn>2</mn></msup><mo>⁢</mo><msup><mi>c</mi><mn>2</mn></msup><mo>⁢</mo><mi>t</mi></mrow></msup></mrow></mrow></math>  which is impossible, since such a <math id="p3.m5" class="ltx_Math" alttext="T" display="inline"><mi>T</mi></math> and along with this also the temperature  <math id="p3.m6" class="ltx_Math" alttext="u=XYT" display="inline"><mrow><mi>u</mi><mo>=</mo><mrow><mi>X</mi><mo>⁢</mo><mi>Y</mi><mo>⁢</mo><mi>T</mi></mrow></mrow></math>  would ascend infinitely when  <math id="p3.m7" class="ltx_Math" alttext="t\to\infty" display="inline"><mrow><mi>t</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></math>.  And since, by symmetry, the right sides the two first equations (7) must have the same sign, also they must by (6) be negative.</p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">The two first boundary conditions (5) imply by (8) that  <math id="p4.m1" class="ltx_Math" alttext="C_{1}=C_{2}=0" display="inline"><mrow><msub><mi>C</mi><mn>1</mn></msub><mo>=</mo><msub><mi>C</mi><mn>2</mn></msub><mo>=</mo><mn>0</mn></mrow></math>,  and then the two last conditions (5) require that
+</p>
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="D_{1}\sin{k_{1}a}=0,\,\,\,D_{2}\sin{k_{2}b}=0." display="block"><mrow><mrow><mrow><mrow><msub><mi>D</mi><mn>1</mn></msub><mo>⁢</mo><mrow><mi>sin</mi><mo>⁡</mo><mrow><msub><mi>k</mi><mn>1</mn></msub><mo>⁢</mo><mi>a</mi></mrow></mrow></mrow><mo>=</mo><mn>0</mn></mrow><mo rspace="7.5pt">,</mo><mrow><mrow><msub><mi>D</mi><mn>2</mn></msub><mo>⁢</mo><mrow><mi>sin</mi><mo>⁡</mo><mrow><msub><mi>k</mi><mn>2</mn></msub><mo>⁢</mo><mi>b</mi></mrow></mrow></mrow><mo>=</mo><mn>0</mn></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">If we had  <math id="p4.m2" class="ltx_Math" alttext="D_{1}=0" display="inline"><mrow><msub><mi>D</mi><mn>1</mn></msub><mo>=</mo><mn>0</mn></mrow></math>  or  <math id="p4.m3" class="ltx_Math" alttext="D_{2}=0" display="inline"><mrow><msub><mi>D</mi><mn>2</mn></msub><mo>=</mo><mn>0</mn></mrow></math>,  then <math id="p4.m4" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> or <math id="p4.m5" class="ltx_Math" alttext="Y" display="inline"><mi>Y</mi></math> would vanish identically, which cannot occur.  Thus we have</p>
+<table id="S0.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex5.m1" class="ltx_Math" alttext="\sin{k_{1}a}=0\,\,\,\mathrm{and}\,\,\,\sin{k_{2}b}=0," display="block"><mrow><mrow><mrow><mi>sin</mi><mo>⁡</mo><mrow><msub><mi>k</mi><mn>1</mn></msub><mo>⁢</mo><mi>a</mi></mrow></mrow><mo>=</mo><mrow><mpadded width="+5pt"><mn>0</mn></mpadded><mo>⁢</mo><mpadded width="+5pt"><mi>and</mi></mpadded><mo>⁢</mo><mrow><mi>sin</mi><mo>⁡</mo><mrow><msub><mi>k</mi><mn>2</mn></msub><mo>⁢</mo><mi>b</mi></mrow></mrow></mrow><mo>=</mo><mn>0</mn></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">whence only the eigenvalues</p>
+<table id="A0.EGx9" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex6" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex6.m1" class="ltx_Math" alttext="\displaystyle\begin{cases}k_{1}=\frac{m\pi}{a}\,\,\,(m=1,\,2,\,3,\,\ldots)\\
+k_{2}=\frac{n\pi}{b}\,\,\,(n=1,\,2,\,3,\,\ldots)\end{cases}" display="inline"><mrow><mo>{</mo><mtable columnspacing="5pt" rowspacing="0pt"><mtr><mtd columnalign="left"><mrow><msub><mi>k</mi><mn>1</mn></msub><mo>=</mo><mpadded width="+5pt"><mfrac><mrow><mi>m</mi><mo>⁢</mo><mi>π</mi></mrow><mi>a</mi></mfrac></mpadded><mrow><mo stretchy="false">(</mo><mi>m</mi><mo>=</mo><mn>1</mn><mo>,</mo><mn> 2</mn><mo>,</mo><mn> 3</mn><mo rspace="4.2pt">,</mo><mi mathvariant="normal">…</mi><mo stretchy="false">)</mo></mrow></mrow></mtd><mtd></mtd></mtr><mtr><mtd columnalign="left"><mrow><msub><mi>k</mi><mn>2</mn></msub><mo>=</mo><mpadded width="+5pt"><mfrac><mrow><mi>n</mi><mo>⁢</mo><mi>π</mi></mrow><mi>b</mi></mfrac></mpadded><mrow><mo stretchy="false">(</mo><mi>n</mi><mo>=</mo><mn>1</mn><mo>,</mo><mn> 2</mn><mo>,</mo><mn> 3</mn><mo rspace="4.2pt">,</mo><mi mathvariant="normal">…</mi><mo stretchy="false">)</mo></mrow></mrow></mtd><mtd></mtd></mtr></mtable></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">are possible for the obtained <math id="p4.m6" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> and <math id="p4.m7" class="ltx_Math" alttext="Y" display="inline"><mi>Y</mi></math>.  Considering the equation  <math id="p4.m8" class="ltx_Math" alttext="k^{2}=k_{1}^{2}+k_{2}^{2}" display="inline"><mrow><msup><mi>k</mi><mn>2</mn></msup><mo>=</mo><mrow><msubsup><mi>k</mi><mn>1</mn><mn>2</mn></msubsup><mo>+</mo><msubsup><mi>k</mi><mn>2</mn><mn>2</mn></msubsup></mrow></mrow></math>  we may denote</p>
+<table id="A0.EGx10" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.E9"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E9.m1" class="ltx_Math" alttext="\displaystyle q_{mn}:=k^{2}c^{2}=\left[\left(\frac{m\pi}{a}\right)^{2}\!+\!%
+\left(\frac{n\pi}{b}\right)^{2}\right]c^{2}" display="inline"><mrow><msub><mi>q</mi><mrow><mi>m</mi><mo>⁢</mo><mi>n</mi></mrow></msub><mo>:=</mo><mrow><msup><mi>k</mi><mn>2</mn></msup><mo>⁢</mo><msup><mi>c</mi><mn>2</mn></msup></mrow><mo>=</mo><mrow><mrow><mo>[</mo><mrow><mpadded width="-1.7pt"><msup><mrow><mo>(</mo><mstyle displaystyle="true"><mfrac><mrow><mi>m</mi><mo>⁢</mo><mi>π</mi></mrow><mi>a</mi></mfrac></mstyle><mo>)</mo></mrow><mn>2</mn></msup></mpadded><mo rspace="0.8pt">+</mo><msup><mrow><mo>(</mo><mstyle displaystyle="true"><mfrac><mrow><mi>n</mi><mo>⁢</mo><mi>π</mi></mrow><mi>b</mi></mfrac></mstyle><mo>)</mo></mrow><mn>2</mn></msup></mrow><mo>]</mo></mrow><mo>⁢</mo><msup><mi>c</mi><mn>2</mn></msup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(9)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">for all   <math id="p4.m9" class="ltx_Math" alttext="m,\,n\in\mathbb{Z}_{+}." display="inline"><mrow><mrow><mrow><mi>m</mi><mo rspace="4.2pt">,</mo><mi>n</mi></mrow><mo>∈</mo><msub><mi>ℤ</mi><mo>+</mo></msub></mrow><mo>.</mo></mrow></math></p>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">Altogether we have infinitely many solutions</p>
+<table id="S0.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex7.m1" class="ltx_Math" alttext="u_{mn}=XYT=CD_{1}D_{2}e^{-q_{mn}t}\sin\frac{m\pi x}{a}\sin\frac{n\pi y}{b}=c_{%
+mn}e^{-q_{mn}t}\sin\frac{m\pi x}{a}\sin\frac{n\pi y}{b}" display="block"><mrow><msub><mi>u</mi><mrow><mi>m</mi><mo>⁢</mo><mi>n</mi></mrow></msub><mo>=</mo><mrow><mi>X</mi><mo>⁢</mo><mi>Y</mi><mo>⁢</mo><mi>T</mi></mrow><mo>=</mo><mrow><mi>C</mi><mo>⁢</mo><msub><mi>D</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>D</mi><mn>2</mn></msub><mo>⁢</mo><msup><mi>e</mi><mrow><mo>-</mo><mrow><msub><mi>q</mi><mrow><mi>m</mi><mo>⁢</mo><mi>n</mi></mrow></msub><mo>⁢</mo><mi>t</mi></mrow></mrow></msup><mo>⁢</mo><mrow><mi>sin</mi><mo>⁡</mo><mfrac><mrow><mi>m</mi><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mi>x</mi></mrow><mi>a</mi></mfrac></mrow><mo>⁢</mo><mrow><mi>sin</mi><mo>⁡</mo><mfrac><mrow><mi>n</mi><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mi>y</mi></mrow><mi>b</mi></mfrac></mrow></mrow><mo>=</mo><mrow><msub><mi>c</mi><mrow><mi>m</mi><mo>⁢</mo><mi>n</mi></mrow></msub><mo>⁢</mo><msup><mi>e</mi><mrow><mo>-</mo><mrow><msub><mi>q</mi><mrow><mi>m</mi><mo>⁢</mo><mi>n</mi></mrow></msub><mo>⁢</mo><mi>t</mi></mrow></mrow></msup><mo>⁢</mo><mrow><mi>sin</mi><mo>⁡</mo><mfrac><mrow><mi>m</mi><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mi>x</mi></mrow><mi>a</mi></mfrac></mrow><mo>⁢</mo><mrow><mi>sin</mi><mo>⁡</mo><mfrac><mrow><mi>n</mi><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mi>y</mi></mrow><mi>b</mi></mfrac></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">of the equation (1), where the coefficients <math id="p5.m1" class="ltx_Math" alttext="c_{mn}" display="inline"><msub><mi>c</mi><mrow><mi>m</mi><mo>⁢</mo><mi>n</mi></mrow></msub></math> are, for the present, arbitrary constants.  These solutions fulfil the boundary condition (3).  The sum of the solutions, i.e. the double series</p>
+<table id="A0.EGx11" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.E10"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E10.m1" class="ltx_Math" alttext="\displaystyle u(x,\,y,\,t):=\sum_{m=1}^{\infty}\sum_{n=1}^{\infty}c_{mn}e^{-q_%
+{mn}t}\sin\frac{m\pi x}{a}\sin\frac{n\pi y}{b}," display="inline"><mrow><mrow><mrow><mi>u</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo rspace="4.2pt">,</mo><mi>y</mi><mo rspace="4.2pt">,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>:=</mo><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>m</mi><mo>=</mo><mn>1</mn></mrow><mi mathvariant="normal">∞</mi></munderover></mstyle><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mi mathvariant="normal">∞</mi></munderover></mstyle><mrow><msub><mi>c</mi><mrow><mi>m</mi><mo>⁢</mo><mi>n</mi></mrow></msub><mo>⁢</mo><msup><mi>e</mi><mrow><mo>-</mo><mrow><msub><mi>q</mi><mrow><mi>m</mi><mo>⁢</mo><mi>n</mi></mrow></msub><mo>⁢</mo><mi>t</mi></mrow></mrow></msup><mo>⁢</mo><mrow><mi>sin</mi><mo>⁡</mo><mstyle displaystyle="true"><mfrac><mrow><mi>m</mi><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mi>x</mi></mrow><mi>a</mi></mfrac></mstyle></mrow><mo>⁢</mo><mrow><mi>sin</mi><mo>⁡</mo><mstyle displaystyle="true"><mfrac><mrow><mi>n</mi><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mi>y</mi></mrow><mi>b</mi></mfrac></mstyle></mrow></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(10)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">provided it converges, is also a solution of the linear differential equation (1) and fulfils the boundary condition.  In order to fulfil also the initial condition (2), one must have</p>
+<table id="S0.Ex8" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex8.m1" class="ltx_Math" alttext="\sum_{m=1}^{\infty}\sum_{n=1}^{\infty}c_{mn}e^{-q_{mn}t}\sin\frac{m\pi x}{a}%
+\sin\frac{n\pi y}{b}=f(x,\,y)." display="block"><mrow><mrow><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>m</mi><mo>=</mo><mn>1</mn></mrow><mi mathvariant="normal">∞</mi></munderover><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mi mathvariant="normal">∞</mi></munderover><mrow><msub><mi>c</mi><mrow><mi>m</mi><mo>⁢</mo><mi>n</mi></mrow></msub><mo>⁢</mo><msup><mi>e</mi><mrow><mo>-</mo><mrow><msub><mi>q</mi><mrow><mi>m</mi><mo>⁢</mo><mi>n</mi></mrow></msub><mo>⁢</mo><mi>t</mi></mrow></mrow></msup><mo>⁢</mo><mrow><mi>sin</mi><mo>⁡</mo><mfrac><mrow><mi>m</mi><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mi>x</mi></mrow><mi>a</mi></mfrac></mrow><mo>⁢</mo><mrow><mi>sin</mi><mo>⁡</mo><mfrac><mrow><mi>n</mi><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mi>y</mi></mrow><mi>b</mi></mfrac></mrow></mrow></mrow></mrow><mo>=</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo rspace="4.2pt">,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">But this equation presents the Fourier double sine series  of  <math id="p5.m2" class="ltx_Math" alttext="f(x,\,y)" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo rspace="4.2pt">,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow></math>  in the rectangle <math id="p5.m3" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>, and therefore we have the expression</p>
+<table id="A0.EGx12" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.E11"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E11.m1" class="ltx_Math" alttext="\displaystyle c_{mn}:=\frac{4}{ab}\int_{0}^{a}\!\int_{0}^{b}f(x,\,y)\,\sin%
+\frac{m\pi x}{a}\sin\frac{n\pi y}{b}\,dx\,dy" display="inline"><mrow><msub><mi>c</mi><mrow><mi>m</mi><mo>⁢</mo><mi>n</mi></mrow></msub><mo>:=</mo><mrow><mstyle displaystyle="true"><mfrac><mn>4</mn><mrow><mi>a</mi><mo>⁢</mo><mi>b</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mpadded width="-1.7pt"><mstyle displaystyle="true"><msubsup><mo largeop="true" symmetric="true">∫</mo><mn>0</mn><mi>a</mi></msubsup></mstyle></mpadded><mrow><mstyle displaystyle="true"><msubsup><mo largeop="true" symmetric="true">∫</mo><mn>0</mn><mi>b</mi></msubsup></mstyle><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo rspace="4.2pt">,</mo><mi>y</mi><mo rspace="4.2pt" stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mi>sin</mi><mo>⁡</mo><mstyle displaystyle="true"><mfrac><mrow><mi>m</mi><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mi>x</mi></mrow><mi>a</mi></mfrac></mstyle></mrow><mo>⁢</mo><mrow><mi>sin</mi><mo>⁡</mo><mrow><mpadded width="+1.7pt"><mstyle displaystyle="true"><mfrac><mrow><mi>n</mi><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mi>y</mi></mrow><mi>b</mi></mfrac></mstyle></mpadded><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mpadded width="+1.7pt"><mi>x</mi></mpadded><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>y</mi></mrow></mrow></mrow></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(11)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">for the coefficients.</p>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p">The result of calculating the solution of our problem is the temperature function (10) with the formulae (9) and (11).</p>
+</div>
+<section id="bib" class="ltx_bibliography">
+<h2 class="ltx_title ltx_title_bibliography">References</h2>
+
+<ul class="ltx_biblist">
+      
+<li id="bib.bib1" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">1</span>
+        
+<span class="ltx_bibblock"><span class="ltx_text ltx_font_smallcaps">K. Väisälä:</span> <span class="ltx_text ltx_font_italic">Matematiikka IV</span>.  Hand-out Nr. 141. Teknillisen korkeakoulun ylioppilaskunta, Otaniemi, Finland (1967).
+
+</span>
+      </li>
+    
+</ul>
+</section>
+<div id="p7" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">time-dependent example of heat equation</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">TimedependentExampleOfHeatEquation</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 16:32:47</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 16:32:47</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">pahio (2872)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">pahio (2872)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">10</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">pahio (2872)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Example</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 35Q99</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Synonym</th>
+<td class="ltx_td ltx_align_left ltx_border_r">solving a time-dependent heat equation</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_r">ExampleOfSolvingTheHeatEquation</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">EigenvalueProblem</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 20:44:47 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>
